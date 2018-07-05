@@ -57,17 +57,12 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "kgraph",
+                            label: "annoy",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9714975845410628 , y: 1457.80073845, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.991304347826087 , y: 1426.26372594, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.993719806763285 , y: 883.12633427, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9985507246376811 , y: 748.841383486, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9990338164251208 , y: 670.042984513, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 591.39650402, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 220.314230251, label: "Annoy(n_trees=100, search_k=100)" },
                                                             ]
                         },
                                                 ]},
@@ -156,14 +151,9 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.9714975845410628, 1457.80073845)
-                                    (0.991304347826087, 1426.26372594)
-                                    (0.993719806763285, 883.12633427)
-                                    (0.9985507246376811, 748.841383486)
-                                    (0.9990338164251208, 670.042984513)
-                                    (0.9995169082125603, 591.39650402)
+                                                (1.0, 220.314230251)
                             };
-            \addlegendentry{ kgraph };
+            \addlegendentry{ annoy };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -181,13 +171,12 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "kgraph",
+                            label: "annoy",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9801932367149758 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 0.428644895554, label: "Annoy(n_trees=100, search_k=40000)" },
                                                             ]
                         },
                                                 ]},
@@ -276,10 +265,9 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.9801932367149758, 3.60996389389)
-                                    (0.9995169082125603, 3.60996389389)
+                                                (1.0, 0.428644895554)
                             };
-            \addlegendentry{ kgraph };
+            \addlegendentry{ annoy };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Build time (s) tradeoff - down and to the right is better }
@@ -297,13 +285,12 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "kgraph",
+                            label: "annoy",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9801932367149758 , y: 2356, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 2356, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 40880.0, label: "Annoy(n_trees=100, search_k=40000)" },
                                                             ]
                         },
                                                 ]},
@@ -392,10 +379,9 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.9801932367149758, 2356)
-                                    (0.9995169082125603, 2356)
+                                                (1.0, 40880.0)
                             };
-            \addlegendentry{ kgraph };
+            \addlegendentry{ annoy };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB) tradeoff - down and to the right is better }
@@ -413,16 +399,12 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "kgraph",
+                            label: "annoy",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.00804752143 , y: 1457.80073845, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.00022434043 , y: 1426.26372594, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.00000772431 , y: 748.841383486, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.00000302347 , y: 670.042984513, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.00000000125 , y: 591.39650402, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 220.314230251, label: "Annoy(n_trees=100, search_k=100)" },
                                                             ]
                         },
                                                 ]},
@@ -511,13 +493,9 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.00804752143, 1457.80073845)
-                                    (1.00022434043, 1426.26372594)
-                                    (1.00000772431, 748.841383486)
-                                    (1.00000302347, 670.042984513)
-                                    (1.00000000125, 591.39650402)
+                                                (1.0, 220.314230251)
                             };
-            \addlegendentry{ kgraph };
+            \addlegendentry{ annoy };
             \end{axis}
     \end{tikzpicture}
     \caption{ Relative Error-Queries per second (1/s) tradeoff - up and to the left is better }
@@ -535,13 +513,12 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "kgraph",
+                            label: "annoy",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9801932367149758 , y: 10, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 10, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=400, search_k=40000)" },
                                                             ]
                         },
                                                 ]},
@@ -630,10 +607,9 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.9801932367149758, 10)
-                                    (0.9995169082125603, 10)
+                                                (1.0, 10.0)
                             };
-            \addlegendentry{ kgraph };
+            \addlegendentry{ annoy };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Candidates generated tradeoff - down and to the right is better }
@@ -651,17 +627,12 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "kgraph",
+                            label: "annoy",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9714975845410628 , y: 1.61613308174, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.991304347826087 , y: 1.65186841476, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.993719806763285 , y: 2.66779497856, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9985507246376811 , y: 3.14619364255, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9990338164251208 , y: 3.51619232565, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 3.98379088139, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 185.553152665, label: "Annoy(n_trees=100, search_k=100)" },
                                                             ]
                         },
                                                 ]},
@@ -750,14 +721,9 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.9714975845410628, 1.61613308174)
-                                    (0.991304347826087, 1.65186841476)
-                                    (0.993719806763285, 2.66779497856)
-                                    (0.9985507246376811, 3.14619364255)
-                                    (0.9990338164251208, 3.51619232565)
-                                    (0.9995169082125603, 3.98379088139)
+                                                (1.0, 185.553152665)
                             };
-            \addlegendentry{ kgraph };
+            \addlegendentry{ annoy };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB)/Queries per second (s) tradeoff - down and to the right is better }
@@ -775,14 +741,12 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "kgraph",
+                            label: "annoy",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9806763285024155 , y: 1457.80073845, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9985507246376811 , y: 1426.26372594, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 748.841383486, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 220.314230251, label: "Annoy(n_trees=100, search_k=100)" },
                                                             ]
                         },
                                                 ]},
@@ -871,11 +835,9 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.9806763285024155, 1457.80073845)
-                                    (0.9985507246376811, 1426.26372594)
-                                    (1.0, 748.841383486)
+                                                (1.0, 220.314230251)
                             };
-            \addlegendentry{ kgraph };
+            \addlegendentry{ annoy };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.01 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -893,13 +855,12 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "kgraph",
+                            label: "annoy",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9855072463768116 , y: 1457.80073845, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 1426.26372594, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 220.314230251, label: "Annoy(n_trees=100, search_k=100)" },
                                                             ]
                         },
                                                 ]},
@@ -988,10 +949,9 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.9855072463768116, 1457.80073845)
-                                    (1.0, 1426.26372594)
+                                                (1.0, 220.314230251)
                             };
-            \addlegendentry{ kgraph };
+            \addlegendentry{ annoy };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.1 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1011,26 +971,47 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "kgraph",
+                            label: "annoy",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9714975845410628 , y: 1457.80073845, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9685990338164251 , y: 1427.1335033, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.991304347826087 , y: 1426.26372594, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9869565217391304 , y: 1425.76016211, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9801932367149758 , y: 1291.25564669, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9826086956521739 , y: 1104.94697859, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.993719806763285 , y: 883.12633427, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9985507246376811 , y: 748.841383486, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9990338164251208 , y: 670.042984513, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 591.39650402, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 558.97121902, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 500.47407737, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 462.503557388, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 419.157239075, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 413.816489537, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 220.314230251, label: "Annoy(n_trees=100, search_k=100)" },
+                                                                    { x: 1.0 , y: 218.946712651, label: "Annoy(n_trees=100, search_k=200)" },
+                                                                    { x: 1.0 , y: 217.508410774, label: "Annoy(n_trees=100, search_k=400)" },
+                                                                    { x: 1.0 , y: 216.349607754, label: "Annoy(n_trees=400, search_k=100)" },
+                                                                    { x: 1.0 , y: 214.931919567, label: "Annoy(n_trees=100, search_k=1000)" },
+                                                                    { x: 1.0 , y: 214.670882508, label: "Annoy(n_trees=400, search_k=400)" },
+                                                                    { x: 1.0 , y: 214.644346698, label: "Annoy(n_trees=400, search_k=200)" },
+                                                                    { x: 1.0 , y: 214.209142232, label: "Annoy(n_trees=200, search_k=100)" },
+                                                                    { x: 1.0 , y: 213.871118784, label: "Annoy(n_trees=200, search_k=1000)" },
+                                                                    { x: 1.0 , y: 213.150422829, label: "Annoy(n_trees=400, search_k=1000)" },
+                                                                    { x: 1.0 , y: 213.065474458, label: "Annoy(n_trees=200, search_k=400)" },
+                                                                    { x: 1.0 , y: 211.853849257, label: "Annoy(n_trees=200, search_k=200)" },
+                                                                    { x: 1.0 , y: 209.67853158, label: "Annoy(n_trees=100, search_k=4000)" },
+                                                                    { x: 1.0 , y: 208.643608443, label: "Annoy(n_trees=200, search_k=4000)" },
+                                                                    { x: 1.0 , y: 206.716856875, label: "Annoy(n_trees=100, search_k=2000)" },
+                                                                    { x: 1.0 , y: 206.094850245, label: "Annoy(n_trees=400, search_k=4000)" },
+                                                                    { x: 1.0 , y: 205.034955232, label: "Annoy(n_trees=200, search_k=2000)" },
+                                                                    { x: 1.0 , y: 204.665306036, label: "Annoy(n_trees=400, search_k=2000)" },
+                                                                    { x: 1.0 , y: 197.783323819, label: "Annoy(n_trees=100, search_k=10000)" },
+                                                                    { x: 1.0 , y: 193.974280819, label: "Annoy(n_trees=400, search_k=10000)" },
+                                                                    { x: 1.0 , y: 192.508774991, label: "Annoy(n_trees=200, search_k=10000)" },
+                                                                    { x: 1.0 , y: 185.634146623, label: "Annoy(n_trees=400, search_k=20000)" },
+                                                                    { x: 1.0 , y: 185.505083853, label: "Annoy(n_trees=100, search_k=20000)" },
+                                                                    { x: 1.0 , y: 183.065428183, label: "Annoy(n_trees=200, search_k=20000)" },
+                                                                    { x: 1.0 , y: 159.47921025, label: "Annoy(n_trees=400, search_k=40000)" },
+                                                                    { x: 1.0 , y: 157.96539364, label: "Annoy(n_trees=200, search_k=40000)" },
+                                                                    { x: 1.0 , y: 157.9216915, label: "Annoy(n_trees=100, search_k=40000)" },
+                                                                    { x: 1.0 , y: 118.44110705, label: "Annoy(n_trees=400, search_k=100000)" },
+                                                                    { x: 1.0 , y: 117.445597905, label: "Annoy(n_trees=200, search_k=100000)" },
+                                                                    { x: 1.0 , y: 117.056798683, label: "Annoy(n_trees=100, search_k=100000)" },
+                                                                    { x: 1.0 , y: 83.6225598635, label: "Annoy(n_trees=100, search_k=200000)" },
+                                                                    { x: 1.0 , y: 82.3414420596, label: "Annoy(n_trees=100, search_k=400000)" },
+                                                                    { x: 1.0 , y: 80.8683768957, label: "Annoy(n_trees=200, search_k=200000)" },
+                                                                    { x: 1.0 , y: 80.4026413881, label: "Annoy(n_trees=400, search_k=200000)" },
+                                                                    { x: 1.0 , y: 52.7219256289, label: "Annoy(n_trees=200, search_k=400000)" },
+                                                                    { x: 1.0 , y: 50.0442720316, label: "Annoy(n_trees=400, search_k=400000)" },
                                                             ]
                         },
                                                 ]},
@@ -1119,23 +1100,44 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.9714975845410628, 1457.80073845)
-                                    (0.9685990338164251, 1427.1335033)
-                                    (0.991304347826087, 1426.26372594)
-                                    (0.9869565217391304, 1425.76016211)
-                                    (0.9801932367149758, 1291.25564669)
-                                    (0.9826086956521739, 1104.94697859)
-                                    (0.993719806763285, 883.12633427)
-                                    (0.9985507246376811, 748.841383486)
-                                    (0.9990338164251208, 670.042984513)
-                                    (0.9995169082125603, 591.39650402)
-                                    (0.9995169082125603, 558.97121902)
-                                    (0.9995169082125603, 500.47407737)
-                                    (0.9995169082125603, 462.503557388)
-                                    (0.9995169082125603, 419.157239075)
-                                    (0.9995169082125603, 413.816489537)
+                                                (1.0, 220.314230251)
+                                    (1.0, 218.946712651)
+                                    (1.0, 217.508410774)
+                                    (1.0, 216.349607754)
+                                    (1.0, 214.931919567)
+                                    (1.0, 214.670882508)
+                                    (1.0, 214.644346698)
+                                    (1.0, 214.209142232)
+                                    (1.0, 213.871118784)
+                                    (1.0, 213.150422829)
+                                    (1.0, 213.065474458)
+                                    (1.0, 211.853849257)
+                                    (1.0, 209.67853158)
+                                    (1.0, 208.643608443)
+                                    (1.0, 206.716856875)
+                                    (1.0, 206.094850245)
+                                    (1.0, 205.034955232)
+                                    (1.0, 204.665306036)
+                                    (1.0, 197.783323819)
+                                    (1.0, 193.974280819)
+                                    (1.0, 192.508774991)
+                                    (1.0, 185.634146623)
+                                    (1.0, 185.505083853)
+                                    (1.0, 183.065428183)
+                                    (1.0, 159.47921025)
+                                    (1.0, 157.96539364)
+                                    (1.0, 157.9216915)
+                                    (1.0, 118.44110705)
+                                    (1.0, 117.445597905)
+                                    (1.0, 117.056798683)
+                                    (1.0, 83.6225598635)
+                                    (1.0, 82.3414420596)
+                                    (1.0, 80.8683768957)
+                                    (1.0, 80.4026413881)
+                                    (1.0, 52.7219256289)
+                                    (1.0, 50.0442720316)
                             };
-            \addlegendentry{ kgraph };
+            \addlegendentry{ annoy };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1153,26 +1155,47 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "kgraph",
+                            label: "annoy",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9801932367149758 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.993719806763285 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9685990338164251 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.991304347826087 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9869565217391304 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9714975845410628 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9985507246376811 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9990338164251208 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9826086956521739 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 0.428644895554, label: "Annoy(n_trees=100, search_k=40000)" },
+                                                                    { x: 1.0 , y: 0.428644895554, label: "Annoy(n_trees=100, search_k=20000)" },
+                                                                    { x: 1.0 , y: 0.428644895554, label: "Annoy(n_trees=100, search_k=400)" },
+                                                                    { x: 1.0 , y: 0.428644895554, label: "Annoy(n_trees=100, search_k=100)" },
+                                                                    { x: 1.0 , y: 0.428644895554, label: "Annoy(n_trees=100, search_k=200)" },
+                                                                    { x: 1.0 , y: 0.428644895554, label: "Annoy(n_trees=100, search_k=200000)" },
+                                                                    { x: 1.0 , y: 0.428644895554, label: "Annoy(n_trees=100, search_k=400000)" },
+                                                                    { x: 1.0 , y: 0.428644895554, label: "Annoy(n_trees=100, search_k=4000)" },
+                                                                    { x: 1.0 , y: 0.428644895554, label: "Annoy(n_trees=100, search_k=1000)" },
+                                                                    { x: 1.0 , y: 0.428644895554, label: "Annoy(n_trees=100, search_k=10000)" },
+                                                                    { x: 1.0 , y: 0.428644895554, label: "Annoy(n_trees=100, search_k=100000)" },
+                                                                    { x: 1.0 , y: 0.428644895554, label: "Annoy(n_trees=100, search_k=2000)" },
+                                                                    { x: 1.0 , y: 0.449498653412, label: "Annoy(n_trees=200, search_k=400)" },
+                                                                    { x: 1.0 , y: 0.449498653412, label: "Annoy(n_trees=200, search_k=100000)" },
+                                                                    { x: 1.0 , y: 0.449498653412, label: "Annoy(n_trees=200, search_k=200)" },
+                                                                    { x: 1.0 , y: 0.449498653412, label: "Annoy(n_trees=200, search_k=400000)" },
+                                                                    { x: 1.0 , y: 0.449498653412, label: "Annoy(n_trees=200, search_k=2000)" },
+                                                                    { x: 1.0 , y: 0.449498653412, label: "Annoy(n_trees=200, search_k=100)" },
+                                                                    { x: 1.0 , y: 0.449498653412, label: "Annoy(n_trees=200, search_k=40000)" },
+                                                                    { x: 1.0 , y: 0.449498653412, label: "Annoy(n_trees=200, search_k=20000)" },
+                                                                    { x: 1.0 , y: 0.449498653412, label: "Annoy(n_trees=200, search_k=10000)" },
+                                                                    { x: 1.0 , y: 0.449498653412, label: "Annoy(n_trees=200, search_k=4000)" },
+                                                                    { x: 1.0 , y: 0.449498653412, label: "Annoy(n_trees=200, search_k=1000)" },
+                                                                    { x: 1.0 , y: 0.449498653412, label: "Annoy(n_trees=200, search_k=200000)" },
+                                                                    { x: 1.0 , y: 0.45364356041, label: "Annoy(n_trees=400, search_k=40000)" },
+                                                                    { x: 1.0 , y: 0.45364356041, label: "Annoy(n_trees=400, search_k=200000)" },
+                                                                    { x: 1.0 , y: 0.45364356041, label: "Annoy(n_trees=400, search_k=100)" },
+                                                                    { x: 1.0 , y: 0.45364356041, label: "Annoy(n_trees=400, search_k=400)" },
+                                                                    { x: 1.0 , y: 0.45364356041, label: "Annoy(n_trees=400, search_k=20000)" },
+                                                                    { x: 1.0 , y: 0.45364356041, label: "Annoy(n_trees=400, search_k=400000)" },
+                                                                    { x: 1.0 , y: 0.45364356041, label: "Annoy(n_trees=400, search_k=4000)" },
+                                                                    { x: 1.0 , y: 0.45364356041, label: "Annoy(n_trees=400, search_k=2000)" },
+                                                                    { x: 1.0 , y: 0.45364356041, label: "Annoy(n_trees=400, search_k=100000)" },
+                                                                    { x: 1.0 , y: 0.45364356041, label: "Annoy(n_trees=400, search_k=1000)" },
+                                                                    { x: 1.0 , y: 0.45364356041, label: "Annoy(n_trees=400, search_k=10000)" },
+                                                                    { x: 1.0 , y: 0.45364356041, label: "Annoy(n_trees=400, search_k=200)" },
                                                             ]
                         },
                                                 ]},
@@ -1261,23 +1284,44 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.9801932367149758, 3.60996389389)
-                                    (0.9995169082125603, 3.60996389389)
-                                    (0.993719806763285, 3.60996389389)
-                                    (0.9995169082125603, 3.60996389389)
-                                    (0.9685990338164251, 3.60996389389)
-                                    (0.991304347826087, 3.60996389389)
-                                    (0.9869565217391304, 3.60996389389)
-                                    (0.9995169082125603, 3.60996389389)
-                                    (0.9714975845410628, 3.60996389389)
-                                    (0.9995169082125603, 3.60996389389)
-                                    (0.9985507246376811, 3.60996389389)
-                                    (0.9995169082125603, 3.60996389389)
-                                    (0.9995169082125603, 3.60996389389)
-                                    (0.9990338164251208, 3.60996389389)
-                                    (0.9826086956521739, 3.60996389389)
+                                                (1.0, 0.428644895554)
+                                    (1.0, 0.428644895554)
+                                    (1.0, 0.428644895554)
+                                    (1.0, 0.428644895554)
+                                    (1.0, 0.428644895554)
+                                    (1.0, 0.428644895554)
+                                    (1.0, 0.428644895554)
+                                    (1.0, 0.428644895554)
+                                    (1.0, 0.428644895554)
+                                    (1.0, 0.428644895554)
+                                    (1.0, 0.428644895554)
+                                    (1.0, 0.428644895554)
+                                    (1.0, 0.449498653412)
+                                    (1.0, 0.449498653412)
+                                    (1.0, 0.449498653412)
+                                    (1.0, 0.449498653412)
+                                    (1.0, 0.449498653412)
+                                    (1.0, 0.449498653412)
+                                    (1.0, 0.449498653412)
+                                    (1.0, 0.449498653412)
+                                    (1.0, 0.449498653412)
+                                    (1.0, 0.449498653412)
+                                    (1.0, 0.449498653412)
+                                    (1.0, 0.449498653412)
+                                    (1.0, 0.45364356041)
+                                    (1.0, 0.45364356041)
+                                    (1.0, 0.45364356041)
+                                    (1.0, 0.45364356041)
+                                    (1.0, 0.45364356041)
+                                    (1.0, 0.45364356041)
+                                    (1.0, 0.45364356041)
+                                    (1.0, 0.45364356041)
+                                    (1.0, 0.45364356041)
+                                    (1.0, 0.45364356041)
+                                    (1.0, 0.45364356041)
+                                    (1.0, 0.45364356041)
                             };
-            \addlegendentry{ kgraph };
+            \addlegendentry{ annoy };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Build time (s) tradeoff - down and to the right is better }
@@ -1295,26 +1339,47 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "kgraph",
+                            label: "annoy",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9801932367149758 , y: 2356, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 2356, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.993719806763285 , y: 2356, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 2356, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9685990338164251 , y: 2356, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.991304347826087 , y: 2356, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9869565217391304 , y: 2356, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 2356, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9714975845410628 , y: 2356, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 2356, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9985507246376811 , y: 2356, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 2356, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 2356, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9990338164251208 , y: 2356, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9826086956521739 , y: 2356, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 40880.0, label: "Annoy(n_trees=100, search_k=40000)" },
+                                                                    { x: 1.0 , y: 40880.0, label: "Annoy(n_trees=100, search_k=20000)" },
+                                                                    { x: 1.0 , y: 40880.0, label: "Annoy(n_trees=100, search_k=400)" },
+                                                                    { x: 1.0 , y: 40880.0, label: "Annoy(n_trees=100, search_k=100)" },
+                                                                    { x: 1.0 , y: 40880.0, label: "Annoy(n_trees=100, search_k=200)" },
+                                                                    { x: 1.0 , y: 40880.0, label: "Annoy(n_trees=100, search_k=200000)" },
+                                                                    { x: 1.0 , y: 40880.0, label: "Annoy(n_trees=100, search_k=400000)" },
+                                                                    { x: 1.0 , y: 40880.0, label: "Annoy(n_trees=100, search_k=4000)" },
+                                                                    { x: 1.0 , y: 40880.0, label: "Annoy(n_trees=100, search_k=1000)" },
+                                                                    { x: 1.0 , y: 40880.0, label: "Annoy(n_trees=100, search_k=10000)" },
+                                                                    { x: 1.0 , y: 40880.0, label: "Annoy(n_trees=100, search_k=100000)" },
+                                                                    { x: 1.0 , y: 40880.0, label: "Annoy(n_trees=100, search_k=2000)" },
+                                                                    { x: 1.0 , y: 41056.0, label: "Annoy(n_trees=200, search_k=400)" },
+                                                                    { x: 1.0 , y: 41056.0, label: "Annoy(n_trees=200, search_k=100000)" },
+                                                                    { x: 1.0 , y: 41056.0, label: "Annoy(n_trees=200, search_k=200)" },
+                                                                    { x: 1.0 , y: 41056.0, label: "Annoy(n_trees=200, search_k=400000)" },
+                                                                    { x: 1.0 , y: 41056.0, label: "Annoy(n_trees=200, search_k=2000)" },
+                                                                    { x: 1.0 , y: 41056.0, label: "Annoy(n_trees=200, search_k=100)" },
+                                                                    { x: 1.0 , y: 41056.0, label: "Annoy(n_trees=200, search_k=40000)" },
+                                                                    { x: 1.0 , y: 41056.0, label: "Annoy(n_trees=200, search_k=20000)" },
+                                                                    { x: 1.0 , y: 41056.0, label: "Annoy(n_trees=200, search_k=10000)" },
+                                                                    { x: 1.0 , y: 41056.0, label: "Annoy(n_trees=200, search_k=4000)" },
+                                                                    { x: 1.0 , y: 41056.0, label: "Annoy(n_trees=200, search_k=1000)" },
+                                                                    { x: 1.0 , y: 41056.0, label: "Annoy(n_trees=200, search_k=200000)" },
+                                                                    { x: 1.0 , y: 92732.0, label: "Annoy(n_trees=400, search_k=40000)" },
+                                                                    { x: 1.0 , y: 92732.0, label: "Annoy(n_trees=400, search_k=200000)" },
+                                                                    { x: 1.0 , y: 92732.0, label: "Annoy(n_trees=400, search_k=100)" },
+                                                                    { x: 1.0 , y: 92732.0, label: "Annoy(n_trees=400, search_k=400)" },
+                                                                    { x: 1.0 , y: 92732.0, label: "Annoy(n_trees=400, search_k=20000)" },
+                                                                    { x: 1.0 , y: 92732.0, label: "Annoy(n_trees=400, search_k=400000)" },
+                                                                    { x: 1.0 , y: 92732.0, label: "Annoy(n_trees=400, search_k=4000)" },
+                                                                    { x: 1.0 , y: 92732.0, label: "Annoy(n_trees=400, search_k=2000)" },
+                                                                    { x: 1.0 , y: 92732.0, label: "Annoy(n_trees=400, search_k=100000)" },
+                                                                    { x: 1.0 , y: 92732.0, label: "Annoy(n_trees=400, search_k=1000)" },
+                                                                    { x: 1.0 , y: 92732.0, label: "Annoy(n_trees=400, search_k=10000)" },
+                                                                    { x: 1.0 , y: 92732.0, label: "Annoy(n_trees=400, search_k=200)" },
                                                             ]
                         },
                                                 ]},
@@ -1403,23 +1468,44 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.9801932367149758, 2356)
-                                    (0.9995169082125603, 2356)
-                                    (0.993719806763285, 2356)
-                                    (0.9995169082125603, 2356)
-                                    (0.9685990338164251, 2356)
-                                    (0.991304347826087, 2356)
-                                    (0.9869565217391304, 2356)
-                                    (0.9995169082125603, 2356)
-                                    (0.9714975845410628, 2356)
-                                    (0.9995169082125603, 2356)
-                                    (0.9985507246376811, 2356)
-                                    (0.9995169082125603, 2356)
-                                    (0.9995169082125603, 2356)
-                                    (0.9990338164251208, 2356)
-                                    (0.9826086956521739, 2356)
+                                                (1.0, 40880.0)
+                                    (1.0, 40880.0)
+                                    (1.0, 40880.0)
+                                    (1.0, 40880.0)
+                                    (1.0, 40880.0)
+                                    (1.0, 40880.0)
+                                    (1.0, 40880.0)
+                                    (1.0, 40880.0)
+                                    (1.0, 40880.0)
+                                    (1.0, 40880.0)
+                                    (1.0, 40880.0)
+                                    (1.0, 40880.0)
+                                    (1.0, 41056.0)
+                                    (1.0, 41056.0)
+                                    (1.0, 41056.0)
+                                    (1.0, 41056.0)
+                                    (1.0, 41056.0)
+                                    (1.0, 41056.0)
+                                    (1.0, 41056.0)
+                                    (1.0, 41056.0)
+                                    (1.0, 41056.0)
+                                    (1.0, 41056.0)
+                                    (1.0, 41056.0)
+                                    (1.0, 41056.0)
+                                    (1.0, 92732.0)
+                                    (1.0, 92732.0)
+                                    (1.0, 92732.0)
+                                    (1.0, 92732.0)
+                                    (1.0, 92732.0)
+                                    (1.0, 92732.0)
+                                    (1.0, 92732.0)
+                                    (1.0, 92732.0)
+                                    (1.0, 92732.0)
+                                    (1.0, 92732.0)
+                                    (1.0, 92732.0)
+                                    (1.0, 92732.0)
                             };
-            \addlegendentry{ kgraph };
+            \addlegendentry{ annoy };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB) tradeoff - down and to the right is better }
@@ -1437,26 +1523,47 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "kgraph",
+                            label: "annoy",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.00804752143 , y: 1457.80073845, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.00815251673 , y: 1427.1335033, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.00022434043 , y: 1426.26372594, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.00026913932 , y: 1425.76016211, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.00562934047 , y: 1291.25564669, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.00554418245 , y: 1104.94697859, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.00056009767 , y: 883.12633427, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.00000772431 , y: 748.841383486, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.00000302347 , y: 670.042984513, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.00000000125 , y: 591.39650402, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.00000000125 , y: 558.97121902, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.00000000125 , y: 500.47407737, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.00000000125 , y: 462.503557388, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.00000000125 , y: 419.157239075, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.00000000125 , y: 413.816489537, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 220.314230251, label: "Annoy(n_trees=100, search_k=100)" },
+                                                                    { x: 1.0 , y: 218.946712651, label: "Annoy(n_trees=100, search_k=200)" },
+                                                                    { x: 1.0 , y: 217.508410774, label: "Annoy(n_trees=100, search_k=400)" },
+                                                                    { x: 1.0 , y: 216.349607754, label: "Annoy(n_trees=400, search_k=100)" },
+                                                                    { x: 1.0 , y: 214.931919567, label: "Annoy(n_trees=100, search_k=1000)" },
+                                                                    { x: 1.0 , y: 214.670882508, label: "Annoy(n_trees=400, search_k=400)" },
+                                                                    { x: 1.0 , y: 214.644346698, label: "Annoy(n_trees=400, search_k=200)" },
+                                                                    { x: 1.0 , y: 214.209142232, label: "Annoy(n_trees=200, search_k=100)" },
+                                                                    { x: 1.0 , y: 213.871118784, label: "Annoy(n_trees=200, search_k=1000)" },
+                                                                    { x: 1.0 , y: 213.150422829, label: "Annoy(n_trees=400, search_k=1000)" },
+                                                                    { x: 1.0 , y: 213.065474458, label: "Annoy(n_trees=200, search_k=400)" },
+                                                                    { x: 1.0 , y: 211.853849257, label: "Annoy(n_trees=200, search_k=200)" },
+                                                                    { x: 1.0 , y: 209.67853158, label: "Annoy(n_trees=100, search_k=4000)" },
+                                                                    { x: 1.0 , y: 208.643608443, label: "Annoy(n_trees=200, search_k=4000)" },
+                                                                    { x: 1.0 , y: 206.716856875, label: "Annoy(n_trees=100, search_k=2000)" },
+                                                                    { x: 1.0 , y: 206.094850245, label: "Annoy(n_trees=400, search_k=4000)" },
+                                                                    { x: 1.0 , y: 205.034955232, label: "Annoy(n_trees=200, search_k=2000)" },
+                                                                    { x: 1.0 , y: 204.665306036, label: "Annoy(n_trees=400, search_k=2000)" },
+                                                                    { x: 1.0 , y: 197.783323819, label: "Annoy(n_trees=100, search_k=10000)" },
+                                                                    { x: 1.0 , y: 193.974280819, label: "Annoy(n_trees=400, search_k=10000)" },
+                                                                    { x: 1.0 , y: 192.508774991, label: "Annoy(n_trees=200, search_k=10000)" },
+                                                                    { x: 1.0 , y: 185.634146623, label: "Annoy(n_trees=400, search_k=20000)" },
+                                                                    { x: 1.0 , y: 185.505083853, label: "Annoy(n_trees=100, search_k=20000)" },
+                                                                    { x: 1.0 , y: 183.065428183, label: "Annoy(n_trees=200, search_k=20000)" },
+                                                                    { x: 1.0 , y: 159.47921025, label: "Annoy(n_trees=400, search_k=40000)" },
+                                                                    { x: 1.0 , y: 157.96539364, label: "Annoy(n_trees=200, search_k=40000)" },
+                                                                    { x: 1.0 , y: 157.9216915, label: "Annoy(n_trees=100, search_k=40000)" },
+                                                                    { x: 1.0 , y: 118.44110705, label: "Annoy(n_trees=400, search_k=100000)" },
+                                                                    { x: 1.0 , y: 117.445597905, label: "Annoy(n_trees=200, search_k=100000)" },
+                                                                    { x: 1.0 , y: 117.056798683, label: "Annoy(n_trees=100, search_k=100000)" },
+                                                                    { x: 1.0 , y: 83.6225598635, label: "Annoy(n_trees=100, search_k=200000)" },
+                                                                    { x: 1.0 , y: 82.3414420596, label: "Annoy(n_trees=100, search_k=400000)" },
+                                                                    { x: 1.0 , y: 80.8683768957, label: "Annoy(n_trees=200, search_k=200000)" },
+                                                                    { x: 1.0 , y: 80.4026413881, label: "Annoy(n_trees=400, search_k=200000)" },
+                                                                    { x: 1.0 , y: 52.7219256289, label: "Annoy(n_trees=200, search_k=400000)" },
+                                                                    { x: 1.0 , y: 50.0442720316, label: "Annoy(n_trees=400, search_k=400000)" },
                                                             ]
                         },
                                                 ]},
@@ -1545,23 +1652,44 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.00804752143, 1457.80073845)
-                                    (1.00815251673, 1427.1335033)
-                                    (1.00022434043, 1426.26372594)
-                                    (1.00026913932, 1425.76016211)
-                                    (1.00562934047, 1291.25564669)
-                                    (1.00554418245, 1104.94697859)
-                                    (1.00056009767, 883.12633427)
-                                    (1.00000772431, 748.841383486)
-                                    (1.00000302347, 670.042984513)
-                                    (1.00000000125, 591.39650402)
-                                    (1.00000000125, 558.97121902)
-                                    (1.00000000125, 500.47407737)
-                                    (1.00000000125, 462.503557388)
-                                    (1.00000000125, 419.157239075)
-                                    (1.00000000125, 413.816489537)
+                                                (1.0, 220.314230251)
+                                    (1.0, 218.946712651)
+                                    (1.0, 217.508410774)
+                                    (1.0, 216.349607754)
+                                    (1.0, 214.931919567)
+                                    (1.0, 214.670882508)
+                                    (1.0, 214.644346698)
+                                    (1.0, 214.209142232)
+                                    (1.0, 213.871118784)
+                                    (1.0, 213.150422829)
+                                    (1.0, 213.065474458)
+                                    (1.0, 211.853849257)
+                                    (1.0, 209.67853158)
+                                    (1.0, 208.643608443)
+                                    (1.0, 206.716856875)
+                                    (1.0, 206.094850245)
+                                    (1.0, 205.034955232)
+                                    (1.0, 204.665306036)
+                                    (1.0, 197.783323819)
+                                    (1.0, 193.974280819)
+                                    (1.0, 192.508774991)
+                                    (1.0, 185.634146623)
+                                    (1.0, 185.505083853)
+                                    (1.0, 183.065428183)
+                                    (1.0, 159.47921025)
+                                    (1.0, 157.96539364)
+                                    (1.0, 157.9216915)
+                                    (1.0, 118.44110705)
+                                    (1.0, 117.445597905)
+                                    (1.0, 117.056798683)
+                                    (1.0, 83.6225598635)
+                                    (1.0, 82.3414420596)
+                                    (1.0, 80.8683768957)
+                                    (1.0, 80.4026413881)
+                                    (1.0, 52.7219256289)
+                                    (1.0, 50.0442720316)
                             };
-            \addlegendentry{ kgraph };
+            \addlegendentry{ annoy };
             \end{axis}
     \end{tikzpicture}
     \caption{ Relative Error-Queries per second (1/s) tradeoff - up and to the left is better }
@@ -1579,26 +1707,47 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "kgraph",
+                            label: "annoy",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9801932367149758 , y: 10, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 10, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.993719806763285 , y: 10, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 10, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9685990338164251 , y: 10, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.991304347826087 , y: 10, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9869565217391304 , y: 10, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 10, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9714975845410628 , y: 10, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 10, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9985507246376811 , y: 10, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 10, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 10, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9990338164251208 , y: 10, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9826086956521739 , y: 10, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=400, search_k=40000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=200, search_k=400)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=100, search_k=40000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=200, search_k=100000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=200, search_k=200)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=200, search_k=400000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=400, search_k=200000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=400, search_k=100)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=400, search_k=400)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=200, search_k=2000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=400, search_k=20000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=400, search_k=400000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=100, search_k=20000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=200, search_k=100)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=100, search_k=400)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=100, search_k=100)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=200, search_k=40000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=200, search_k=20000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=100, search_k=200)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=400, search_k=4000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=100, search_k=200000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=400, search_k=2000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=100, search_k=400000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=200, search_k=10000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=100, search_k=4000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=200, search_k=4000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=200, search_k=1000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=100, search_k=1000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=100, search_k=10000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=100, search_k=100000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=400, search_k=100000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=100, search_k=2000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=400, search_k=1000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=200, search_k=200000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=400, search_k=10000)" },
+                                                                    { x: 1.0 , y: 10.0, label: "Annoy(n_trees=400, search_k=200)" },
                                                             ]
                         },
                                                 ]},
@@ -1687,23 +1836,44 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.9801932367149758, 10)
-                                    (0.9995169082125603, 10)
-                                    (0.993719806763285, 10)
-                                    (0.9995169082125603, 10)
-                                    (0.9685990338164251, 10)
-                                    (0.991304347826087, 10)
-                                    (0.9869565217391304, 10)
-                                    (0.9995169082125603, 10)
-                                    (0.9714975845410628, 10)
-                                    (0.9995169082125603, 10)
-                                    (0.9985507246376811, 10)
-                                    (0.9995169082125603, 10)
-                                    (0.9995169082125603, 10)
-                                    (0.9990338164251208, 10)
-                                    (0.9826086956521739, 10)
+                                                (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
                             };
-            \addlegendentry{ kgraph };
+            \addlegendentry{ annoy };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Candidates generated tradeoff - down and to the right is better }
@@ -1721,26 +1891,47 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "kgraph",
+                            label: "annoy",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9714975845410628 , y: 1.61613308174, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9685990338164251 , y: 1.65086167101, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.991304347826087 , y: 1.65186841476, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9869565217391304 , y: 1.6524518377, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9801932367149758 , y: 1.82458059799, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9826086956521739 , y: 2.13222900796, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.993719806763285 , y: 2.66779497856, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9985507246376811 , y: 3.14619364255, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9990338164251208 , y: 3.51619232565, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 3.98379088139, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 4.21488606181, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 4.70753652692, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 5.09401487268, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 5.62080236334, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9995169082125603 , y: 5.69334489942, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 185.553152665, label: "Annoy(n_trees=100, search_k=100)" },
+                                                                    { x: 1.0 , y: 186.712097684, label: "Annoy(n_trees=100, search_k=200)" },
+                                                                    { x: 1.0 , y: 187.946755045, label: "Annoy(n_trees=100, search_k=400)" },
+                                                                    { x: 1.0 , y: 190.199762243, label: "Annoy(n_trees=100, search_k=1000)" },
+                                                                    { x: 1.0 , y: 191.66315486, label: "Annoy(n_trees=200, search_k=100)" },
+                                                                    { x: 1.0 , y: 191.966078606, label: "Annoy(n_trees=200, search_k=1000)" },
+                                                                    { x: 1.0 , y: 192.691941782, label: "Annoy(n_trees=200, search_k=400)" },
+                                                                    { x: 1.0 , y: 193.793977046, label: "Annoy(n_trees=200, search_k=200)" },
+                                                                    { x: 1.0 , y: 194.965119661, label: "Annoy(n_trees=100, search_k=4000)" },
+                                                                    { x: 1.0 , y: 196.775737855, label: "Annoy(n_trees=200, search_k=4000)" },
+                                                                    { x: 1.0 , y: 197.758424823, label: "Annoy(n_trees=100, search_k=2000)" },
+                                                                    { x: 1.0 , y: 200.239027309, label: "Annoy(n_trees=200, search_k=2000)" },
+                                                                    { x: 1.0 , y: 206.690833235, label: "Annoy(n_trees=100, search_k=10000)" },
+                                                                    { x: 1.0 , y: 213.268200381, label: "Annoy(n_trees=200, search_k=10000)" },
+                                                                    { x: 1.0 , y: 220.371318946, label: "Annoy(n_trees=100, search_k=20000)" },
+                                                                    { x: 1.0 , y: 224.26954345, label: "Annoy(n_trees=200, search_k=20000)" },
+                                                                    { x: 1.0 , y: 258.86247552, label: "Annoy(n_trees=100, search_k=40000)" },
+                                                                    { x: 1.0 , y: 259.905027638, label: "Annoy(n_trees=200, search_k=40000)" },
+                                                                    { x: 1.0 , y: 349.232171561, label: "Annoy(n_trees=100, search_k=100000)" },
+                                                                    { x: 1.0 , y: 349.574617801, label: "Annoy(n_trees=200, search_k=100000)" },
+                                                                    { x: 1.0 , y: 428.621068291, label: "Annoy(n_trees=400, search_k=100)" },
+                                                                    { x: 1.0 , y: 431.972882939, label: "Annoy(n_trees=400, search_k=400)" },
+                                                                    { x: 1.0 , y: 432.026286397, label: "Annoy(n_trees=400, search_k=200)" },
+                                                                    { x: 1.0 , y: 435.054262475, label: "Annoy(n_trees=400, search_k=1000)" },
+                                                                    { x: 1.0 , y: 449.948166534, label: "Annoy(n_trees=400, search_k=4000)" },
+                                                                    { x: 1.0 , y: 453.090960047, label: "Annoy(n_trees=400, search_k=2000)" },
+                                                                    { x: 1.0 , y: 478.063378343, label: "Annoy(n_trees=400, search_k=10000)" },
+                                                                    { x: 1.0 , y: 488.863293192, label: "Annoy(n_trees=100, search_k=200000)" },
+                                                                    { x: 1.0 , y: 496.469323071, label: "Annoy(n_trees=100, search_k=400000)" },
+                                                                    { x: 1.0 , y: 499.54171518, label: "Annoy(n_trees=400, search_k=20000)" },
+                                                                    { x: 1.0 , y: 507.689180568, label: "Annoy(n_trees=200, search_k=200000)" },
+                                                                    { x: 1.0 , y: 581.467639918, label: "Annoy(n_trees=400, search_k=40000)" },
+                                                                    { x: 1.0 , y: 778.727246971, label: "Annoy(n_trees=200, search_k=400000)" },
+                                                                    { x: 1.0 , y: 782.937632971, label: "Annoy(n_trees=400, search_k=100000)" },
+                                                                    { x: 1.0 , y: 1153.34519363, label: "Annoy(n_trees=400, search_k=200000)" },
+                                                                    { x: 1.0 , y: 1852.99927915, label: "Annoy(n_trees=400, search_k=400000)" },
                                                             ]
                         },
                                                 ]},
@@ -1829,23 +2020,44 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.9714975845410628, 1.61613308174)
-                                    (0.9685990338164251, 1.65086167101)
-                                    (0.991304347826087, 1.65186841476)
-                                    (0.9869565217391304, 1.6524518377)
-                                    (0.9801932367149758, 1.82458059799)
-                                    (0.9826086956521739, 2.13222900796)
-                                    (0.993719806763285, 2.66779497856)
-                                    (0.9985507246376811, 3.14619364255)
-                                    (0.9990338164251208, 3.51619232565)
-                                    (0.9995169082125603, 3.98379088139)
-                                    (0.9995169082125603, 4.21488606181)
-                                    (0.9995169082125603, 4.70753652692)
-                                    (0.9995169082125603, 5.09401487268)
-                                    (0.9995169082125603, 5.62080236334)
-                                    (0.9995169082125603, 5.69334489942)
+                                                (1.0, 185.553152665)
+                                    (1.0, 186.712097684)
+                                    (1.0, 187.946755045)
+                                    (1.0, 190.199762243)
+                                    (1.0, 191.66315486)
+                                    (1.0, 191.966078606)
+                                    (1.0, 192.691941782)
+                                    (1.0, 193.793977046)
+                                    (1.0, 194.965119661)
+                                    (1.0, 196.775737855)
+                                    (1.0, 197.758424823)
+                                    (1.0, 200.239027309)
+                                    (1.0, 206.690833235)
+                                    (1.0, 213.268200381)
+                                    (1.0, 220.371318946)
+                                    (1.0, 224.26954345)
+                                    (1.0, 258.86247552)
+                                    (1.0, 259.905027638)
+                                    (1.0, 349.232171561)
+                                    (1.0, 349.574617801)
+                                    (1.0, 428.621068291)
+                                    (1.0, 431.972882939)
+                                    (1.0, 432.026286397)
+                                    (1.0, 435.054262475)
+                                    (1.0, 449.948166534)
+                                    (1.0, 453.090960047)
+                                    (1.0, 478.063378343)
+                                    (1.0, 488.863293192)
+                                    (1.0, 496.469323071)
+                                    (1.0, 499.54171518)
+                                    (1.0, 507.689180568)
+                                    (1.0, 581.467639918)
+                                    (1.0, 778.727246971)
+                                    (1.0, 782.937632971)
+                                    (1.0, 1153.34519363)
+                                    (1.0, 1852.99927915)
                             };
-            \addlegendentry{ kgraph };
+            \addlegendentry{ annoy };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB)/Queries per second (s) tradeoff - down and to the right is better }
@@ -1863,26 +2075,47 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "kgraph",
+                            label: "annoy",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9806763285024155 , y: 1457.80073845, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9792270531400966 , y: 1427.1335033, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9985507246376811 , y: 1426.26372594, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9980676328502416 , y: 1425.76016211, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9859903381642512 , y: 1291.25564669, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9869565217391304 , y: 1104.94697859, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9966183574879227 , y: 883.12633427, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 748.841383486, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 670.042984513, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 591.39650402, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 558.97121902, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 500.47407737, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 462.503557388, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 419.157239075, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 413.816489537, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 220.314230251, label: "Annoy(n_trees=100, search_k=100)" },
+                                                                    { x: 1.0 , y: 218.946712651, label: "Annoy(n_trees=100, search_k=200)" },
+                                                                    { x: 1.0 , y: 217.508410774, label: "Annoy(n_trees=100, search_k=400)" },
+                                                                    { x: 1.0 , y: 216.349607754, label: "Annoy(n_trees=400, search_k=100)" },
+                                                                    { x: 1.0 , y: 214.931919567, label: "Annoy(n_trees=100, search_k=1000)" },
+                                                                    { x: 1.0 , y: 214.670882508, label: "Annoy(n_trees=400, search_k=400)" },
+                                                                    { x: 1.0 , y: 214.644346698, label: "Annoy(n_trees=400, search_k=200)" },
+                                                                    { x: 1.0 , y: 214.209142232, label: "Annoy(n_trees=200, search_k=100)" },
+                                                                    { x: 1.0 , y: 213.871118784, label: "Annoy(n_trees=200, search_k=1000)" },
+                                                                    { x: 1.0 , y: 213.150422829, label: "Annoy(n_trees=400, search_k=1000)" },
+                                                                    { x: 1.0 , y: 213.065474458, label: "Annoy(n_trees=200, search_k=400)" },
+                                                                    { x: 1.0 , y: 211.853849257, label: "Annoy(n_trees=200, search_k=200)" },
+                                                                    { x: 1.0 , y: 209.67853158, label: "Annoy(n_trees=100, search_k=4000)" },
+                                                                    { x: 1.0 , y: 208.643608443, label: "Annoy(n_trees=200, search_k=4000)" },
+                                                                    { x: 1.0 , y: 206.716856875, label: "Annoy(n_trees=100, search_k=2000)" },
+                                                                    { x: 1.0 , y: 206.094850245, label: "Annoy(n_trees=400, search_k=4000)" },
+                                                                    { x: 1.0 , y: 205.034955232, label: "Annoy(n_trees=200, search_k=2000)" },
+                                                                    { x: 1.0 , y: 204.665306036, label: "Annoy(n_trees=400, search_k=2000)" },
+                                                                    { x: 1.0 , y: 197.783323819, label: "Annoy(n_trees=100, search_k=10000)" },
+                                                                    { x: 1.0 , y: 193.974280819, label: "Annoy(n_trees=400, search_k=10000)" },
+                                                                    { x: 1.0 , y: 192.508774991, label: "Annoy(n_trees=200, search_k=10000)" },
+                                                                    { x: 1.0 , y: 185.634146623, label: "Annoy(n_trees=400, search_k=20000)" },
+                                                                    { x: 1.0 , y: 185.505083853, label: "Annoy(n_trees=100, search_k=20000)" },
+                                                                    { x: 1.0 , y: 183.065428183, label: "Annoy(n_trees=200, search_k=20000)" },
+                                                                    { x: 1.0 , y: 159.47921025, label: "Annoy(n_trees=400, search_k=40000)" },
+                                                                    { x: 1.0 , y: 157.96539364, label: "Annoy(n_trees=200, search_k=40000)" },
+                                                                    { x: 1.0 , y: 157.9216915, label: "Annoy(n_trees=100, search_k=40000)" },
+                                                                    { x: 1.0 , y: 118.44110705, label: "Annoy(n_trees=400, search_k=100000)" },
+                                                                    { x: 1.0 , y: 117.445597905, label: "Annoy(n_trees=200, search_k=100000)" },
+                                                                    { x: 1.0 , y: 117.056798683, label: "Annoy(n_trees=100, search_k=100000)" },
+                                                                    { x: 1.0 , y: 83.6225598635, label: "Annoy(n_trees=100, search_k=200000)" },
+                                                                    { x: 1.0 , y: 82.3414420596, label: "Annoy(n_trees=100, search_k=400000)" },
+                                                                    { x: 1.0 , y: 80.8683768957, label: "Annoy(n_trees=200, search_k=200000)" },
+                                                                    { x: 1.0 , y: 80.4026413881, label: "Annoy(n_trees=400, search_k=200000)" },
+                                                                    { x: 1.0 , y: 52.7219256289, label: "Annoy(n_trees=200, search_k=400000)" },
+                                                                    { x: 1.0 , y: 50.0442720316, label: "Annoy(n_trees=400, search_k=400000)" },
                                                             ]
                         },
                                                 ]},
@@ -1971,23 +2204,44 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.9806763285024155, 1457.80073845)
-                                    (0.9792270531400966, 1427.1335033)
-                                    (0.9985507246376811, 1426.26372594)
-                                    (0.9980676328502416, 1425.76016211)
-                                    (0.9859903381642512, 1291.25564669)
-                                    (0.9869565217391304, 1104.94697859)
-                                    (0.9966183574879227, 883.12633427)
-                                    (1.0, 748.841383486)
-                                    (1.0, 670.042984513)
-                                    (1.0, 591.39650402)
-                                    (1.0, 558.97121902)
-                                    (1.0, 500.47407737)
-                                    (1.0, 462.503557388)
-                                    (1.0, 419.157239075)
-                                    (1.0, 413.816489537)
+                                                (1.0, 220.314230251)
+                                    (1.0, 218.946712651)
+                                    (1.0, 217.508410774)
+                                    (1.0, 216.349607754)
+                                    (1.0, 214.931919567)
+                                    (1.0, 214.670882508)
+                                    (1.0, 214.644346698)
+                                    (1.0, 214.209142232)
+                                    (1.0, 213.871118784)
+                                    (1.0, 213.150422829)
+                                    (1.0, 213.065474458)
+                                    (1.0, 211.853849257)
+                                    (1.0, 209.67853158)
+                                    (1.0, 208.643608443)
+                                    (1.0, 206.716856875)
+                                    (1.0, 206.094850245)
+                                    (1.0, 205.034955232)
+                                    (1.0, 204.665306036)
+                                    (1.0, 197.783323819)
+                                    (1.0, 193.974280819)
+                                    (1.0, 192.508774991)
+                                    (1.0, 185.634146623)
+                                    (1.0, 185.505083853)
+                                    (1.0, 183.065428183)
+                                    (1.0, 159.47921025)
+                                    (1.0, 157.96539364)
+                                    (1.0, 157.9216915)
+                                    (1.0, 118.44110705)
+                                    (1.0, 117.445597905)
+                                    (1.0, 117.056798683)
+                                    (1.0, 83.6225598635)
+                                    (1.0, 82.3414420596)
+                                    (1.0, 80.8683768957)
+                                    (1.0, 80.4026413881)
+                                    (1.0, 52.7219256289)
+                                    (1.0, 50.0442720316)
                             };
-            \addlegendentry{ kgraph };
+            \addlegendentry{ annoy };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.01 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -2005,26 +2259,47 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "kgraph",
+                            label: "annoy",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9855072463768116 , y: 1457.80073845, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9855072463768116 , y: 1427.1335033, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 1426.26372594, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 1425.76016211, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9903381642512077 , y: 1291.25564669, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 0.9903381642512077 , y: 1104.94697859, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 883.12633427, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 748.841383486, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 670.042984513, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 591.39650402, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 558.97121902, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 500.47407737, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 462.503557388, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 419.157239075, label: "b'KGraph(euclidean)'" },
-                                                                    { x: 1.0 , y: 413.816489537, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 220.314230251, label: "Annoy(n_trees=100, search_k=100)" },
+                                                                    { x: 1.0 , y: 218.946712651, label: "Annoy(n_trees=100, search_k=200)" },
+                                                                    { x: 1.0 , y: 217.508410774, label: "Annoy(n_trees=100, search_k=400)" },
+                                                                    { x: 1.0 , y: 216.349607754, label: "Annoy(n_trees=400, search_k=100)" },
+                                                                    { x: 1.0 , y: 214.931919567, label: "Annoy(n_trees=100, search_k=1000)" },
+                                                                    { x: 1.0 , y: 214.670882508, label: "Annoy(n_trees=400, search_k=400)" },
+                                                                    { x: 1.0 , y: 214.644346698, label: "Annoy(n_trees=400, search_k=200)" },
+                                                                    { x: 1.0 , y: 214.209142232, label: "Annoy(n_trees=200, search_k=100)" },
+                                                                    { x: 1.0 , y: 213.871118784, label: "Annoy(n_trees=200, search_k=1000)" },
+                                                                    { x: 1.0 , y: 213.150422829, label: "Annoy(n_trees=400, search_k=1000)" },
+                                                                    { x: 1.0 , y: 213.065474458, label: "Annoy(n_trees=200, search_k=400)" },
+                                                                    { x: 1.0 , y: 211.853849257, label: "Annoy(n_trees=200, search_k=200)" },
+                                                                    { x: 1.0 , y: 209.67853158, label: "Annoy(n_trees=100, search_k=4000)" },
+                                                                    { x: 1.0 , y: 208.643608443, label: "Annoy(n_trees=200, search_k=4000)" },
+                                                                    { x: 1.0 , y: 206.716856875, label: "Annoy(n_trees=100, search_k=2000)" },
+                                                                    { x: 1.0 , y: 206.094850245, label: "Annoy(n_trees=400, search_k=4000)" },
+                                                                    { x: 1.0 , y: 205.034955232, label: "Annoy(n_trees=200, search_k=2000)" },
+                                                                    { x: 1.0 , y: 204.665306036, label: "Annoy(n_trees=400, search_k=2000)" },
+                                                                    { x: 1.0 , y: 197.783323819, label: "Annoy(n_trees=100, search_k=10000)" },
+                                                                    { x: 1.0 , y: 193.974280819, label: "Annoy(n_trees=400, search_k=10000)" },
+                                                                    { x: 1.0 , y: 192.508774991, label: "Annoy(n_trees=200, search_k=10000)" },
+                                                                    { x: 1.0 , y: 185.634146623, label: "Annoy(n_trees=400, search_k=20000)" },
+                                                                    { x: 1.0 , y: 185.505083853, label: "Annoy(n_trees=100, search_k=20000)" },
+                                                                    { x: 1.0 , y: 183.065428183, label: "Annoy(n_trees=200, search_k=20000)" },
+                                                                    { x: 1.0 , y: 159.47921025, label: "Annoy(n_trees=400, search_k=40000)" },
+                                                                    { x: 1.0 , y: 157.96539364, label: "Annoy(n_trees=200, search_k=40000)" },
+                                                                    { x: 1.0 , y: 157.9216915, label: "Annoy(n_trees=100, search_k=40000)" },
+                                                                    { x: 1.0 , y: 118.44110705, label: "Annoy(n_trees=400, search_k=100000)" },
+                                                                    { x: 1.0 , y: 117.445597905, label: "Annoy(n_trees=200, search_k=100000)" },
+                                                                    { x: 1.0 , y: 117.056798683, label: "Annoy(n_trees=100, search_k=100000)" },
+                                                                    { x: 1.0 , y: 83.6225598635, label: "Annoy(n_trees=100, search_k=200000)" },
+                                                                    { x: 1.0 , y: 82.3414420596, label: "Annoy(n_trees=100, search_k=400000)" },
+                                                                    { x: 1.0 , y: 80.8683768957, label: "Annoy(n_trees=200, search_k=200000)" },
+                                                                    { x: 1.0 , y: 80.4026413881, label: "Annoy(n_trees=400, search_k=200000)" },
+                                                                    { x: 1.0 , y: 52.7219256289, label: "Annoy(n_trees=200, search_k=400000)" },
+                                                                    { x: 1.0 , y: 50.0442720316, label: "Annoy(n_trees=400, search_k=400000)" },
                                                             ]
                         },
                                                 ]},
@@ -2113,23 +2388,44 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.9855072463768116, 1457.80073845)
-                                    (0.9855072463768116, 1427.1335033)
-                                    (1.0, 1426.26372594)
-                                    (1.0, 1425.76016211)
-                                    (0.9903381642512077, 1291.25564669)
-                                    (0.9903381642512077, 1104.94697859)
-                                    (1.0, 883.12633427)
-                                    (1.0, 748.841383486)
-                                    (1.0, 670.042984513)
-                                    (1.0, 591.39650402)
-                                    (1.0, 558.97121902)
-                                    (1.0, 500.47407737)
-                                    (1.0, 462.503557388)
-                                    (1.0, 419.157239075)
-                                    (1.0, 413.816489537)
+                                                (1.0, 220.314230251)
+                                    (1.0, 218.946712651)
+                                    (1.0, 217.508410774)
+                                    (1.0, 216.349607754)
+                                    (1.0, 214.931919567)
+                                    (1.0, 214.670882508)
+                                    (1.0, 214.644346698)
+                                    (1.0, 214.209142232)
+                                    (1.0, 213.871118784)
+                                    (1.0, 213.150422829)
+                                    (1.0, 213.065474458)
+                                    (1.0, 211.853849257)
+                                    (1.0, 209.67853158)
+                                    (1.0, 208.643608443)
+                                    (1.0, 206.716856875)
+                                    (1.0, 206.094850245)
+                                    (1.0, 205.034955232)
+                                    (1.0, 204.665306036)
+                                    (1.0, 197.783323819)
+                                    (1.0, 193.974280819)
+                                    (1.0, 192.508774991)
+                                    (1.0, 185.634146623)
+                                    (1.0, 185.505083853)
+                                    (1.0, 183.065428183)
+                                    (1.0, 159.47921025)
+                                    (1.0, 157.96539364)
+                                    (1.0, 157.9216915)
+                                    (1.0, 118.44110705)
+                                    (1.0, 117.445597905)
+                                    (1.0, 117.056798683)
+                                    (1.0, 83.6225598635)
+                                    (1.0, 82.3414420596)
+                                    (1.0, 80.8683768957)
+                                    (1.0, 80.4026413881)
+                                    (1.0, 52.7219256289)
+                                    (1.0, 50.0442720316)
                             };
-            \addlegendentry{ kgraph };
+            \addlegendentry{ annoy };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.1 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
