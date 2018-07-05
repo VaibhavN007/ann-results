@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>sign-language-digits (k = 10)</title>
+        <title>faiss-ivf</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -47,7 +47,7 @@
             </nav>
 
                     <div class="container">
-                                <h2>Plots for sign-language-digits (k = 10)</h2>
+                                <h2>Plots for faiss-ivf</h2>
                                                 <h3>Recall/Queries per second (1/s)</h3>
             <div id="RecallQueries per second (1/s)">
             <canvas id="chartRecallQueries per second (1/s)" width="800" height="600"></canvas>
@@ -57,7 +57,7 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
@@ -69,21 +69,6 @@
                                                                     { x: 0.9884057971014493 , y: 517.169733255, label: "b'FaissIVF(n_list=10, n_probe=5)'" },
                                                                     { x: 0.9956521739130435 , y: 513.474341983, label: "b'FaissIVF(n_list=800, n_probe=50)'" },
                                                                     { x: 1.0 , y: 413.589201781, label: "b'FaissIVF(n_list=800, n_probe=100)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 0.8975845410628019 , y: 2851.45945094, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9371980676328503 , y: 2133.46732424, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9782608695652174 , y: 1750.62189334, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9888888888888889 , y: 1340.22973843, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9985507246376811 , y: 1068.1168626, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9990338164251208 , y: 846.301713617, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 693.949412131, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                             ]
                         },
                                                 ]},
@@ -180,17 +165,7 @@
                                     (0.9956521739130435, 513.474341983)
                                     (1.0, 413.589201781)
                             };
-            \addlegendentry{ faiss-ivf };
-                                \addplot coordinates {
-                                                (0.8975845410628019, 2851.45945094)
-                                    (0.9371980676328503, 2133.46732424)
-                                    (0.9782608695652174, 1750.62189334)
-                                    (0.9888888888888889, 1340.22973843)
-                                    (0.9985507246376811, 1068.1168626)
-                                    (0.9990338164251208, 846.301713617)
-                                    (1.0, 693.949412131)
-                            };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -208,21 +183,12 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
                                                                     { x: 1.0 , y: 0.214970111847, label: "b'FaissIVF(n_list=5, n_probe=10)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 5.5328578949, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                             ]
                         },
                                                 ]},
@@ -313,11 +279,7 @@
                                 \addplot coordinates {
                                                 (1.0, 0.214970111847)
                             };
-            \addlegendentry{ faiss-ivf };
-                                \addplot coordinates {
-                                                (1.0, 5.5328578949)
-                            };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Build time (s) tradeoff - down and to the right is better }
@@ -335,21 +297,12 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
                                                                     { x: 1.0 , y: 42164, label: "b'FaissIVF(n_list=10, n_probe=100)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 30052, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                             ]
                         },
                                                 ]},
@@ -440,11 +393,7 @@
                                 \addplot coordinates {
                                                 (1.0, 42164)
                             };
-            \addlegendentry{ faiss-ivf };
-                                \addplot coordinates {
-                                                (1.0, 30052)
-                            };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB) tradeoff - down and to the right is better }
@@ -462,7 +411,7 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
@@ -475,21 +424,6 @@
                                                                     { x: 1.00041310708 , y: 517.169733255, label: "b'FaissIVF(n_list=10, n_probe=5)'" },
                                                                     { x: 1.00009101056 , y: 513.474341983, label: "b'FaissIVF(n_list=800, n_probe=50)'" },
                                                                     { x: 1.0 , y: 413.589201781, label: "b'FaissIVF(n_list=800, n_probe=100)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 1.00372321333 , y: 2851.45945094, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0018269872 , y: 2133.46732424, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.00053930123 , y: 1750.62189334, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.00028458582 , y: 1340.22973843, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.00004388616 , y: 1068.1168626, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.00000944408 , y: 846.301713617, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 693.949412131, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                             ]
                         },
                                                 ]},
@@ -587,17 +521,7 @@
                                     (1.00009101056, 513.474341983)
                                     (1.0, 413.589201781)
                             };
-            \addlegendentry{ faiss-ivf };
-                                \addplot coordinates {
-                                                (1.00372321333, 2851.45945094)
-                                    (1.0018269872, 2133.46732424)
-                                    (1.00053930123, 1750.62189334)
-                                    (1.00028458582, 1340.22973843)
-                                    (1.00004388616, 1068.1168626)
-                                    (1.00000944408, 846.301713617)
-                                    (1.0, 693.949412131)
-                            };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Relative Error-Queries per second (1/s) tradeoff - up and to the left is better }
@@ -615,22 +539,13 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
                                                                     { x: 0.5550724637681159 , y: 10, label: "b'FaissIVF(n_list=800, n_probe=4)'" },
                                                                     { x: 1.0 , y: 10, label: "b'FaissIVF(n_list=10, n_probe=100)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                             ]
                         },
                                                 ]},
@@ -722,11 +637,7 @@
                                                 (0.5550724637681159, 10)
                                     (1.0, 10)
                             };
-            \addlegendentry{ faiss-ivf };
-                                \addplot coordinates {
-                                                (1.0, 10)
-                            };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Candidates generated tradeoff - down and to the right is better }
@@ -744,7 +655,7 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
@@ -756,21 +667,6 @@
                                                                     { x: 0.9884057971014493 , y: 81.5283596251, label: "b'FaissIVF(n_list=10, n_probe=5)'" },
                                                                     { x: 0.9956521739130435 , y: 94.5168940917, label: "b'FaissIVF(n_list=800, n_probe=50)'" },
                                                                     { x: 1.0 , y: 117.343489122, label: "b'FaissIVF(n_list=800, n_probe=100)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 0.8975845410628019 , y: 10.5391644234, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9371980676328503 , y: 14.1141135174, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9782608695652174 , y: 17.1664710206, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9888888888888889 , y: 22.4677897651, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9985507246376811 , y: 28.135498139, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9990338164251208 , y: 35.5806912777, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 43.3057503539, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                             ]
                         },
                                                 ]},
@@ -867,17 +763,7 @@
                                     (0.9956521739130435, 94.5168940917)
                                     (1.0, 117.343489122)
                             };
-            \addlegendentry{ faiss-ivf };
-                                \addplot coordinates {
-                                                (0.8975845410628019, 10.5391644234)
-                                    (0.9371980676328503, 14.1141135174)
-                                    (0.9782608695652174, 17.1664710206)
-                                    (0.9888888888888889, 22.4677897651)
-                                    (0.9985507246376811, 28.135498139)
-                                    (0.9990338164251208, 35.5806912777)
-                                    (1.0, 43.3057503539)
-                            };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB)/Queries per second (s) tradeoff - down and to the right is better }
@@ -895,7 +781,7 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
@@ -908,19 +794,6 @@
                                                                     { x: 0.9971014492753624 , y: 517.169733255, label: "b'FaissIVF(n_list=10, n_probe=5)'" },
                                                                     { x: 0.9995169082125603 , y: 513.474341983, label: "b'FaissIVF(n_list=800, n_probe=50)'" },
                                                                     { x: 1.0 , y: 413.589201781, label: "b'FaissIVF(n_list=800, n_probe=100)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 0.9603864734299516 , y: 2851.45945094, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9893719806763285 , y: 2133.46732424, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9980676328502416 , y: 1750.62189334, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9985507246376811 , y: 1340.22973843, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 1068.1168626, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                             ]
                         },
                                                 ]},
@@ -1018,15 +891,7 @@
                                     (0.9995169082125603, 513.474341983)
                                     (1.0, 413.589201781)
                             };
-            \addlegendentry{ faiss-ivf };
-                                \addplot coordinates {
-                                                (0.9603864734299516, 2851.45945094)
-                                    (0.9893719806763285, 2133.46732424)
-                                    (0.9980676328502416, 1750.62189334)
-                                    (0.9985507246376811, 1340.22973843)
-                                    (1.0, 1068.1168626)
-                            };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.01 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1044,22 +909,13 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
                                                                     { x: 0.9966183574879227 , y: 2438.47349958, label: "b'FaissIVF(n_list=10, n_probe=1)'" },
                                                                     { x: 1.0 , y: 1283.47711321, label: "b'FaissIVF(n_list=10, n_probe=2)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 2851.45945094, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                             ]
                         },
                                                 ]},
@@ -1151,11 +1007,7 @@
                                                 (0.9966183574879227, 2438.47349958)
                                     (1.0, 1283.47711321)
                             };
-            \addlegendentry{ faiss-ivf };
-                                \addplot coordinates {
-                                                (1.0, 2851.45945094)
-                            };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.1 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1165,7 +1017,7 @@
                 </div>
             
                         <hr />
-                                <h2>Scatterplots for sign-language-digits (k = 10)</h2>
+                                <h2>Scatterplots for faiss-ivf</h2>
                                                 <h3>Recall/Queries per second (1/s)</h3>
             <div id="RecallQueries per second (1/s)Scatterplot ">
             <canvas id="chartRecallQueries per second (1/s)Scatterplot " width="800" height="600"></canvas>
@@ -1175,7 +1027,7 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
@@ -1213,32 +1065,6 @@
                                                                     { x: 1.0 , y: 243.271235005, label: "b'FaissIVF(n_list=5, n_probe=8)'" },
                                                                     { x: 1.0 , y: 237.36332609, label: "b'FaissIVF(n_list=5, n_probe=50)'" },
                                                                     { x: 1.0 , y: 214.830926297, label: "b'FaissIVF(n_list=5, n_probe=20)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 0.8975845410628019 , y: 2851.45945094, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9371980676328503 , y: 2133.46732424, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9782608695652174 , y: 1750.62189334, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9888888888888889 , y: 1340.22973843, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9985507246376811 , y: 1068.1168626, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9990338164251208 , y: 846.301713617, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 693.949412131, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 546.221291673, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 534.250349513, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 460.064545256, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 373.276155787, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 352.058196469, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 265.47177527, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 250.730899052, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 210.364178572, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 200.182084297, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 169.618693006, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 165.064025503, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
                                                             ]
                         },
                                                 ]},
@@ -1361,28 +1187,7 @@
                                     (1.0, 237.36332609)
                                     (1.0, 214.830926297)
                             };
-            \addlegendentry{ faiss-ivf };
-                                \addplot [only marks] coordinates {
-                                                (0.8975845410628019, 2851.45945094)
-                                    (0.9371980676328503, 2133.46732424)
-                                    (0.9782608695652174, 1750.62189334)
-                                    (0.9888888888888889, 1340.22973843)
-                                    (0.9985507246376811, 1068.1168626)
-                                    (0.9990338164251208, 846.301713617)
-                                    (1.0, 693.949412131)
-                                    (1.0, 546.221291673)
-                                    (1.0, 534.250349513)
-                                    (1.0, 460.064545256)
-                                    (1.0, 373.276155787)
-                                    (1.0, 352.058196469)
-                                    (1.0, 265.47177527)
-                                    (1.0, 250.730899052)
-                                    (1.0, 210.364178572)
-                                    (1.0, 200.182084297)
-                                    (1.0, 169.618693006)
-                                    (1.0, 165.064025503)
-                            };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1400,7 +1205,7 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
@@ -1438,32 +1243,6 @@
                                                                     { x: 0.9956521739130435 , y: 4.14169812202, label: "b'FaissIVF(n_list=800, n_probe=50)'" },
                                                                     { x: 0.47342995169082125 , y: 4.14169812202, label: "b'FaissIVF(n_list=800, n_probe=3)'" },
                                                                     { x: 1.0 , y: 4.14169812202, label: "b'FaissIVF(n_list=800, n_probe=200)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 5.5328578949, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 5.5328578949, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 5.5328578949, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.8975845410628019 , y: 5.5328578949, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 5.5328578949, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9985507246376811 , y: 5.5328578949, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 5.5328578949, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 5.5328578949, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9782608695652174 , y: 5.5328578949, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 5.84498286247, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 5.84498286247, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 5.84498286247, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 5.84498286247, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9990338164251208 , y: 5.84498286247, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9371980676328503 , y: 5.84498286247, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 5.84498286247, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 5.84498286247, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9888888888888889 , y: 5.84498286247, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
                                                             ]
                         },
                                                 ]},
@@ -1586,28 +1365,7 @@
                                     (0.47342995169082125, 4.14169812202)
                                     (1.0, 4.14169812202)
                             };
-            \addlegendentry{ faiss-ivf };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 5.5328578949)
-                                    (1.0, 5.5328578949)
-                                    (1.0, 5.5328578949)
-                                    (0.8975845410628019, 5.5328578949)
-                                    (1.0, 5.5328578949)
-                                    (0.9985507246376811, 5.5328578949)
-                                    (1.0, 5.5328578949)
-                                    (1.0, 5.5328578949)
-                                    (0.9782608695652174, 5.5328578949)
-                                    (1.0, 5.84498286247)
-                                    (1.0, 5.84498286247)
-                                    (1.0, 5.84498286247)
-                                    (1.0, 5.84498286247)
-                                    (0.9990338164251208, 5.84498286247)
-                                    (0.9371980676328503, 5.84498286247)
-                                    (1.0, 5.84498286247)
-                                    (1.0, 5.84498286247)
-                                    (0.9888888888888889, 5.84498286247)
-                            };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Build time (s) tradeoff - down and to the right is better }
@@ -1625,7 +1383,7 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
@@ -1663,32 +1421,6 @@
                                                                     { x: 1.0 , y: 59216, label: "b'FaissIVF(n_list=5, n_probe=50)'" },
                                                                     { x: 0.7888888888888889 , y: 59216, label: "b'FaissIVF(n_list=5, n_probe=1)'" },
                                                                     { x: 1.0 , y: 59216, label: "b'FaissIVF(n_list=5, n_probe=200)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 30052, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 30052, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 30052, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.8975845410628019 , y: 30052, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 30052, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9985507246376811 , y: 30052, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 30052, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 30052, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9782608695652174 , y: 30052, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 30112, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 30112, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 30112, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 30112, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9990338164251208 , y: 30112, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9371980676328503 , y: 30112, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 30112, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 30112, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9888888888888889 , y: 30112, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
                                                             ]
                         },
                                                 ]},
@@ -1811,28 +1543,7 @@
                                     (0.7888888888888889, 59216)
                                     (1.0, 59216)
                             };
-            \addlegendentry{ faiss-ivf };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 30052)
-                                    (1.0, 30052)
-                                    (1.0, 30052)
-                                    (0.8975845410628019, 30052)
-                                    (1.0, 30052)
-                                    (0.9985507246376811, 30052)
-                                    (1.0, 30052)
-                                    (1.0, 30052)
-                                    (0.9782608695652174, 30052)
-                                    (1.0, 30112)
-                                    (1.0, 30112)
-                                    (1.0, 30112)
-                                    (1.0, 30112)
-                                    (0.9990338164251208, 30112)
-                                    (0.9371980676328503, 30112)
-                                    (1.0, 30112)
-                                    (1.0, 30112)
-                                    (0.9888888888888889, 30112)
-                            };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB) tradeoff - down and to the right is better }
@@ -1850,7 +1561,7 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
@@ -1888,32 +1599,6 @@
                                                                     { x: 1.0 , y: 243.271235005, label: "b'FaissIVF(n_list=5, n_probe=8)'" },
                                                                     { x: 1.0 , y: 237.36332609, label: "b'FaissIVF(n_list=5, n_probe=50)'" },
                                                                     { x: 1.0 , y: 214.830926297, label: "b'FaissIVF(n_list=5, n_probe=20)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 1.00372321333 , y: 2851.45945094, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0018269872 , y: 2133.46732424, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.00053930123 , y: 1750.62189334, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.00028458582 , y: 1340.22973843, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.00004388616 , y: 1068.1168626, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.00000944408 , y: 846.301713617, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 693.949412131, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 546.221291673, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 534.250349513, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 460.064545256, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 373.276155787, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 352.058196469, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 265.47177527, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 250.730899052, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 210.364178572, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 200.182084297, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 169.618693006, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 165.064025503, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
                                                             ]
                         },
                                                 ]},
@@ -2036,28 +1721,7 @@
                                     (1.0, 237.36332609)
                                     (1.0, 214.830926297)
                             };
-            \addlegendentry{ faiss-ivf };
-                                \addplot [only marks] coordinates {
-                                                (1.00372321333, 2851.45945094)
-                                    (1.0018269872, 2133.46732424)
-                                    (1.00053930123, 1750.62189334)
-                                    (1.00028458582, 1340.22973843)
-                                    (1.00004388616, 1068.1168626)
-                                    (1.00000944408, 846.301713617)
-                                    (1.0, 693.949412131)
-                                    (1.0, 546.221291673)
-                                    (1.0, 534.250349513)
-                                    (1.0, 460.064545256)
-                                    (1.0, 373.276155787)
-                                    (1.0, 352.058196469)
-                                    (1.0, 265.47177527)
-                                    (1.0, 250.730899052)
-                                    (1.0, 210.364178572)
-                                    (1.0, 200.182084297)
-                                    (1.0, 169.618693006)
-                                    (1.0, 165.064025503)
-                            };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Relative Error-Queries per second (1/s) tradeoff - up and to the left is better }
@@ -2075,7 +1739,7 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
@@ -2113,32 +1777,6 @@
                                                                     { x: 0.7888888888888889 , y: 10, label: "b'FaissIVF(n_list=5, n_probe=1)'" },
                                                                     { x: 1.0 , y: 10, label: "b'FaissIVF(n_list=5, n_probe=200)'" },
                                                                     { x: 0.9990338164251208 , y: 10, label: "b'FaissIVF(n_list=10, n_probe=8)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.8975845410628019 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9990338164251208 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9371980676328503 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9985507246376811 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9888888888888889 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9782608695652174 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                             ]
                         },
                                                 ]},
@@ -2261,28 +1899,7 @@
                                     (1.0, 10)
                                     (0.9990338164251208, 10)
                             };
-            \addlegendentry{ faiss-ivf };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 10)
-                                    (1.0, 10)
-                                    (1.0, 10)
-                                    (1.0, 10)
-                                    (1.0, 10)
-                                    (0.8975845410628019, 10)
-                                    (1.0, 10)
-                                    (1.0, 10)
-                                    (0.9990338164251208, 10)
-                                    (1.0, 10)
-                                    (0.9371980676328503, 10)
-                                    (0.9985507246376811, 10)
-                                    (1.0, 10)
-                                    (1.0, 10)
-                                    (1.0, 10)
-                                    (1.0, 10)
-                                    (0.9888888888888889, 10)
-                                    (0.9782608695652174, 10)
-                            };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Candidates generated tradeoff - down and to the right is better }
@@ -2300,7 +1917,7 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
@@ -2338,32 +1955,6 @@
                                                                     { x: 1.0 , y: 243.415543966, label: "b'FaissIVF(n_list=5, n_probe=8)'" },
                                                                     { x: 1.0 , y: 249.474090945, label: "b'FaissIVF(n_list=5, n_probe=50)'" },
                                                                     { x: 1.0 , y: 275.640016178, label: "b'FaissIVF(n_list=5, n_probe=20)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 0.8975845410628019 , y: 10.5391644234, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9371980676328503 , y: 14.1141135174, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9782608695652174 , y: 17.1664710206, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9888888888888889 , y: 22.4677897651, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9985507246376811 , y: 28.135498139, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9990338164251208 , y: 35.5806912777, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 43.3057503539, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 55.1278400513, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 56.2507821051, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 65.4516856613, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 80.5087588213, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 85.5313135783, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 113.202241441, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 120.096885202, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 142.85702159, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 150.423051622, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 177.173868442, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 182.426182254, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
                                                             ]
                         },
                                                 ]},
@@ -2486,28 +2077,7 @@
                                     (1.0, 249.474090945)
                                     (1.0, 275.640016178)
                             };
-            \addlegendentry{ faiss-ivf };
-                                \addplot [only marks] coordinates {
-                                                (0.8975845410628019, 10.5391644234)
-                                    (0.9371980676328503, 14.1141135174)
-                                    (0.9782608695652174, 17.1664710206)
-                                    (0.9888888888888889, 22.4677897651)
-                                    (0.9985507246376811, 28.135498139)
-                                    (0.9990338164251208, 35.5806912777)
-                                    (1.0, 43.3057503539)
-                                    (1.0, 55.1278400513)
-                                    (1.0, 56.2507821051)
-                                    (1.0, 65.4516856613)
-                                    (1.0, 80.5087588213)
-                                    (1.0, 85.5313135783)
-                                    (1.0, 113.202241441)
-                                    (1.0, 120.096885202)
-                                    (1.0, 142.85702159)
-                                    (1.0, 150.423051622)
-                                    (1.0, 177.173868442)
-                                    (1.0, 182.426182254)
-                            };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB)/Queries per second (s) tradeoff - down and to the right is better }
@@ -2525,7 +2095,7 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
@@ -2563,32 +2133,6 @@
                                                                     { x: 1.0 , y: 243.271235005, label: "b'FaissIVF(n_list=5, n_probe=8)'" },
                                                                     { x: 1.0 , y: 237.36332609, label: "b'FaissIVF(n_list=5, n_probe=50)'" },
                                                                     { x: 1.0 , y: 214.830926297, label: "b'FaissIVF(n_list=5, n_probe=20)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 0.9603864734299516 , y: 2851.45945094, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9893719806763285 , y: 2133.46732424, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 0.9980676328502416 , y: 1750.62189334, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 0.9985507246376811 , y: 1340.22973843, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 1068.1168626, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 846.301713617, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 693.949412131, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 546.221291673, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 534.250349513, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 460.064545256, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 373.276155787, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 352.058196469, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 265.47177527, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 250.730899052, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 210.364178572, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 200.182084297, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 169.618693006, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 165.064025503, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
                                                             ]
                         },
                                                 ]},
@@ -2711,28 +2255,7 @@
                                     (1.0, 237.36332609)
                                     (1.0, 214.830926297)
                             };
-            \addlegendentry{ faiss-ivf };
-                                \addplot [only marks] coordinates {
-                                                (0.9603864734299516, 2851.45945094)
-                                    (0.9893719806763285, 2133.46732424)
-                                    (0.9980676328502416, 1750.62189334)
-                                    (0.9985507246376811, 1340.22973843)
-                                    (1.0, 1068.1168626)
-                                    (1.0, 846.301713617)
-                                    (1.0, 693.949412131)
-                                    (1.0, 546.221291673)
-                                    (1.0, 534.250349513)
-                                    (1.0, 460.064545256)
-                                    (1.0, 373.276155787)
-                                    (1.0, 352.058196469)
-                                    (1.0, 265.47177527)
-                                    (1.0, 250.730899052)
-                                    (1.0, 210.364178572)
-                                    (1.0, 200.182084297)
-                                    (1.0, 169.618693006)
-                                    (1.0, 165.064025503)
-                            };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.01 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -2750,7 +2273,7 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
@@ -2788,32 +2311,6 @@
                                                                     { x: 1.0 , y: 243.271235005, label: "b'FaissIVF(n_list=5, n_probe=8)'" },
                                                                     { x: 1.0 , y: 237.36332609, label: "b'FaissIVF(n_list=5, n_probe=50)'" },
                                                                     { x: 1.0 , y: 214.830926297, label: "b'FaissIVF(n_list=5, n_probe=20)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 2851.45945094, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 2133.46732424, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 1750.62189334, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 1340.22973843, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 1068.1168626, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 846.301713617, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 693.949412131, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 546.221291673, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 534.250349513, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 460.064545256, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 373.276155787, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 352.058196469, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 265.47177527, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 250.730899052, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 210.364178572, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 200.182084297, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
-                                                                    { x: 1.0 , y: 169.618693006, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
-                                                                    { x: 1.0 , y: 165.064025503, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
                                                             ]
                         },
                                                 ]},
@@ -2936,28 +2433,7 @@
                                     (1.0, 237.36332609)
                                     (1.0, 214.830926297)
                             };
-            \addlegendentry{ faiss-ivf };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 2851.45945094)
-                                    (1.0, 2133.46732424)
-                                    (1.0, 1750.62189334)
-                                    (1.0, 1340.22973843)
-                                    (1.0, 1068.1168626)
-                                    (1.0, 846.301713617)
-                                    (1.0, 693.949412131)
-                                    (1.0, 546.221291673)
-                                    (1.0, 534.250349513)
-                                    (1.0, 460.064545256)
-                                    (1.0, 373.276155787)
-                                    (1.0, 352.058196469)
-                                    (1.0, 265.47177527)
-                                    (1.0, 250.730899052)
-                                    (1.0, 210.364178572)
-                                    (1.0, 200.182084297)
-                                    (1.0, 169.618693006)
-                                    (1.0, 165.064025503)
-                            };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.1 Recall-Queries per second (1/s) tradeoff - up and to the right is better }

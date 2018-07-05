@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>sign-language-digits (k = 10)</title>
+        <title>hnsw(faiss)</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -47,7 +47,7 @@
             </nav>
 
                     <div class="container">
-                                <h2>Plots for sign-language-digits (k = 10)</h2>
+                                <h2>Plots for hnsw(faiss)</h2>
                                                 <h3>Recall/Queries per second (1/s)</h3>
             <div id="RecallQueries per second (1/s)">
             <canvas id="chartRecallQueries per second (1/s)" width="800" height="600"></canvas>
@@ -57,25 +57,10 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
-                            data: [
-                                                                    { x: 0.6666666666666666 , y: 2438.47349958, label: "b'FaissIVF(n_list=10, n_probe=1)'" },
-                                                                    { x: 0.8541062801932368 , y: 1283.47711321, label: "b'FaissIVF(n_list=10, n_probe=2)'" },
-                                                                    { x: 0.9410628019323671 , y: 843.165424253, label: "b'FaissIVF(n_list=10, n_probe=3)'" },
-                                                                    { x: 0.972463768115942 , y: 642.37051944, label: "b'FaissIVF(n_list=10, n_probe=4)'" },
-                                                                    { x: 0.9884057971014493 , y: 517.169733255, label: "b'FaissIVF(n_list=10, n_probe=5)'" },
-                                                                    { x: 0.9956521739130435 , y: 513.474341983, label: "b'FaissIVF(n_list=800, n_probe=50)'" },
-                                                                    { x: 1.0 , y: 413.589201781, label: "b'FaissIVF(n_list=800, n_probe=100)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
                             data: [
                                                                     { x: 0.8975845410628019 , y: 2851.45945094, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                                     { x: 0.9371980676328503 , y: 2133.46732424, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
@@ -172,16 +157,6 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.6666666666666666, 2438.47349958)
-                                    (0.8541062801932368, 1283.47711321)
-                                    (0.9410628019323671, 843.165424253)
-                                    (0.972463768115942, 642.37051944)
-                                    (0.9884057971014493, 517.169733255)
-                                    (0.9956521739130435, 513.474341983)
-                                    (1.0, 413.589201781)
-                            };
-            \addlegendentry{ faiss-ivf };
-                                \addplot coordinates {
                                                 (0.8975845410628019, 2851.45945094)
                                     (0.9371980676328503, 2133.46732424)
                                     (0.9782608695652174, 1750.62189334)
@@ -190,7 +165,7 @@
                                     (0.9990338164251208, 846.301713617)
                                     (1.0, 693.949412131)
                             };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -208,19 +183,10 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 0.214970111847, label: "b'FaissIVF(n_list=5, n_probe=10)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
                             data: [
                                                                     { x: 1.0 , y: 5.5328578949, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                             ]
@@ -311,13 +277,9 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 0.214970111847)
-                            };
-            \addlegendentry{ faiss-ivf };
-                                \addplot coordinates {
                                                 (1.0, 5.5328578949)
                             };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Build time (s) tradeoff - down and to the right is better }
@@ -335,19 +297,10 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 42164, label: "b'FaissIVF(n_list=10, n_probe=100)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
                             data: [
                                                                     { x: 1.0 , y: 30052, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                             ]
@@ -438,13 +391,9 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 42164)
-                            };
-            \addlegendentry{ faiss-ivf };
-                                \addplot coordinates {
                                                 (1.0, 30052)
                             };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB) tradeoff - down and to the right is better }
@@ -462,26 +411,10 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
-                            data: [
-                                                                    { x: 1.02326371036 , y: 2438.47349958, label: "b'FaissIVF(n_list=10, n_probe=1)'" },
-                                                                    { x: 1.00792143811 , y: 1283.47711321, label: "b'FaissIVF(n_list=10, n_probe=2)'" },
-                                                                    { x: 1.00233624133 , y: 843.165424253, label: "b'FaissIVF(n_list=10, n_probe=3)'" },
-                                                                    { x: 1.00169361717 , y: 655.492107784, label: "b'FaissIVF(n_list=800, n_probe=20)'" },
-                                                                    { x: 1.00095750067 , y: 642.37051944, label: "b'FaissIVF(n_list=10, n_probe=4)'" },
-                                                                    { x: 1.00041310708 , y: 517.169733255, label: "b'FaissIVF(n_list=10, n_probe=5)'" },
-                                                                    { x: 1.00009101056 , y: 513.474341983, label: "b'FaissIVF(n_list=800, n_probe=50)'" },
-                                                                    { x: 1.0 , y: 413.589201781, label: "b'FaissIVF(n_list=800, n_probe=100)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
                             data: [
                                                                     { x: 1.00372321333 , y: 2851.45945094, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                                     { x: 1.0018269872 , y: 2133.46732424, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
@@ -578,17 +511,6 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.02326371036, 2438.47349958)
-                                    (1.00792143811, 1283.47711321)
-                                    (1.00233624133, 843.165424253)
-                                    (1.00169361717, 655.492107784)
-                                    (1.00095750067, 642.37051944)
-                                    (1.00041310708, 517.169733255)
-                                    (1.00009101056, 513.474341983)
-                                    (1.0, 413.589201781)
-                            };
-            \addlegendentry{ faiss-ivf };
-                                \addplot coordinates {
                                                 (1.00372321333, 2851.45945094)
                                     (1.0018269872, 2133.46732424)
                                     (1.00053930123, 1750.62189334)
@@ -597,7 +519,7 @@
                                     (1.00000944408, 846.301713617)
                                     (1.0, 693.949412131)
                             };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Relative Error-Queries per second (1/s) tradeoff - up and to the left is better }
@@ -615,20 +537,10 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
-                            data: [
-                                                                    { x: 0.5550724637681159 , y: 10, label: "b'FaissIVF(n_list=800, n_probe=4)'" },
-                                                                    { x: 1.0 , y: 10, label: "b'FaissIVF(n_list=10, n_probe=100)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
                             data: [
                                                                     { x: 1.0 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                             ]
@@ -719,14 +631,9 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.5550724637681159, 10)
-                                    (1.0, 10)
-                            };
-            \addlegendentry{ faiss-ivf };
-                                \addplot coordinates {
                                                 (1.0, 10)
                             };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Candidates generated tradeoff - down and to the right is better }
@@ -744,25 +651,10 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
-                            data: [
-                                                                    { x: 0.6666666666666666 , y: 17.2911454675, label: "b'FaissIVF(n_list=10, n_probe=1)'" },
-                                                                    { x: 0.8541062801932368 , y: 32.8513843887, label: "b'FaissIVF(n_list=10, n_probe=2)'" },
-                                                                    { x: 0.9410628019323671 , y: 50.0067943813, label: "b'FaissIVF(n_list=10, n_probe=3)'" },
-                                                                    { x: 0.972463768115942 , y: 65.6381305243, label: "b'FaissIVF(n_list=10, n_probe=4)'" },
-                                                                    { x: 0.9884057971014493 , y: 81.5283596251, label: "b'FaissIVF(n_list=10, n_probe=5)'" },
-                                                                    { x: 0.9956521739130435 , y: 94.5168940917, label: "b'FaissIVF(n_list=800, n_probe=50)'" },
-                                                                    { x: 1.0 , y: 117.343489122, label: "b'FaissIVF(n_list=800, n_probe=100)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
                             data: [
                                                                     { x: 0.8975845410628019 , y: 10.5391644234, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                                     { x: 0.9371980676328503 , y: 14.1141135174, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
@@ -859,16 +751,6 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.6666666666666666, 17.2911454675)
-                                    (0.8541062801932368, 32.8513843887)
-                                    (0.9410628019323671, 50.0067943813)
-                                    (0.972463768115942, 65.6381305243)
-                                    (0.9884057971014493, 81.5283596251)
-                                    (0.9956521739130435, 94.5168940917)
-                                    (1.0, 117.343489122)
-                            };
-            \addlegendentry{ faiss-ivf };
-                                \addplot coordinates {
                                                 (0.8975845410628019, 10.5391644234)
                                     (0.9371980676328503, 14.1141135174)
                                     (0.9782608695652174, 17.1664710206)
@@ -877,7 +759,7 @@
                                     (0.9990338164251208, 35.5806912777)
                                     (1.0, 43.3057503539)
                             };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB)/Queries per second (s) tradeoff - down and to the right is better }
@@ -895,26 +777,10 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
-                            data: [
-                                                                    { x: 0.7555555555555555 , y: 2438.47349958, label: "b'FaissIVF(n_list=10, n_probe=1)'" },
-                                                                    { x: 0.9270531400966183 , y: 1283.47711321, label: "b'FaissIVF(n_list=10, n_probe=2)'" },
-                                                                    { x: 0.9830917874396136 , y: 843.165424253, label: "b'FaissIVF(n_list=10, n_probe=3)'" },
-                                                                    { x: 0.985024154589372 , y: 655.492107784, label: "b'FaissIVF(n_list=800, n_probe=20)'" },
-                                                                    { x: 0.993719806763285 , y: 642.37051944, label: "b'FaissIVF(n_list=10, n_probe=4)'" },
-                                                                    { x: 0.9971014492753624 , y: 517.169733255, label: "b'FaissIVF(n_list=10, n_probe=5)'" },
-                                                                    { x: 0.9995169082125603 , y: 513.474341983, label: "b'FaissIVF(n_list=800, n_probe=50)'" },
-                                                                    { x: 1.0 , y: 413.589201781, label: "b'FaissIVF(n_list=800, n_probe=100)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
                             data: [
                                                                     { x: 0.9603864734299516 , y: 2851.45945094, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                                     { x: 0.9893719806763285 , y: 2133.46732424, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
@@ -1009,24 +875,13 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.7555555555555555, 2438.47349958)
-                                    (0.9270531400966183, 1283.47711321)
-                                    (0.9830917874396136, 843.165424253)
-                                    (0.985024154589372, 655.492107784)
-                                    (0.993719806763285, 642.37051944)
-                                    (0.9971014492753624, 517.169733255)
-                                    (0.9995169082125603, 513.474341983)
-                                    (1.0, 413.589201781)
-                            };
-            \addlegendentry{ faiss-ivf };
-                                \addplot coordinates {
                                                 (0.9603864734299516, 2851.45945094)
                                     (0.9893719806763285, 2133.46732424)
                                     (0.9980676328502416, 1750.62189334)
                                     (0.9985507246376811, 1340.22973843)
                                     (1.0, 1068.1168626)
                             };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.01 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1044,20 +899,10 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
-                            data: [
-                                                                    { x: 0.9966183574879227 , y: 2438.47349958, label: "b'FaissIVF(n_list=10, n_probe=1)'" },
-                                                                    { x: 1.0 , y: 1283.47711321, label: "b'FaissIVF(n_list=10, n_probe=2)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
                             data: [
                                                                     { x: 1.0 , y: 2851.45945094, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                             ]
@@ -1148,14 +993,9 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.9966183574879227, 2438.47349958)
-                                    (1.0, 1283.47711321)
-                            };
-            \addlegendentry{ faiss-ivf };
-                                \addplot coordinates {
                                                 (1.0, 2851.45945094)
                             };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.1 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1165,7 +1005,7 @@
                 </div>
             
                         <hr />
-                                <h2>Scatterplots for sign-language-digits (k = 10)</h2>
+                                <h2>Scatterplots for hnsw(faiss)</h2>
                                                 <h3>Recall/Queries per second (1/s)</h3>
             <div id="RecallQueries per second (1/s)Scatterplot ">
             <canvas id="chartRecallQueries per second (1/s)Scatterplot " width="800" height="600"></canvas>
@@ -1175,51 +1015,10 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
-                            data: [
-                                                                    { x: 0.6666666666666666 , y: 2438.47349958, label: "b'FaissIVF(n_list=10, n_probe=1)'" },
-                                                                    { x: 0.8541062801932368 , y: 1283.47711321, label: "b'FaissIVF(n_list=10, n_probe=2)'" },
-                                                                    { x: 0.7888888888888889 , y: 1030.74706347, label: "b'FaissIVF(n_list=5, n_probe=1)'" },
-                                                                    { x: 0.9410628019323671 , y: 843.165424253, label: "b'FaissIVF(n_list=10, n_probe=3)'" },
-                                                                    { x: 0.5550724637681159 , y: 792.065421823, label: "b'FaissIVF(n_list=800, n_probe=4)'" },
-                                                                    { x: 0.6169082125603865 , y: 769.231591426, label: "b'FaissIVF(n_list=800, n_probe=5)'" },
-                                                                    { x: 0.47342995169082125 , y: 753.331801601, label: "b'FaissIVF(n_list=800, n_probe=3)'" },
-                                                                    { x: 0.7425120772946859 , y: 746.014758397, label: "b'FaissIVF(n_list=800, n_probe=8)'" },
-                                                                    { x: 0.3647342995169082 , y: 744.474394197, label: "b'FaissIVF(n_list=800, n_probe=2)'" },
-                                                                    { x: 0.7951690821256039 , y: 700.334048546, label: "b'FaissIVF(n_list=800, n_probe=10)'" },
-                                                                    { x: 0.21690821256038648 , y: 681.955117093, label: "b'FaissIVF(n_list=800, n_probe=1)'" },
-                                                                    { x: 0.9304347826086956 , y: 655.492107784, label: "b'FaissIVF(n_list=800, n_probe=20)'" },
-                                                                    { x: 0.972463768115942 , y: 642.37051944, label: "b'FaissIVF(n_list=10, n_probe=4)'" },
-                                                                    { x: 0.9884057971014493 , y: 517.169733255, label: "b'FaissIVF(n_list=10, n_probe=5)'" },
-                                                                    { x: 0.9956521739130435 , y: 513.474341983, label: "b'FaissIVF(n_list=800, n_probe=50)'" },
-                                                                    { x: 0.9555555555555556 , y: 497.288193957, label: "b'FaissIVF(n_list=5, n_probe=2)'" },
-                                                                    { x: 1.0 , y: 413.589201781, label: "b'FaissIVF(n_list=800, n_probe=100)'" },
-                                                                    { x: 0.9975845410628019 , y: 332.760449296, label: "b'FaissIVF(n_list=5, n_probe=3)'" },
-                                                                    { x: 0.9990338164251208 , y: 319.221638602, label: "b'FaissIVF(n_list=10, n_probe=8)'" },
-                                                                    { x: 1.0 , y: 314.735071017, label: "b'FaissIVF(n_list=800, n_probe=200)'" },
-                                                                    { x: 0.9990338164251208 , y: 277.919364354, label: "b'FaissIVF(n_list=5, n_probe=4)'" },
-                                                                    { x: 1.0 , y: 265.018716915, label: "b'FaissIVF(n_list=10, n_probe=20)'" },
-                                                                    { x: 1.0 , y: 261.369047089, label: "b'FaissIVF(n_list=10, n_probe=50)'" },
-                                                                    { x: 1.0 , y: 259.875736776, label: "b'FaissIVF(n_list=10, n_probe=100)'" },
-                                                                    { x: 1.0 , y: 259.785925041, label: "b'FaissIVF(n_list=5, n_probe=200)'" },
-                                                                    { x: 1.0 , y: 259.420244092, label: "b'FaissIVF(n_list=10, n_probe=10)'" },
-                                                                    { x: 1.0 , y: 258.637555699, label: "b'FaissIVF(n_list=10, n_probe=200)'" },
-                                                                    { x: 1.0 , y: 257.233572646, label: "b'FaissIVF(n_list=5, n_probe=100)'" },
-                                                                    { x: 1.0 , y: 247.03208096, label: "b'FaissIVF(n_list=5, n_probe=5)'" },
-                                                                    { x: 1.0 , y: 244.494893948, label: "b'FaissIVF(n_list=5, n_probe=10)'" },
-                                                                    { x: 1.0 , y: 243.271235005, label: "b'FaissIVF(n_list=5, n_probe=8)'" },
-                                                                    { x: 1.0 , y: 237.36332609, label: "b'FaissIVF(n_list=5, n_probe=50)'" },
-                                                                    { x: 1.0 , y: 214.830926297, label: "b'FaissIVF(n_list=5, n_probe=20)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
                             data: [
                                                                     { x: 0.8975845410628019 , y: 2851.45945094, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                                     { x: 0.9371980676328503 , y: 2133.46732424, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
@@ -1327,42 +1126,6 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.6666666666666666, 2438.47349958)
-                                    (0.8541062801932368, 1283.47711321)
-                                    (0.7888888888888889, 1030.74706347)
-                                    (0.9410628019323671, 843.165424253)
-                                    (0.5550724637681159, 792.065421823)
-                                    (0.6169082125603865, 769.231591426)
-                                    (0.47342995169082125, 753.331801601)
-                                    (0.7425120772946859, 746.014758397)
-                                    (0.3647342995169082, 744.474394197)
-                                    (0.7951690821256039, 700.334048546)
-                                    (0.21690821256038648, 681.955117093)
-                                    (0.9304347826086956, 655.492107784)
-                                    (0.972463768115942, 642.37051944)
-                                    (0.9884057971014493, 517.169733255)
-                                    (0.9956521739130435, 513.474341983)
-                                    (0.9555555555555556, 497.288193957)
-                                    (1.0, 413.589201781)
-                                    (0.9975845410628019, 332.760449296)
-                                    (0.9990338164251208, 319.221638602)
-                                    (1.0, 314.735071017)
-                                    (0.9990338164251208, 277.919364354)
-                                    (1.0, 265.018716915)
-                                    (1.0, 261.369047089)
-                                    (1.0, 259.875736776)
-                                    (1.0, 259.785925041)
-                                    (1.0, 259.420244092)
-                                    (1.0, 258.637555699)
-                                    (1.0, 257.233572646)
-                                    (1.0, 247.03208096)
-                                    (1.0, 244.494893948)
-                                    (1.0, 243.271235005)
-                                    (1.0, 237.36332609)
-                                    (1.0, 214.830926297)
-                            };
-            \addlegendentry{ faiss-ivf };
-                                \addplot [only marks] coordinates {
                                                 (0.8975845410628019, 2851.45945094)
                                     (0.9371980676328503, 2133.46732424)
                                     (0.9782608695652174, 1750.62189334)
@@ -1382,7 +1145,7 @@
                                     (1.0, 169.618693006)
                                     (1.0, 165.064025503)
                             };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1400,51 +1163,10 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 0.214970111847, label: "b'FaissIVF(n_list=5, n_probe=10)'" },
-                                                                    { x: 1.0 , y: 0.214970111847, label: "b'FaissIVF(n_list=5, n_probe=5)'" },
-                                                                    { x: 1.0 , y: 0.214970111847, label: "b'FaissIVF(n_list=5, n_probe=20)'" },
-                                                                    { x: 1.0 , y: 0.214970111847, label: "b'FaissIVF(n_list=5, n_probe=8)'" },
-                                                                    { x: 0.9555555555555556 , y: 0.214970111847, label: "b'FaissIVF(n_list=5, n_probe=2)'" },
-                                                                    { x: 0.9990338164251208 , y: 0.214970111847, label: "b'FaissIVF(n_list=5, n_probe=4)'" },
-                                                                    { x: 1.0 , y: 0.214970111847, label: "b'FaissIVF(n_list=5, n_probe=100)'" },
-                                                                    { x: 0.9975845410628019 , y: 0.214970111847, label: "b'FaissIVF(n_list=5, n_probe=3)'" },
-                                                                    { x: 1.0 , y: 0.214970111847, label: "b'FaissIVF(n_list=5, n_probe=50)'" },
-                                                                    { x: 0.7888888888888889 , y: 0.214970111847, label: "b'FaissIVF(n_list=5, n_probe=1)'" },
-                                                                    { x: 1.0 , y: 0.214970111847, label: "b'FaissIVF(n_list=5, n_probe=200)'" },
-                                                                    { x: 1.0 , y: 0.330291986465, label: "b'FaissIVF(n_list=10, n_probe=100)'" },
-                                                                    { x: 1.0 , y: 0.330291986465, label: "b'FaissIVF(n_list=10, n_probe=20)'" },
-                                                                    { x: 0.9884057971014493 , y: 0.330291986465, label: "b'FaissIVF(n_list=10, n_probe=5)'" },
-                                                                    { x: 0.9410628019323671 , y: 0.330291986465, label: "b'FaissIVF(n_list=10, n_probe=3)'" },
-                                                                    { x: 1.0 , y: 0.330291986465, label: "b'FaissIVF(n_list=10, n_probe=50)'" },
-                                                                    { x: 0.6666666666666666 , y: 0.330291986465, label: "b'FaissIVF(n_list=10, n_probe=1)'" },
-                                                                    { x: 0.972463768115942 , y: 0.330291986465, label: "b'FaissIVF(n_list=10, n_probe=4)'" },
-                                                                    { x: 1.0 , y: 0.330291986465, label: "b'FaissIVF(n_list=10, n_probe=10)'" },
-                                                                    { x: 0.8541062801932368 , y: 0.330291986465, label: "b'FaissIVF(n_list=10, n_probe=2)'" },
-                                                                    { x: 1.0 , y: 0.330291986465, label: "b'FaissIVF(n_list=10, n_probe=200)'" },
-                                                                    { x: 0.9990338164251208 , y: 0.330291986465, label: "b'FaissIVF(n_list=10, n_probe=8)'" },
-                                                                    { x: 0.5550724637681159 , y: 4.14169812202, label: "b'FaissIVF(n_list=800, n_probe=4)'" },
-                                                                    { x: 1.0 , y: 4.14169812202, label: "b'FaissIVF(n_list=800, n_probe=100)'" },
-                                                                    { x: 0.7951690821256039 , y: 4.14169812202, label: "b'FaissIVF(n_list=800, n_probe=10)'" },
-                                                                    { x: 0.6169082125603865 , y: 4.14169812202, label: "b'FaissIVF(n_list=800, n_probe=5)'" },
-                                                                    { x: 0.3647342995169082 , y: 4.14169812202, label: "b'FaissIVF(n_list=800, n_probe=2)'" },
-                                                                    { x: 0.7425120772946859 , y: 4.14169812202, label: "b'FaissIVF(n_list=800, n_probe=8)'" },
-                                                                    { x: 0.21690821256038648 , y: 4.14169812202, label: "b'FaissIVF(n_list=800, n_probe=1)'" },
-                                                                    { x: 0.9304347826086956 , y: 4.14169812202, label: "b'FaissIVF(n_list=800, n_probe=20)'" },
-                                                                    { x: 0.9956521739130435 , y: 4.14169812202, label: "b'FaissIVF(n_list=800, n_probe=50)'" },
-                                                                    { x: 0.47342995169082125 , y: 4.14169812202, label: "b'FaissIVF(n_list=800, n_probe=3)'" },
-                                                                    { x: 1.0 , y: 4.14169812202, label: "b'FaissIVF(n_list=800, n_probe=200)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
                             data: [
                                                                     { x: 1.0 , y: 5.5328578949, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                                     { x: 1.0 , y: 5.5328578949, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
@@ -1552,42 +1274,6 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 0.214970111847)
-                                    (1.0, 0.214970111847)
-                                    (1.0, 0.214970111847)
-                                    (1.0, 0.214970111847)
-                                    (0.9555555555555556, 0.214970111847)
-                                    (0.9990338164251208, 0.214970111847)
-                                    (1.0, 0.214970111847)
-                                    (0.9975845410628019, 0.214970111847)
-                                    (1.0, 0.214970111847)
-                                    (0.7888888888888889, 0.214970111847)
-                                    (1.0, 0.214970111847)
-                                    (1.0, 0.330291986465)
-                                    (1.0, 0.330291986465)
-                                    (0.9884057971014493, 0.330291986465)
-                                    (0.9410628019323671, 0.330291986465)
-                                    (1.0, 0.330291986465)
-                                    (0.6666666666666666, 0.330291986465)
-                                    (0.972463768115942, 0.330291986465)
-                                    (1.0, 0.330291986465)
-                                    (0.8541062801932368, 0.330291986465)
-                                    (1.0, 0.330291986465)
-                                    (0.9990338164251208, 0.330291986465)
-                                    (0.5550724637681159, 4.14169812202)
-                                    (1.0, 4.14169812202)
-                                    (0.7951690821256039, 4.14169812202)
-                                    (0.6169082125603865, 4.14169812202)
-                                    (0.3647342995169082, 4.14169812202)
-                                    (0.7425120772946859, 4.14169812202)
-                                    (0.21690821256038648, 4.14169812202)
-                                    (0.9304347826086956, 4.14169812202)
-                                    (0.9956521739130435, 4.14169812202)
-                                    (0.47342995169082125, 4.14169812202)
-                                    (1.0, 4.14169812202)
-                            };
-            \addlegendentry{ faiss-ivf };
-                                \addplot [only marks] coordinates {
                                                 (1.0, 5.5328578949)
                                     (1.0, 5.5328578949)
                                     (1.0, 5.5328578949)
@@ -1607,7 +1293,7 @@
                                     (1.0, 5.84498286247)
                                     (0.9888888888888889, 5.84498286247)
                             };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Build time (s) tradeoff - down and to the right is better }
@@ -1625,51 +1311,10 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 42164, label: "b'FaissIVF(n_list=10, n_probe=100)'" },
-                                                                    { x: 1.0 , y: 42164, label: "b'FaissIVF(n_list=10, n_probe=20)'" },
-                                                                    { x: 0.9884057971014493 , y: 42164, label: "b'FaissIVF(n_list=10, n_probe=5)'" },
-                                                                    { x: 0.9410628019323671 , y: 42164, label: "b'FaissIVF(n_list=10, n_probe=3)'" },
-                                                                    { x: 1.0 , y: 42164, label: "b'FaissIVF(n_list=10, n_probe=50)'" },
-                                                                    { x: 0.6666666666666666 , y: 42164, label: "b'FaissIVF(n_list=10, n_probe=1)'" },
-                                                                    { x: 0.972463768115942 , y: 42164, label: "b'FaissIVF(n_list=10, n_probe=4)'" },
-                                                                    { x: 1.0 , y: 42164, label: "b'FaissIVF(n_list=10, n_probe=10)'" },
-                                                                    { x: 0.8541062801932368 , y: 42164, label: "b'FaissIVF(n_list=10, n_probe=2)'" },
-                                                                    { x: 1.0 , y: 42164, label: "b'FaissIVF(n_list=10, n_probe=200)'" },
-                                                                    { x: 0.9990338164251208 , y: 42164, label: "b'FaissIVF(n_list=10, n_probe=8)'" },
-                                                                    { x: 0.5550724637681159 , y: 48532, label: "b'FaissIVF(n_list=800, n_probe=4)'" },
-                                                                    { x: 1.0 , y: 48532, label: "b'FaissIVF(n_list=800, n_probe=100)'" },
-                                                                    { x: 0.7951690821256039 , y: 48532, label: "b'FaissIVF(n_list=800, n_probe=10)'" },
-                                                                    { x: 0.6169082125603865 , y: 48532, label: "b'FaissIVF(n_list=800, n_probe=5)'" },
-                                                                    { x: 0.3647342995169082 , y: 48532, label: "b'FaissIVF(n_list=800, n_probe=2)'" },
-                                                                    { x: 0.7425120772946859 , y: 48532, label: "b'FaissIVF(n_list=800, n_probe=8)'" },
-                                                                    { x: 0.21690821256038648 , y: 48532, label: "b'FaissIVF(n_list=800, n_probe=1)'" },
-                                                                    { x: 0.9304347826086956 , y: 48532, label: "b'FaissIVF(n_list=800, n_probe=20)'" },
-                                                                    { x: 0.9956521739130435 , y: 48532, label: "b'FaissIVF(n_list=800, n_probe=50)'" },
-                                                                    { x: 0.47342995169082125 , y: 48532, label: "b'FaissIVF(n_list=800, n_probe=3)'" },
-                                                                    { x: 1.0 , y: 48532, label: "b'FaissIVF(n_list=800, n_probe=200)'" },
-                                                                    { x: 1.0 , y: 59216, label: "b'FaissIVF(n_list=5, n_probe=10)'" },
-                                                                    { x: 1.0 , y: 59216, label: "b'FaissIVF(n_list=5, n_probe=5)'" },
-                                                                    { x: 1.0 , y: 59216, label: "b'FaissIVF(n_list=5, n_probe=20)'" },
-                                                                    { x: 1.0 , y: 59216, label: "b'FaissIVF(n_list=5, n_probe=8)'" },
-                                                                    { x: 0.9555555555555556 , y: 59216, label: "b'FaissIVF(n_list=5, n_probe=2)'" },
-                                                                    { x: 0.9990338164251208 , y: 59216, label: "b'FaissIVF(n_list=5, n_probe=4)'" },
-                                                                    { x: 1.0 , y: 59216, label: "b'FaissIVF(n_list=5, n_probe=100)'" },
-                                                                    { x: 0.9975845410628019 , y: 59216, label: "b'FaissIVF(n_list=5, n_probe=3)'" },
-                                                                    { x: 1.0 , y: 59216, label: "b'FaissIVF(n_list=5, n_probe=50)'" },
-                                                                    { x: 0.7888888888888889 , y: 59216, label: "b'FaissIVF(n_list=5, n_probe=1)'" },
-                                                                    { x: 1.0 , y: 59216, label: "b'FaissIVF(n_list=5, n_probe=200)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
                             data: [
                                                                     { x: 1.0 , y: 30052, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                                     { x: 1.0 , y: 30052, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
@@ -1777,42 +1422,6 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 42164)
-                                    (1.0, 42164)
-                                    (0.9884057971014493, 42164)
-                                    (0.9410628019323671, 42164)
-                                    (1.0, 42164)
-                                    (0.6666666666666666, 42164)
-                                    (0.972463768115942, 42164)
-                                    (1.0, 42164)
-                                    (0.8541062801932368, 42164)
-                                    (1.0, 42164)
-                                    (0.9990338164251208, 42164)
-                                    (0.5550724637681159, 48532)
-                                    (1.0, 48532)
-                                    (0.7951690821256039, 48532)
-                                    (0.6169082125603865, 48532)
-                                    (0.3647342995169082, 48532)
-                                    (0.7425120772946859, 48532)
-                                    (0.21690821256038648, 48532)
-                                    (0.9304347826086956, 48532)
-                                    (0.9956521739130435, 48532)
-                                    (0.47342995169082125, 48532)
-                                    (1.0, 48532)
-                                    (1.0, 59216)
-                                    (1.0, 59216)
-                                    (1.0, 59216)
-                                    (1.0, 59216)
-                                    (0.9555555555555556, 59216)
-                                    (0.9990338164251208, 59216)
-                                    (1.0, 59216)
-                                    (0.9975845410628019, 59216)
-                                    (1.0, 59216)
-                                    (0.7888888888888889, 59216)
-                                    (1.0, 59216)
-                            };
-            \addlegendentry{ faiss-ivf };
-                                \addplot [only marks] coordinates {
                                                 (1.0, 30052)
                                     (1.0, 30052)
                                     (1.0, 30052)
@@ -1832,7 +1441,7 @@
                                     (1.0, 30112)
                                     (0.9888888888888889, 30112)
                             };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB) tradeoff - down and to the right is better }
@@ -1850,51 +1459,10 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
-                            data: [
-                                                                    { x: 1.02326371036 , y: 2438.47349958, label: "b'FaissIVF(n_list=10, n_probe=1)'" },
-                                                                    { x: 1.00792143811 , y: 1283.47711321, label: "b'FaissIVF(n_list=10, n_probe=2)'" },
-                                                                    { x: 1.01417313628 , y: 1030.74706347, label: "b'FaissIVF(n_list=5, n_probe=1)'" },
-                                                                    { x: 1.00233624133 , y: 843.165424253, label: "b'FaissIVF(n_list=10, n_probe=3)'" },
-                                                                    { x: 1.03227738121 , y: 792.065421823, label: "b'FaissIVF(n_list=800, n_probe=4)'" },
-                                                                    { x: 1.02227542741 , y: 769.231591426, label: "b'FaissIVF(n_list=800, n_probe=5)'" },
-                                                                    { x: 1.05844314361 , y: 753.331801601, label: "b'FaissIVF(n_list=800, n_probe=3)'" },
-                                                                    { x: 1.01076520114 , y: 746.014758397, label: "b'FaissIVF(n_list=800, n_probe=8)'" },
-                                                                    { x: 1.13082284632 , y: 744.474394197, label: "b'FaissIVF(n_list=800, n_probe=2)'" },
-                                                                    { x: 1.0074740665 , y: 700.334048546, label: "b'FaissIVF(n_list=800, n_probe=10)'" },
-                                                                    { x: 1.27177792023 , y: 681.955117093, label: "b'FaissIVF(n_list=800, n_probe=1)'" },
-                                                                    { x: 1.00169361717 , y: 655.492107784, label: "b'FaissIVF(n_list=800, n_probe=20)'" },
-                                                                    { x: 1.00095750067 , y: 642.37051944, label: "b'FaissIVF(n_list=10, n_probe=4)'" },
-                                                                    { x: 1.00041310708 , y: 517.169733255, label: "b'FaissIVF(n_list=10, n_probe=5)'" },
-                                                                    { x: 1.00009101056 , y: 513.474341983, label: "b'FaissIVF(n_list=800, n_probe=50)'" },
-                                                                    { x: 1.00251491742 , y: 497.288193957, label: "b'FaissIVF(n_list=5, n_probe=2)'" },
-                                                                    { x: 1.0 , y: 413.589201781, label: "b'FaissIVF(n_list=800, n_probe=100)'" },
-                                                                    { x: 1.00012459942 , y: 332.760449296, label: "b'FaissIVF(n_list=5, n_probe=3)'" },
-                                                                    { x: 1.00007672404 , y: 319.221638602, label: "b'FaissIVF(n_list=10, n_probe=8)'" },
-                                                                    { x: 1.0 , y: 314.735071017, label: "b'FaissIVF(n_list=800, n_probe=200)'" },
-                                                                    { x: 1.00007672404 , y: 277.919364354, label: "b'FaissIVF(n_list=5, n_probe=4)'" },
-                                                                    { x: 1.0 , y: 265.018716915, label: "b'FaissIVF(n_list=10, n_probe=20)'" },
-                                                                    { x: 1.0 , y: 261.369047089, label: "b'FaissIVF(n_list=10, n_probe=50)'" },
-                                                                    { x: 1.0 , y: 259.875736776, label: "b'FaissIVF(n_list=10, n_probe=100)'" },
-                                                                    { x: 1.0 , y: 259.785925041, label: "b'FaissIVF(n_list=5, n_probe=200)'" },
-                                                                    { x: 1.0 , y: 259.420244092, label: "b'FaissIVF(n_list=10, n_probe=10)'" },
-                                                                    { x: 1.0 , y: 258.637555699, label: "b'FaissIVF(n_list=10, n_probe=200)'" },
-                                                                    { x: 1.0 , y: 257.233572646, label: "b'FaissIVF(n_list=5, n_probe=100)'" },
-                                                                    { x: 1.0 , y: 247.03208096, label: "b'FaissIVF(n_list=5, n_probe=5)'" },
-                                                                    { x: 1.0 , y: 244.494893948, label: "b'FaissIVF(n_list=5, n_probe=10)'" },
-                                                                    { x: 1.0 , y: 243.271235005, label: "b'FaissIVF(n_list=5, n_probe=8)'" },
-                                                                    { x: 1.0 , y: 237.36332609, label: "b'FaissIVF(n_list=5, n_probe=50)'" },
-                                                                    { x: 1.0 , y: 214.830926297, label: "b'FaissIVF(n_list=5, n_probe=20)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
                             data: [
                                                                     { x: 1.00372321333 , y: 2851.45945094, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                                     { x: 1.0018269872 , y: 2133.46732424, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
@@ -2002,42 +1570,6 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.02326371036, 2438.47349958)
-                                    (1.00792143811, 1283.47711321)
-                                    (1.01417313628, 1030.74706347)
-                                    (1.00233624133, 843.165424253)
-                                    (1.03227738121, 792.065421823)
-                                    (1.02227542741, 769.231591426)
-                                    (1.05844314361, 753.331801601)
-                                    (1.01076520114, 746.014758397)
-                                    (1.13082284632, 744.474394197)
-                                    (1.0074740665, 700.334048546)
-                                    (1.27177792023, 681.955117093)
-                                    (1.00169361717, 655.492107784)
-                                    (1.00095750067, 642.37051944)
-                                    (1.00041310708, 517.169733255)
-                                    (1.00009101056, 513.474341983)
-                                    (1.00251491742, 497.288193957)
-                                    (1.0, 413.589201781)
-                                    (1.00012459942, 332.760449296)
-                                    (1.00007672404, 319.221638602)
-                                    (1.0, 314.735071017)
-                                    (1.00007672404, 277.919364354)
-                                    (1.0, 265.018716915)
-                                    (1.0, 261.369047089)
-                                    (1.0, 259.875736776)
-                                    (1.0, 259.785925041)
-                                    (1.0, 259.420244092)
-                                    (1.0, 258.637555699)
-                                    (1.0, 257.233572646)
-                                    (1.0, 247.03208096)
-                                    (1.0, 244.494893948)
-                                    (1.0, 243.271235005)
-                                    (1.0, 237.36332609)
-                                    (1.0, 214.830926297)
-                            };
-            \addlegendentry{ faiss-ivf };
-                                \addplot [only marks] coordinates {
                                                 (1.00372321333, 2851.45945094)
                                     (1.0018269872, 2133.46732424)
                                     (1.00053930123, 1750.62189334)
@@ -2057,7 +1589,7 @@
                                     (1.0, 169.618693006)
                                     (1.0, 165.064025503)
                             };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Relative Error-Queries per second (1/s) tradeoff - up and to the left is better }
@@ -2075,51 +1607,10 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
-                            data: [
-                                                                    { x: 0.5550724637681159 , y: 10, label: "b'FaissIVF(n_list=800, n_probe=4)'" },
-                                                                    { x: 1.0 , y: 10, label: "b'FaissIVF(n_list=10, n_probe=100)'" },
-                                                                    { x: 1.0 , y: 10, label: "b'FaissIVF(n_list=800, n_probe=100)'" },
-                                                                    { x: 1.0 , y: 10, label: "b'FaissIVF(n_list=10, n_probe=20)'" },
-                                                                    { x: 0.7951690821256039 , y: 10, label: "b'FaissIVF(n_list=800, n_probe=10)'" },
-                                                                    { x: 1.0 , y: 10, label: "b'FaissIVF(n_list=5, n_probe=10)'" },
-                                                                    { x: 1.0 , y: 10, label: "b'FaissIVF(n_list=5, n_probe=5)'" },
-                                                                    { x: 0.9884057971014493 , y: 10, label: "b'FaissIVF(n_list=10, n_probe=5)'" },
-                                                                    { x: 0.9410628019323671 , y: 10, label: "b'FaissIVF(n_list=10, n_probe=3)'" },
-                                                                    { x: 0.6169082125603865 , y: 10, label: "b'FaissIVF(n_list=800, n_probe=5)'" },
-                                                                    { x: 0.3647342995169082 , y: 10, label: "b'FaissIVF(n_list=800, n_probe=2)'" },
-                                                                    { x: 0.7425120772946859 , y: 10, label: "b'FaissIVF(n_list=800, n_probe=8)'" },
-                                                                    { x: 1.0 , y: 10, label: "b'FaissIVF(n_list=5, n_probe=20)'" },
-                                                                    { x: 1.0 , y: 10, label: "b'FaissIVF(n_list=10, n_probe=50)'" },
-                                                                    { x: 1.0 , y: 10, label: "b'FaissIVF(n_list=5, n_probe=8)'" },
-                                                                    { x: 0.21690821256038648 , y: 10, label: "b'FaissIVF(n_list=800, n_probe=1)'" },
-                                                                    { x: 0.9555555555555556 , y: 10, label: "b'FaissIVF(n_list=5, n_probe=2)'" },
-                                                                    { x: 0.9990338164251208 , y: 10, label: "b'FaissIVF(n_list=5, n_probe=4)'" },
-                                                                    { x: 0.6666666666666666 , y: 10, label: "b'FaissIVF(n_list=10, n_probe=1)'" },
-                                                                    { x: 1.0 , y: 10, label: "b'FaissIVF(n_list=5, n_probe=100)'" },
-                                                                    { x: 0.972463768115942 , y: 10, label: "b'FaissIVF(n_list=10, n_probe=4)'" },
-                                                                    { x: 0.9304347826086956 , y: 10, label: "b'FaissIVF(n_list=800, n_probe=20)'" },
-                                                                    { x: 1.0 , y: 10, label: "b'FaissIVF(n_list=10, n_probe=10)'" },
-                                                                    { x: 0.9975845410628019 , y: 10, label: "b'FaissIVF(n_list=5, n_probe=3)'" },
-                                                                    { x: 0.9956521739130435 , y: 10, label: "b'FaissIVF(n_list=800, n_probe=50)'" },
-                                                                    { x: 0.8541062801932368 , y: 10, label: "b'FaissIVF(n_list=10, n_probe=2)'" },
-                                                                    { x: 1.0 , y: 10, label: "b'FaissIVF(n_list=10, n_probe=200)'" },
-                                                                    { x: 0.47342995169082125 , y: 10, label: "b'FaissIVF(n_list=800, n_probe=3)'" },
-                                                                    { x: 1.0 , y: 10, label: "b'FaissIVF(n_list=800, n_probe=200)'" },
-                                                                    { x: 1.0 , y: 10, label: "b'FaissIVF(n_list=5, n_probe=50)'" },
-                                                                    { x: 0.7888888888888889 , y: 10, label: "b'FaissIVF(n_list=5, n_probe=1)'" },
-                                                                    { x: 1.0 , y: 10, label: "b'FaissIVF(n_list=5, n_probe=200)'" },
-                                                                    { x: 0.9990338164251208 , y: 10, label: "b'FaissIVF(n_list=10, n_probe=8)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
                             data: [
                                                                     { x: 1.0 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                                     { x: 1.0 , y: 10, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
@@ -2227,42 +1718,6 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.5550724637681159, 10)
-                                    (1.0, 10)
-                                    (1.0, 10)
-                                    (1.0, 10)
-                                    (0.7951690821256039, 10)
-                                    (1.0, 10)
-                                    (1.0, 10)
-                                    (0.9884057971014493, 10)
-                                    (0.9410628019323671, 10)
-                                    (0.6169082125603865, 10)
-                                    (0.3647342995169082, 10)
-                                    (0.7425120772946859, 10)
-                                    (1.0, 10)
-                                    (1.0, 10)
-                                    (1.0, 10)
-                                    (0.21690821256038648, 10)
-                                    (0.9555555555555556, 10)
-                                    (0.9990338164251208, 10)
-                                    (0.6666666666666666, 10)
-                                    (1.0, 10)
-                                    (0.972463768115942, 10)
-                                    (0.9304347826086956, 10)
-                                    (1.0, 10)
-                                    (0.9975845410628019, 10)
-                                    (0.9956521739130435, 10)
-                                    (0.8541062801932368, 10)
-                                    (1.0, 10)
-                                    (0.47342995169082125, 10)
-                                    (1.0, 10)
-                                    (1.0, 10)
-                                    (0.7888888888888889, 10)
-                                    (1.0, 10)
-                                    (0.9990338164251208, 10)
-                            };
-            \addlegendentry{ faiss-ivf };
-                                \addplot [only marks] coordinates {
                                                 (1.0, 10)
                                     (1.0, 10)
                                     (1.0, 10)
@@ -2282,7 +1737,7 @@
                                     (0.9888888888888889, 10)
                                     (0.9782608695652174, 10)
                             };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Candidates generated tradeoff - down and to the right is better }
@@ -2300,51 +1755,10 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
-                            data: [
-                                                                    { x: 0.6666666666666666 , y: 17.2911454675, label: "b'FaissIVF(n_list=10, n_probe=1)'" },
-                                                                    { x: 0.8541062801932368 , y: 32.8513843887, label: "b'FaissIVF(n_list=10, n_probe=2)'" },
-                                                                    { x: 0.9410628019323671 , y: 50.0067943813, label: "b'FaissIVF(n_list=10, n_probe=3)'" },
-                                                                    { x: 0.7888888888888889 , y: 57.449593696, label: "b'FaissIVF(n_list=5, n_probe=1)'" },
-                                                                    { x: 0.5550724637681159 , y: 61.2727164485, label: "b'FaissIVF(n_list=800, n_probe=4)'" },
-                                                                    { x: 0.6169082125603865 , y: 63.0915325644, label: "b'FaissIVF(n_list=800, n_probe=5)'" },
-                                                                    { x: 0.47342995169082125 , y: 64.4231398394, label: "b'FaissIVF(n_list=800, n_probe=3)'" },
-                                                                    { x: 0.7425120772946859 , y: 65.0550132604, label: "b'FaissIVF(n_list=800, n_probe=8)'" },
-                                                                    { x: 0.3647342995169082 , y: 65.1896161618, label: "b'FaissIVF(n_list=800, n_probe=2)'" },
-                                                                    { x: 0.972463768115942 , y: 65.6381305243, label: "b'FaissIVF(n_list=10, n_probe=4)'" },
-                                                                    { x: 0.7951690821256039 , y: 69.2983585487, label: "b'FaissIVF(n_list=800, n_probe=10)'" },
-                                                                    { x: 0.21690821256038648 , y: 71.1659738062, label: "b'FaissIVF(n_list=800, n_probe=1)'" },
-                                                                    { x: 0.9304347826086956 , y: 74.0390302548, label: "b'FaissIVF(n_list=800, n_probe=20)'" },
-                                                                    { x: 0.9884057971014493 , y: 81.5283596251, label: "b'FaissIVF(n_list=10, n_probe=5)'" },
-                                                                    { x: 0.9956521739130435 , y: 94.5168940917, label: "b'FaissIVF(n_list=800, n_probe=50)'" },
-                                                                    { x: 1.0 , y: 117.343489122, label: "b'FaissIVF(n_list=800, n_probe=100)'" },
-                                                                    { x: 0.9555555555555556 , y: 119.077831969, label: "b'FaissIVF(n_list=5, n_probe=2)'" },
-                                                                    { x: 0.9990338164251208 , y: 132.083777856, label: "b'FaissIVF(n_list=10, n_probe=8)'" },
-                                                                    { x: 1.0 , y: 154.19952992, label: "b'FaissIVF(n_list=800, n_probe=200)'" },
-                                                                    { x: 1.0 , y: 159.098196877, label: "b'FaissIVF(n_list=10, n_probe=20)'" },
-                                                                    { x: 1.0 , y: 161.319790808, label: "b'FaissIVF(n_list=10, n_probe=50)'" },
-                                                                    { x: 1.0 , y: 162.246774259, label: "b'FaissIVF(n_list=10, n_probe=100)'" },
-                                                                    { x: 1.0 , y: 162.531648783, label: "b'FaissIVF(n_list=10, n_probe=10)'" },
-                                                                    { x: 1.0 , y: 163.023501696, label: "b'FaissIVF(n_list=10, n_probe=200)'" },
-                                                                    { x: 0.9975845410628019 , y: 177.953840744, label: "b'FaissIVF(n_list=5, n_probe=3)'" },
-                                                                    { x: 0.9990338164251208 , y: 213.068996245, label: "b'FaissIVF(n_list=5, n_probe=4)'" },
-                                                                    { x: 1.0 , y: 227.94152528, label: "b'FaissIVF(n_list=5, n_probe=200)'" },
-                                                                    { x: 1.0 , y: 230.20323277, label: "b'FaissIVF(n_list=5, n_probe=100)'" },
-                                                                    { x: 1.0 , y: 239.709756602, label: "b'FaissIVF(n_list=5, n_probe=5)'" },
-                                                                    { x: 1.0 , y: 242.197287002, label: "b'FaissIVF(n_list=5, n_probe=10)'" },
-                                                                    { x: 1.0 , y: 243.415543966, label: "b'FaissIVF(n_list=5, n_probe=8)'" },
-                                                                    { x: 1.0 , y: 249.474090945, label: "b'FaissIVF(n_list=5, n_probe=50)'" },
-                                                                    { x: 1.0 , y: 275.640016178, label: "b'FaissIVF(n_list=5, n_probe=20)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
                             data: [
                                                                     { x: 0.8975845410628019 , y: 10.5391644234, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                                     { x: 0.9371980676328503 , y: 14.1141135174, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
@@ -2452,42 +1866,6 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.6666666666666666, 17.2911454675)
-                                    (0.8541062801932368, 32.8513843887)
-                                    (0.9410628019323671, 50.0067943813)
-                                    (0.7888888888888889, 57.449593696)
-                                    (0.5550724637681159, 61.2727164485)
-                                    (0.6169082125603865, 63.0915325644)
-                                    (0.47342995169082125, 64.4231398394)
-                                    (0.7425120772946859, 65.0550132604)
-                                    (0.3647342995169082, 65.1896161618)
-                                    (0.972463768115942, 65.6381305243)
-                                    (0.7951690821256039, 69.2983585487)
-                                    (0.21690821256038648, 71.1659738062)
-                                    (0.9304347826086956, 74.0390302548)
-                                    (0.9884057971014493, 81.5283596251)
-                                    (0.9956521739130435, 94.5168940917)
-                                    (1.0, 117.343489122)
-                                    (0.9555555555555556, 119.077831969)
-                                    (0.9990338164251208, 132.083777856)
-                                    (1.0, 154.19952992)
-                                    (1.0, 159.098196877)
-                                    (1.0, 161.319790808)
-                                    (1.0, 162.246774259)
-                                    (1.0, 162.531648783)
-                                    (1.0, 163.023501696)
-                                    (0.9975845410628019, 177.953840744)
-                                    (0.9990338164251208, 213.068996245)
-                                    (1.0, 227.94152528)
-                                    (1.0, 230.20323277)
-                                    (1.0, 239.709756602)
-                                    (1.0, 242.197287002)
-                                    (1.0, 243.415543966)
-                                    (1.0, 249.474090945)
-                                    (1.0, 275.640016178)
-                            };
-            \addlegendentry{ faiss-ivf };
-                                \addplot [only marks] coordinates {
                                                 (0.8975845410628019, 10.5391644234)
                                     (0.9371980676328503, 14.1141135174)
                                     (0.9782608695652174, 17.1664710206)
@@ -2507,7 +1885,7 @@
                                     (1.0, 177.173868442)
                                     (1.0, 182.426182254)
                             };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB)/Queries per second (s) tradeoff - down and to the right is better }
@@ -2525,51 +1903,10 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
-                            data: [
-                                                                    { x: 0.7555555555555555 , y: 2438.47349958, label: "b'FaissIVF(n_list=10, n_probe=1)'" },
-                                                                    { x: 0.9270531400966183 , y: 1283.47711321, label: "b'FaissIVF(n_list=10, n_probe=2)'" },
-                                                                    { x: 0.8623188405797102 , y: 1030.74706347, label: "b'FaissIVF(n_list=5, n_probe=1)'" },
-                                                                    { x: 0.9830917874396136 , y: 843.165424253, label: "b'FaissIVF(n_list=10, n_probe=3)'" },
-                                                                    { x: 0.629951690821256 , y: 792.065421823, label: "b'FaissIVF(n_list=800, n_probe=4)'" },
-                                                                    { x: 0.7 , y: 769.231591426, label: "b'FaissIVF(n_list=800, n_probe=5)'" },
-                                                                    { x: 0.5347826086956522 , y: 753.331801601, label: "b'FaissIVF(n_list=800, n_probe=3)'" },
-                                                                    { x: 0.8410628019323672 , y: 746.014758397, label: "b'FaissIVF(n_list=800, n_probe=8)'" },
-                                                                    { x: 0.4048309178743961 , y: 744.474394197, label: "b'FaissIVF(n_list=800, n_probe=2)'" },
-                                                                    { x: 0.893719806763285 , y: 700.334048546, label: "b'FaissIVF(n_list=800, n_probe=10)'" },
-                                                                    { x: 0.2323671497584541 , y: 681.955117093, label: "b'FaissIVF(n_list=800, n_probe=1)'" },
-                                                                    { x: 0.985024154589372 , y: 655.492107784, label: "b'FaissIVF(n_list=800, n_probe=20)'" },
-                                                                    { x: 0.993719806763285 , y: 642.37051944, label: "b'FaissIVF(n_list=10, n_probe=4)'" },
-                                                                    { x: 0.9971014492753624 , y: 517.169733255, label: "b'FaissIVF(n_list=10, n_probe=5)'" },
-                                                                    { x: 0.9995169082125603 , y: 513.474341983, label: "b'FaissIVF(n_list=800, n_probe=50)'" },
-                                                                    { x: 0.9869565217391304 , y: 497.288193957, label: "b'FaissIVF(n_list=5, n_probe=2)'" },
-                                                                    { x: 1.0 , y: 413.589201781, label: "b'FaissIVF(n_list=800, n_probe=100)'" },
-                                                                    { x: 0.9990338164251208 , y: 332.760449296, label: "b'FaissIVF(n_list=5, n_probe=3)'" },
-                                                                    { x: 0.9990338164251208 , y: 319.221638602, label: "b'FaissIVF(n_list=10, n_probe=8)'" },
-                                                                    { x: 1.0 , y: 314.735071017, label: "b'FaissIVF(n_list=800, n_probe=200)'" },
-                                                                    { x: 0.9990338164251208 , y: 277.919364354, label: "b'FaissIVF(n_list=5, n_probe=4)'" },
-                                                                    { x: 1.0 , y: 265.018716915, label: "b'FaissIVF(n_list=10, n_probe=20)'" },
-                                                                    { x: 1.0 , y: 261.369047089, label: "b'FaissIVF(n_list=10, n_probe=50)'" },
-                                                                    { x: 1.0 , y: 259.875736776, label: "b'FaissIVF(n_list=10, n_probe=100)'" },
-                                                                    { x: 1.0 , y: 259.785925041, label: "b'FaissIVF(n_list=5, n_probe=200)'" },
-                                                                    { x: 1.0 , y: 259.420244092, label: "b'FaissIVF(n_list=10, n_probe=10)'" },
-                                                                    { x: 1.0 , y: 258.637555699, label: "b'FaissIVF(n_list=10, n_probe=200)'" },
-                                                                    { x: 1.0 , y: 257.233572646, label: "b'FaissIVF(n_list=5, n_probe=100)'" },
-                                                                    { x: 1.0 , y: 247.03208096, label: "b'FaissIVF(n_list=5, n_probe=5)'" },
-                                                                    { x: 1.0 , y: 244.494893948, label: "b'FaissIVF(n_list=5, n_probe=10)'" },
-                                                                    { x: 1.0 , y: 243.271235005, label: "b'FaissIVF(n_list=5, n_probe=8)'" },
-                                                                    { x: 1.0 , y: 237.36332609, label: "b'FaissIVF(n_list=5, n_probe=50)'" },
-                                                                    { x: 1.0 , y: 214.830926297, label: "b'FaissIVF(n_list=5, n_probe=20)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
                             data: [
                                                                     { x: 0.9603864734299516 , y: 2851.45945094, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                                     { x: 0.9893719806763285 , y: 2133.46732424, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
@@ -2677,42 +2014,6 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.7555555555555555, 2438.47349958)
-                                    (0.9270531400966183, 1283.47711321)
-                                    (0.8623188405797102, 1030.74706347)
-                                    (0.9830917874396136, 843.165424253)
-                                    (0.629951690821256, 792.065421823)
-                                    (0.7, 769.231591426)
-                                    (0.5347826086956522, 753.331801601)
-                                    (0.8410628019323672, 746.014758397)
-                                    (0.4048309178743961, 744.474394197)
-                                    (0.893719806763285, 700.334048546)
-                                    (0.2323671497584541, 681.955117093)
-                                    (0.985024154589372, 655.492107784)
-                                    (0.993719806763285, 642.37051944)
-                                    (0.9971014492753624, 517.169733255)
-                                    (0.9995169082125603, 513.474341983)
-                                    (0.9869565217391304, 497.288193957)
-                                    (1.0, 413.589201781)
-                                    (0.9990338164251208, 332.760449296)
-                                    (0.9990338164251208, 319.221638602)
-                                    (1.0, 314.735071017)
-                                    (0.9990338164251208, 277.919364354)
-                                    (1.0, 265.018716915)
-                                    (1.0, 261.369047089)
-                                    (1.0, 259.875736776)
-                                    (1.0, 259.785925041)
-                                    (1.0, 259.420244092)
-                                    (1.0, 258.637555699)
-                                    (1.0, 257.233572646)
-                                    (1.0, 247.03208096)
-                                    (1.0, 244.494893948)
-                                    (1.0, 243.271235005)
-                                    (1.0, 237.36332609)
-                                    (1.0, 214.830926297)
-                            };
-            \addlegendentry{ faiss-ivf };
-                                \addplot [only marks] coordinates {
                                                 (0.9603864734299516, 2851.45945094)
                                     (0.9893719806763285, 2133.46732424)
                                     (0.9980676328502416, 1750.62189334)
@@ -2732,7 +2033,7 @@
                                     (1.0, 169.618693006)
                                     (1.0, 165.064025503)
                             };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.01 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -2750,51 +2051,10 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "faiss-ivf",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
-                            data: [
-                                                                    { x: 0.9966183574879227 , y: 2438.47349958, label: "b'FaissIVF(n_list=10, n_probe=1)'" },
-                                                                    { x: 1.0 , y: 1283.47711321, label: "b'FaissIVF(n_list=10, n_probe=2)'" },
-                                                                    { x: 0.9971014492753624 , y: 1030.74706347, label: "b'FaissIVF(n_list=5, n_probe=1)'" },
-                                                                    { x: 1.0 , y: 843.165424253, label: "b'FaissIVF(n_list=10, n_probe=3)'" },
-                                                                    { x: 0.9748792270531401 , y: 792.065421823, label: "b'FaissIVF(n_list=800, n_probe=4)'" },
-                                                                    { x: 0.9975845410628019 , y: 769.231591426, label: "b'FaissIVF(n_list=800, n_probe=5)'" },
-                                                                    { x: 0.885024154589372 , y: 753.331801601, label: "b'FaissIVF(n_list=800, n_probe=3)'" },
-                                                                    { x: 1.0 , y: 746.014758397, label: "b'FaissIVF(n_list=800, n_probe=8)'" },
-                                                                    { x: 0.6657004830917874 , y: 744.474394197, label: "b'FaissIVF(n_list=800, n_probe=2)'" },
-                                                                    { x: 1.0 , y: 700.334048546, label: "b'FaissIVF(n_list=800, n_probe=10)'" },
-                                                                    { x: 0.3560386473429952 , y: 681.955117093, label: "b'FaissIVF(n_list=800, n_probe=1)'" },
-                                                                    { x: 1.0 , y: 655.492107784, label: "b'FaissIVF(n_list=800, n_probe=20)'" },
-                                                                    { x: 1.0 , y: 642.37051944, label: "b'FaissIVF(n_list=10, n_probe=4)'" },
-                                                                    { x: 1.0 , y: 517.169733255, label: "b'FaissIVF(n_list=10, n_probe=5)'" },
-                                                                    { x: 1.0 , y: 513.474341983, label: "b'FaissIVF(n_list=800, n_probe=50)'" },
-                                                                    { x: 1.0 , y: 497.288193957, label: "b'FaissIVF(n_list=5, n_probe=2)'" },
-                                                                    { x: 1.0 , y: 413.589201781, label: "b'FaissIVF(n_list=800, n_probe=100)'" },
-                                                                    { x: 1.0 , y: 332.760449296, label: "b'FaissIVF(n_list=5, n_probe=3)'" },
-                                                                    { x: 1.0 , y: 319.221638602, label: "b'FaissIVF(n_list=10, n_probe=8)'" },
-                                                                    { x: 1.0 , y: 314.735071017, label: "b'FaissIVF(n_list=800, n_probe=200)'" },
-                                                                    { x: 1.0 , y: 277.919364354, label: "b'FaissIVF(n_list=5, n_probe=4)'" },
-                                                                    { x: 1.0 , y: 265.018716915, label: "b'FaissIVF(n_list=10, n_probe=20)'" },
-                                                                    { x: 1.0 , y: 261.369047089, label: "b'FaissIVF(n_list=10, n_probe=50)'" },
-                                                                    { x: 1.0 , y: 259.875736776, label: "b'FaissIVF(n_list=10, n_probe=100)'" },
-                                                                    { x: 1.0 , y: 259.785925041, label: "b'FaissIVF(n_list=5, n_probe=200)'" },
-                                                                    { x: 1.0 , y: 259.420244092, label: "b'FaissIVF(n_list=10, n_probe=10)'" },
-                                                                    { x: 1.0 , y: 258.637555699, label: "b'FaissIVF(n_list=10, n_probe=200)'" },
-                                                                    { x: 1.0 , y: 257.233572646, label: "b'FaissIVF(n_list=5, n_probe=100)'" },
-                                                                    { x: 1.0 , y: 247.03208096, label: "b'FaissIVF(n_list=5, n_probe=5)'" },
-                                                                    { x: 1.0 , y: 244.494893948, label: "b'FaissIVF(n_list=5, n_probe=10)'" },
-                                                                    { x: 1.0 , y: 243.271235005, label: "b'FaissIVF(n_list=5, n_probe=8)'" },
-                                                                    { x: 1.0 , y: 237.36332609, label: "b'FaissIVF(n_list=5, n_probe=50)'" },
-                                                                    { x: 1.0 , y: 214.830926297, label: "b'FaissIVF(n_list=5, n_probe=20)'" },
-                                                            ]
-                        },
-                                                {
-                            label: "hnsw(faiss)",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
                             data: [
                                                                     { x: 1.0 , y: 2851.45945094, label: "b"faiss ({u'efConstruction': 500, u'M': 12})"" },
                                                                     { x: 1.0 , y: 2133.46732424, label: "b"faiss ({u'efConstruction': 500, u'M': 36})"" },
@@ -2902,42 +2162,6 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.9966183574879227, 2438.47349958)
-                                    (1.0, 1283.47711321)
-                                    (0.9971014492753624, 1030.74706347)
-                                    (1.0, 843.165424253)
-                                    (0.9748792270531401, 792.065421823)
-                                    (0.9975845410628019, 769.231591426)
-                                    (0.885024154589372, 753.331801601)
-                                    (1.0, 746.014758397)
-                                    (0.6657004830917874, 744.474394197)
-                                    (1.0, 700.334048546)
-                                    (0.3560386473429952, 681.955117093)
-                                    (1.0, 655.492107784)
-                                    (1.0, 642.37051944)
-                                    (1.0, 517.169733255)
-                                    (1.0, 513.474341983)
-                                    (1.0, 497.288193957)
-                                    (1.0, 413.589201781)
-                                    (1.0, 332.760449296)
-                                    (1.0, 319.221638602)
-                                    (1.0, 314.735071017)
-                                    (1.0, 277.919364354)
-                                    (1.0, 265.018716915)
-                                    (1.0, 261.369047089)
-                                    (1.0, 259.875736776)
-                                    (1.0, 259.785925041)
-                                    (1.0, 259.420244092)
-                                    (1.0, 258.637555699)
-                                    (1.0, 257.233572646)
-                                    (1.0, 247.03208096)
-                                    (1.0, 244.494893948)
-                                    (1.0, 243.271235005)
-                                    (1.0, 237.36332609)
-                                    (1.0, 214.830926297)
-                            };
-            \addlegendentry{ faiss-ivf };
-                                \addplot [only marks] coordinates {
                                                 (1.0, 2851.45945094)
                                     (1.0, 2133.46732424)
                                     (1.0, 1750.62189334)
@@ -2957,7 +2181,7 @@
                                     (1.0, 169.618693006)
                                     (1.0, 165.064025503)
                             };
-            \addlegendentry{ hnsw(faiss) };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.1 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
