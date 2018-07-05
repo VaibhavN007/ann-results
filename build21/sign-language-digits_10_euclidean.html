@@ -57,12 +57,15 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "nearpy",
+                            label: "panns",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.8159420289855073 , y: 26.614168598, label: "NearPy(n_bits=16, hash_counts=20)" },
+                                                                    { x: 0.19516908212560385 , y: 92.8711532058, label: "b'PANNS(n_trees=5, n_cand=20)'" },
+                                                                    { x: 0.38357487922705313 , y: 46.5223220584, label: "b'PANNS(n_trees=10, n_cand=100)'" },
+                                                                    { x: 0.3864734299516908 , y: 45.6603770251, label: "b'PANNS(n_trees=10, n_cand=10)'" },
+                                                                    { x: 0.81256038647343 , y: 11.569076904, label: "b'PANNS(n_trees=40, n_cand=100)'" },
                                                             ]
                         },
                                                 ]},
@@ -151,9 +154,12 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.8159420289855073, 26.614168598)
+                                                (0.19516908212560385, 92.8711532058)
+                                    (0.38357487922705313, 46.5223220584)
+                                    (0.3864734299516908, 45.6603770251)
+                                    (0.81256038647343, 11.569076904)
                             };
-            \addlegendentry{ nearpy };
+            \addlegendentry{ panns };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -171,12 +177,16 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "nearpy",
+                            label: "panns",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.8159420289855073 , y: 2.97630596161, label: "NearPy(n_bits=10, hash_counts=20)" },
+                                                                    { x: 0.19516908212560385 , y: 1.29354000092, label: "b'PANNS(n_trees=5, n_cand=20)'" },
+                                                                    { x: 0.37777777777777777 , y: 2.53287005424, label: "b'PANNS(n_trees=10, n_cand=50)'" },
+                                                                    { x: 0.38357487922705313 , y: 2.54525709152, label: "b'PANNS(n_trees=10, n_cand=100)'" },
+                                                                    { x: 0.3864734299516908 , y: 2.68906879425, label: "b'PANNS(n_trees=10, n_cand=10)'" },
+                                                                    { x: 0.81256038647343 , y: 10.0407269001, label: "b'PANNS(n_trees=40, n_cand=100)'" },
                                                             ]
                         },
                                                 ]},
@@ -265,9 +275,13 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.8159420289855073, 2.97630596161)
+                                                (0.19516908212560385, 1.29354000092)
+                                    (0.37777777777777777, 2.53287005424)
+                                    (0.38357487922705313, 2.54525709152)
+                                    (0.3864734299516908, 2.68906879425)
+                                    (0.81256038647343, 10.0407269001)
                             };
-            \addlegendentry{ nearpy };
+            \addlegendentry{ panns };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Build time (s) tradeoff - down and to the right is better }
@@ -285,12 +299,15 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "nearpy",
+                            label: "panns",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.8159420289855073 , y: 65944.0, label: "NearPy(n_bits=10, hash_counts=20)" },
+                                                                    { x: 0.19516908212560385 , y: 1004, label: "b'PANNS(n_trees=5, n_cand=20)'" },
+                                                                    { x: 0.37777777777777777 , y: 1472, label: "b'PANNS(n_trees=10, n_cand=50)'" },
+                                                                    { x: 0.3864734299516908 , y: 1480, label: "b'PANNS(n_trees=10, n_cand=10)'" },
+                                                                    { x: 0.81256038647343 , y: 4704, label: "b'PANNS(n_trees=40, n_cand=100)'" },
                                                             ]
                         },
                                                 ]},
@@ -379,9 +396,12 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.8159420289855073, 65944.0)
+                                                (0.19516908212560385, 1004)
+                                    (0.37777777777777777, 1472)
+                                    (0.3864734299516908, 1480)
+                                    (0.81256038647343, 4704)
                             };
-            \addlegendentry{ nearpy };
+            \addlegendentry{ panns };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB) tradeoff - down and to the right is better }
@@ -399,13 +419,15 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "nearpy",
+                            label: "panns",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.01551555406 , y: 26.614168598, label: "NearPy(n_bits=16, hash_counts=20)" },
-                                                                    { x: 1.0154963952 , y: 26.4765183309, label: "NearPy(n_bits=10, hash_counts=20)" },
+                                                                    { x: 1.10486430883 , y: 92.8711532058, label: "b'PANNS(n_trees=5, n_cand=20)'" },
+                                                                    { x: 1.05489522444 , y: 46.5223220584, label: "b'PANNS(n_trees=10, n_cand=100)'" },
+                                                                    { x: 1.05403543344 , y: 45.6603770251, label: "b'PANNS(n_trees=10, n_cand=10)'" },
+                                                                    { x: 1.00798325887 , y: 11.569076904, label: "b'PANNS(n_trees=40, n_cand=100)'" },
                                                             ]
                         },
                                                 ]},
@@ -494,10 +516,12 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.01551555406, 26.614168598)
-                                    (1.0154963952, 26.4765183309)
+                                                (1.10486430883, 92.8711532058)
+                                    (1.05489522444, 46.5223220584)
+                                    (1.05403543344, 45.6603770251)
+                                    (1.00798325887, 11.569076904)
                             };
-            \addlegendentry{ nearpy };
+            \addlegendentry{ panns };
             \end{axis}
     \end{tikzpicture}
     \caption{ Relative Error-Queries per second (1/s) tradeoff - up and to the left is better }
@@ -515,12 +539,13 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "nearpy",
+                            label: "panns",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.8159420289855073 , y: 10.0, label: "NearPy(n_bits=10, hash_counts=20)" },
+                                                                    { x: 0.38357487922705313 , y: 10, label: "b'PANNS(n_trees=10, n_cand=100)'" },
+                                                                    { x: 0.81256038647343 , y: 10, label: "b'PANNS(n_trees=40, n_cand=100)'" },
                                                             ]
                         },
                                                 ]},
@@ -609,9 +634,10 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.8159420289855073, 10.0)
+                                                (0.38357487922705313, 10)
+                                    (0.81256038647343, 10)
                             };
-            \addlegendentry{ nearpy };
+            \addlegendentry{ panns };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Candidates generated tradeoff - down and to the right is better }
@@ -629,12 +655,15 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "nearpy",
+                            label: "panns",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.8159420289855073 , y: 2490.65980564, label: "NearPy(n_bits=10, hash_counts=20)" },
+                                                                    { x: 0.19516908212560385 , y: 10.8106765701, label: "b'PANNS(n_trees=5, n_cand=20)'" },
+                                                                    { x: 0.37777777777777777 , y: 31.7032284207, label: "b'PANNS(n_trees=10, n_cand=50)'" },
+                                                                    { x: 0.3864734299516908 , y: 32.4132233772, label: "b'PANNS(n_trees=10, n_cand=10)'" },
+                                                                    { x: 0.81256038647343 , y: 406.601152282, label: "b'PANNS(n_trees=40, n_cand=100)'" },
                                                             ]
                         },
                                                 ]},
@@ -723,9 +752,12 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.8159420289855073, 2490.65980564)
+                                                (0.19516908212560385, 10.8106765701)
+                                    (0.37777777777777777, 31.7032284207)
+                                    (0.3864734299516908, 32.4132233772)
+                                    (0.81256038647343, 406.601152282)
                             };
-            \addlegendentry{ nearpy };
+            \addlegendentry{ panns };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB)/Queries per second (s) tradeoff - down and to the right is better }
@@ -743,12 +775,15 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "nearpy",
+                            label: "panns",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.8594202898550725 , y: 26.614168598, label: "NearPy(n_bits=16, hash_counts=20)" },
+                                                                    { x: 0.24057971014492754 , y: 92.8711532058, label: "b'PANNS(n_trees=5, n_cand=20)'" },
+                                                                    { x: 0.4463768115942029 , y: 46.5223220584, label: "b'PANNS(n_trees=10, n_cand=100)'" },
+                                                                    { x: 0.45314009661835747 , y: 45.6603770251, label: "b'PANNS(n_trees=10, n_cand=10)'" },
+                                                                    { x: 0.9140096618357488 , y: 11.569076904, label: "b'PANNS(n_trees=40, n_cand=100)'" },
                                                             ]
                         },
                                                 ]},
@@ -837,9 +872,12 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.8594202898550725, 26.614168598)
+                                                (0.24057971014492754, 92.8711532058)
+                                    (0.4463768115942029, 46.5223220584)
+                                    (0.45314009661835747, 45.6603770251)
+                                    (0.9140096618357488, 11.569076904)
                             };
-            \addlegendentry{ nearpy };
+            \addlegendentry{ panns };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.01 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -857,12 +895,14 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "nearpy",
+                            label: "panns",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9671497584541063 , y: 26.614168598, label: "NearPy(n_bits=16, hash_counts=20)" },
+                                                                    { x: 0.721256038647343 , y: 92.8711532058, label: "b'PANNS(n_trees=5, n_cand=20)'" },
+                                                                    { x: 0.9671497584541063 , y: 46.5223220584, label: "b'PANNS(n_trees=10, n_cand=100)'" },
+                                                                    { x: 1.0 , y: 11.569076904, label: "b'PANNS(n_trees=40, n_cand=100)'" },
                                                             ]
                         },
                                                 ]},
@@ -951,9 +991,11 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.9671497584541063, 26.614168598)
+                                                (0.721256038647343, 92.8711532058)
+                                    (0.9671497584541063, 46.5223220584)
+                                    (1.0, 11.569076904)
                             };
-            \addlegendentry{ nearpy };
+            \addlegendentry{ panns };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.1 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -973,16 +1015,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "nearpy",
+                            label: "panns",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.8159420289855073 , y: 26.614168598, label: "NearPy(n_bits=16, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 26.4765183309, label: "NearPy(n_bits=10, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 26.4583182131, label: "NearPy(n_bits=12, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 25.9126127304, label: "NearPy(n_bits=14, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 24.4901202856, label: "NearPy(n_bits=16, hash_counts=30)" },
+                                                                    { x: 0.19516908212560385 , y: 92.8711532058, label: "b'PANNS(n_trees=5, n_cand=20)'" },
+                                                                    { x: 0.38357487922705313 , y: 46.5223220584, label: "b'PANNS(n_trees=10, n_cand=100)'" },
+                                                                    { x: 0.37777777777777777 , y: 46.430602602, label: "b'PANNS(n_trees=10, n_cand=50)'" },
+                                                                    { x: 0.3864734299516908 , y: 45.6603770251, label: "b'PANNS(n_trees=10, n_cand=10)'" },
+                                                                    { x: 0.81256038647343 , y: 11.569076904, label: "b'PANNS(n_trees=40, n_cand=100)'" },
                                                             ]
                         },
                                                 ]},
@@ -1071,13 +1113,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.8159420289855073, 26.614168598)
-                                    (0.8159420289855073, 26.4765183309)
-                                    (0.8159420289855073, 26.4583182131)
-                                    (0.8159420289855073, 25.9126127304)
-                                    (0.8159420289855073, 24.4901202856)
+                                                (0.19516908212560385, 92.8711532058)
+                                    (0.38357487922705313, 46.5223220584)
+                                    (0.37777777777777777, 46.430602602)
+                                    (0.3864734299516908, 45.6603770251)
+                                    (0.81256038647343, 11.569076904)
                             };
-            \addlegendentry{ nearpy };
+            \addlegendentry{ panns };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1095,16 +1137,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "nearpy",
+                            label: "panns",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.8159420289855073 , y: 2.97630596161, label: "NearPy(n_bits=10, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 3.59552526474, label: "NearPy(n_bits=12, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 4.31175112724, label: "NearPy(n_bits=14, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 5.01901936531, label: "NearPy(n_bits=16, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 7.68294072151, label: "NearPy(n_bits=16, hash_counts=30)" },
+                                                                    { x: 0.19516908212560385 , y: 1.29354000092, label: "b'PANNS(n_trees=5, n_cand=20)'" },
+                                                                    { x: 0.37777777777777777 , y: 2.53287005424, label: "b'PANNS(n_trees=10, n_cand=50)'" },
+                                                                    { x: 0.38357487922705313 , y: 2.54525709152, label: "b'PANNS(n_trees=10, n_cand=100)'" },
+                                                                    { x: 0.3864734299516908 , y: 2.68906879425, label: "b'PANNS(n_trees=10, n_cand=10)'" },
+                                                                    { x: 0.81256038647343 , y: 10.0407269001, label: "b'PANNS(n_trees=40, n_cand=100)'" },
                                                             ]
                         },
                                                 ]},
@@ -1193,13 +1235,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.8159420289855073, 2.97630596161)
-                                    (0.8159420289855073, 3.59552526474)
-                                    (0.8159420289855073, 4.31175112724)
-                                    (0.8159420289855073, 5.01901936531)
-                                    (0.8159420289855073, 7.68294072151)
+                                                (0.19516908212560385, 1.29354000092)
+                                    (0.37777777777777777, 2.53287005424)
+                                    (0.38357487922705313, 2.54525709152)
+                                    (0.3864734299516908, 2.68906879425)
+                                    (0.81256038647343, 10.0407269001)
                             };
-            \addlegendentry{ nearpy };
+            \addlegendentry{ panns };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Build time (s) tradeoff - down and to the right is better }
@@ -1217,16 +1259,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "nearpy",
+                            label: "panns",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.8159420289855073 , y: 65944.0, label: "NearPy(n_bits=10, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 67080.0, label: "NearPy(n_bits=12, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 68640.0, label: "NearPy(n_bits=14, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 69828.0, label: "NearPy(n_bits=16, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 76440.0, label: "NearPy(n_bits=16, hash_counts=30)" },
+                                                                    { x: 0.19516908212560385 , y: 1004, label: "b'PANNS(n_trees=5, n_cand=20)'" },
+                                                                    { x: 0.37777777777777777 , y: 1472, label: "b'PANNS(n_trees=10, n_cand=50)'" },
+                                                                    { x: 0.3864734299516908 , y: 1480, label: "b'PANNS(n_trees=10, n_cand=10)'" },
+                                                                    { x: 0.38357487922705313 , y: 1680, label: "b'PANNS(n_trees=10, n_cand=100)'" },
+                                                                    { x: 0.81256038647343 , y: 4704, label: "b'PANNS(n_trees=40, n_cand=100)'" },
                                                             ]
                         },
                                                 ]},
@@ -1315,13 +1357,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.8159420289855073, 65944.0)
-                                    (0.8159420289855073, 67080.0)
-                                    (0.8159420289855073, 68640.0)
-                                    (0.8159420289855073, 69828.0)
-                                    (0.8159420289855073, 76440.0)
+                                                (0.19516908212560385, 1004)
+                                    (0.37777777777777777, 1472)
+                                    (0.3864734299516908, 1480)
+                                    (0.38357487922705313, 1680)
+                                    (0.81256038647343, 4704)
                             };
-            \addlegendentry{ nearpy };
+            \addlegendentry{ panns };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB) tradeoff - down and to the right is better }
@@ -1339,16 +1381,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "nearpy",
+                            label: "panns",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.01551555406 , y: 26.614168598, label: "NearPy(n_bits=16, hash_counts=20)" },
-                                                                    { x: 1.0154963952 , y: 26.4765183309, label: "NearPy(n_bits=10, hash_counts=20)" },
-                                                                    { x: 1.0154963952 , y: 26.4583182131, label: "NearPy(n_bits=12, hash_counts=20)" },
-                                                                    { x: 1.0154963952 , y: 25.9126127304, label: "NearPy(n_bits=14, hash_counts=20)" },
-                                                                    { x: 1.0154963952 , y: 24.4901202856, label: "NearPy(n_bits=16, hash_counts=30)" },
+                                                                    { x: 1.10486430883 , y: 92.8711532058, label: "b'PANNS(n_trees=5, n_cand=20)'" },
+                                                                    { x: 1.05489522444 , y: 46.5223220584, label: "b'PANNS(n_trees=10, n_cand=100)'" },
+                                                                    { x: 1.05589723968 , y: 46.430602602, label: "b'PANNS(n_trees=10, n_cand=50)'" },
+                                                                    { x: 1.05403543344 , y: 45.6603770251, label: "b'PANNS(n_trees=10, n_cand=10)'" },
+                                                                    { x: 1.00798325887 , y: 11.569076904, label: "b'PANNS(n_trees=40, n_cand=100)'" },
                                                             ]
                         },
                                                 ]},
@@ -1437,13 +1479,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.01551555406, 26.614168598)
-                                    (1.0154963952, 26.4765183309)
-                                    (1.0154963952, 26.4583182131)
-                                    (1.0154963952, 25.9126127304)
-                                    (1.0154963952, 24.4901202856)
+                                                (1.10486430883, 92.8711532058)
+                                    (1.05489522444, 46.5223220584)
+                                    (1.05589723968, 46.430602602)
+                                    (1.05403543344, 45.6603770251)
+                                    (1.00798325887, 11.569076904)
                             };
-            \addlegendentry{ nearpy };
+            \addlegendentry{ panns };
             \end{axis}
     \end{tikzpicture}
     \caption{ Relative Error-Queries per second (1/s) tradeoff - up and to the left is better }
@@ -1461,16 +1503,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "nearpy",
+                            label: "panns",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.8159420289855073 , y: 10.0, label: "NearPy(n_bits=10, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 10.0, label: "NearPy(n_bits=14, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 10.0, label: "NearPy(n_bits=12, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 10.0, label: "NearPy(n_bits=16, hash_counts=30)" },
-                                                                    { x: 0.8159420289855073 , y: 10.0, label: "NearPy(n_bits=16, hash_counts=20)" },
+                                                                    { x: 0.38357487922705313 , y: 10, label: "b'PANNS(n_trees=10, n_cand=100)'" },
+                                                                    { x: 0.81256038647343 , y: 10, label: "b'PANNS(n_trees=40, n_cand=100)'" },
+                                                                    { x: 0.19516908212560385 , y: 10, label: "b'PANNS(n_trees=5, n_cand=20)'" },
+                                                                    { x: 0.37777777777777777 , y: 10, label: "b'PANNS(n_trees=10, n_cand=50)'" },
+                                                                    { x: 0.3864734299516908 , y: 10, label: "b'PANNS(n_trees=10, n_cand=10)'" },
                                                             ]
                         },
                                                 ]},
@@ -1559,13 +1601,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.8159420289855073, 10.0)
-                                    (0.8159420289855073, 10.0)
-                                    (0.8159420289855073, 10.0)
-                                    (0.8159420289855073, 10.0)
-                                    (0.8159420289855073, 10.0)
+                                                (0.38357487922705313, 10)
+                                    (0.81256038647343, 10)
+                                    (0.19516908212560385, 10)
+                                    (0.37777777777777777, 10)
+                                    (0.3864734299516908, 10)
                             };
-            \addlegendentry{ nearpy };
+            \addlegendentry{ panns };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Candidates generated tradeoff - down and to the right is better }
@@ -1583,16 +1625,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "nearpy",
+                            label: "panns",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.8159420289855073 , y: 2490.65980564, label: "NearPy(n_bits=10, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 2535.30853548, label: "NearPy(n_bits=12, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 2623.71524938, label: "NearPy(n_bits=16, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 2648.90309265, label: "NearPy(n_bits=14, hash_counts=20)" },
-                                                                    { x: 0.8159420289855073 , y: 3121.25865895, label: "NearPy(n_bits=16, hash_counts=30)" },
+                                                                    { x: 0.19516908212560385 , y: 10.8106765701, label: "b'PANNS(n_trees=5, n_cand=20)'" },
+                                                                    { x: 0.37777777777777777 , y: 31.7032284207, label: "b'PANNS(n_trees=10, n_cand=50)'" },
+                                                                    { x: 0.3864734299516908 , y: 32.4132233772, label: "b'PANNS(n_trees=10, n_cand=10)'" },
+                                                                    { x: 0.38357487922705313 , y: 36.1116970449, label: "b'PANNS(n_trees=10, n_cand=100)'" },
+                                                                    { x: 0.81256038647343 , y: 406.601152282, label: "b'PANNS(n_trees=40, n_cand=100)'" },
                                                             ]
                         },
                                                 ]},
@@ -1681,13 +1723,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.8159420289855073, 2490.65980564)
-                                    (0.8159420289855073, 2535.30853548)
-                                    (0.8159420289855073, 2623.71524938)
-                                    (0.8159420289855073, 2648.90309265)
-                                    (0.8159420289855073, 3121.25865895)
+                                                (0.19516908212560385, 10.8106765701)
+                                    (0.37777777777777777, 31.7032284207)
+                                    (0.3864734299516908, 32.4132233772)
+                                    (0.38357487922705313, 36.1116970449)
+                                    (0.81256038647343, 406.601152282)
                             };
-            \addlegendentry{ nearpy };
+            \addlegendentry{ panns };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB)/Queries per second (s) tradeoff - down and to the right is better }
@@ -1705,16 +1747,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "nearpy",
+                            label: "panns",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.8594202898550725 , y: 26.614168598, label: "NearPy(n_bits=16, hash_counts=20)" },
-                                                                    { x: 0.8594202898550725 , y: 26.4765183309, label: "NearPy(n_bits=10, hash_counts=20)" },
-                                                                    { x: 0.8594202898550725 , y: 26.4583182131, label: "NearPy(n_bits=12, hash_counts=20)" },
-                                                                    { x: 0.8594202898550725 , y: 25.9126127304, label: "NearPy(n_bits=14, hash_counts=20)" },
-                                                                    { x: 0.8594202898550725 , y: 24.4901202856, label: "NearPy(n_bits=16, hash_counts=30)" },
+                                                                    { x: 0.24057971014492754 , y: 92.8711532058, label: "b'PANNS(n_trees=5, n_cand=20)'" },
+                                                                    { x: 0.4463768115942029 , y: 46.5223220584, label: "b'PANNS(n_trees=10, n_cand=100)'" },
+                                                                    { x: 0.4391304347826087 , y: 46.430602602, label: "b'PANNS(n_trees=10, n_cand=50)'" },
+                                                                    { x: 0.45314009661835747 , y: 45.6603770251, label: "b'PANNS(n_trees=10, n_cand=10)'" },
+                                                                    { x: 0.9140096618357488 , y: 11.569076904, label: "b'PANNS(n_trees=40, n_cand=100)'" },
                                                             ]
                         },
                                                 ]},
@@ -1803,13 +1845,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.8594202898550725, 26.614168598)
-                                    (0.8594202898550725, 26.4765183309)
-                                    (0.8594202898550725, 26.4583182131)
-                                    (0.8594202898550725, 25.9126127304)
-                                    (0.8594202898550725, 24.4901202856)
+                                                (0.24057971014492754, 92.8711532058)
+                                    (0.4463768115942029, 46.5223220584)
+                                    (0.4391304347826087, 46.430602602)
+                                    (0.45314009661835747, 45.6603770251)
+                                    (0.9140096618357488, 11.569076904)
                             };
-            \addlegendentry{ nearpy };
+            \addlegendentry{ panns };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.01 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1827,16 +1869,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "nearpy",
+                            label: "panns",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9671497584541063 , y: 26.614168598, label: "NearPy(n_bits=16, hash_counts=20)" },
-                                                                    { x: 0.9671497584541063 , y: 26.4765183309, label: "NearPy(n_bits=10, hash_counts=20)" },
-                                                                    { x: 0.9671497584541063 , y: 26.4583182131, label: "NearPy(n_bits=12, hash_counts=20)" },
-                                                                    { x: 0.9671497584541063 , y: 25.9126127304, label: "NearPy(n_bits=14, hash_counts=20)" },
-                                                                    { x: 0.9671497584541063 , y: 24.4901202856, label: "NearPy(n_bits=16, hash_counts=30)" },
+                                                                    { x: 0.721256038647343 , y: 92.8711532058, label: "b'PANNS(n_trees=5, n_cand=20)'" },
+                                                                    { x: 0.9671497584541063 , y: 46.5223220584, label: "b'PANNS(n_trees=10, n_cand=100)'" },
+                                                                    { x: 0.9623188405797102 , y: 46.430602602, label: "b'PANNS(n_trees=10, n_cand=50)'" },
+                                                                    { x: 0.9657004830917875 , y: 45.6603770251, label: "b'PANNS(n_trees=10, n_cand=10)'" },
+                                                                    { x: 1.0 , y: 11.569076904, label: "b'PANNS(n_trees=40, n_cand=100)'" },
                                                             ]
                         },
                                                 ]},
@@ -1925,13 +1967,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.9671497584541063, 26.614168598)
-                                    (0.9671497584541063, 26.4765183309)
-                                    (0.9671497584541063, 26.4583182131)
-                                    (0.9671497584541063, 25.9126127304)
-                                    (0.9671497584541063, 24.4901202856)
+                                                (0.721256038647343, 92.8711532058)
+                                    (0.9671497584541063, 46.5223220584)
+                                    (0.9623188405797102, 46.430602602)
+                                    (0.9657004830917875, 45.6603770251)
+                                    (1.0, 11.569076904)
                             };
-            \addlegendentry{ nearpy };
+            \addlegendentry{ panns };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.1 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
