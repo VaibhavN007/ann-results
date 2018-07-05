@@ -57,15 +57,16 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "flann",
+                            label: "NGT-panng",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.1391304347826087 , y: 7647.70431703, label: "FLANN(target_precision=0.200000)" },
-                                                                    { x: 0.3719806763285024 , y: 3576.06020092, label: "FLANN(target_precision=0.500000)" },
-                                                                    { x: 0.7801932367149759 , y: 1302.95224875, label: "FLANN(target_precision=0.900000)" },
-                                                                    { x: 0.9280193236714975 , y: 357.663178553, label: "FLANN(target_precision=0.950000)" },
+                                                                    { x: 0.042028985507246375 , y: 2760.30536215, label: "PANNG-NGT(20, 40, 60, 0.40)" },
+                                                                    { x: 0.06280193236714976 , y: 2630.78117955, label: "PANNG-NGT(20, 40, 60, 0.60)" },
+                                                                    { x: 0.3893719806763285 , y: 2298.96077403, label: "PANNG-NGT(20, 40, 60, 0.80)" },
+                                                                    { x: 0.5884057971014492 , y: 2090.55211687, label: "PANNG-NGT(20, 40, 60, 0.90)" },
+                                                                    { x: 1.0 , y: 333.030790221, label: "PANNG-NGT(20, 40, 60, 1.30)" },
                                                             ]
                         },
                                                 ]},
@@ -154,12 +155,13 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.1391304347826087, 7647.70431703)
-                                    (0.3719806763285024, 3576.06020092)
-                                    (0.7801932367149759, 1302.95224875)
-                                    (0.9280193236714975, 357.663178553)
+                                                (0.042028985507246375, 2760.30536215)
+                                    (0.06280193236714976, 2630.78117955)
+                                    (0.3893719806763285, 2298.96077403)
+                                    (0.5884057971014492, 2090.55211687)
+                                    (1.0, 333.030790221)
                             };
-            \addlegendentry{ flann };
+            \addlegendentry{ NGT-panng };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -177,15 +179,13 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "flann",
+                            label: "NGT-panng",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.1391304347826087 , y: 15.9188029766, label: "FLANN(target_precision=0.200000)" },
-                                                                    { x: 0.3719806763285024 , y: 19.9688174725, label: "FLANN(target_precision=0.500000)" },
-                                                                    { x: 0.7367149758454107 , y: 48.2013044357, label: "FLANN(target_precision=0.800000)" },
-                                                                    { x: 0.9280193236714975 , y: 65.8383963108, label: "FLANN(target_precision=0.950000)" },
+                                                                    { x: 0.042028985507246375 , y: 1.72683286667, label: "PANNG-NGT(20, 40, 60, 0.40)" },
+                                                                    { x: 1.0 , y: 1.72811746597, label: "PANNG-NGT(20, 40, 60, 1.30)" },
                                                             ]
                         },
                                                 ]},
@@ -274,12 +274,10 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.1391304347826087, 15.9188029766)
-                                    (0.3719806763285024, 19.9688174725)
-                                    (0.7367149758454107, 48.2013044357)
-                                    (0.9280193236714975, 65.8383963108)
+                                                (0.042028985507246375, 1.72683286667)
+                                    (1.0, 1.72811746597)
                             };
-            \addlegendentry{ flann };
+            \addlegendentry{ NGT-panng };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Build time (s) tradeoff - down and to the right is better }
@@ -297,13 +295,14 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "flann",
+                            label: "NGT-panng",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.3719806763285024 , y: 7348.0, label: "FLANN(target_precision=0.500000)" },
-                                                                    { x: 0.9280193236714975 , y: 7584.0, label: "FLANN(target_precision=0.950000)" },
+                                                                    { x: 0.3893719806763285 , y: 28900.0, label: "PANNG-NGT(20, 40, 60, 0.80)" },
+                                                                    { x: 0.5884057971014492 , y: 29148.0, label: "PANNG-NGT(20, 40, 60, 0.90)" },
+                                                                    { x: 1.0 , y: 29168.0, label: "PANNG-NGT(20, 40, 60, 1.30)" },
                                                             ]
                         },
                                                 ]},
@@ -392,10 +391,11 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.3719806763285024, 7348.0)
-                                    (0.9280193236714975, 7584.0)
+                                                (0.3893719806763285, 28900.0)
+                                    (0.5884057971014492, 29148.0)
+                                    (1.0, 29168.0)
                             };
-            \addlegendentry{ flann };
+            \addlegendentry{ NGT-panng };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB) tradeoff - down and to the right is better }
@@ -413,15 +413,16 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "flann",
+                            label: "NGT-panng",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.16878578109 , y: 7647.70431703, label: "FLANN(target_precision=0.200000)" },
-                                                                    { x: 1.06483264857 , y: 3576.06020092, label: "FLANN(target_precision=0.500000)" },
-                                                                    { x: 1.00969530528 , y: 1302.95224875, label: "FLANN(target_precision=0.900000)" },
-                                                                    { x: 1.00236074528 , y: 357.663178553, label: "FLANN(target_precision=0.950000)" },
+                                                                    { x: 1.29220469702 , y: 2760.30536215, label: "PANNG-NGT(20, 40, 60, 0.40)" },
+                                                                    { x: 1.27857711337 , y: 2630.78117955, label: "PANNG-NGT(20, 40, 60, 0.60)" },
+                                                                    { x: 1.09926897893 , y: 2298.96077403, label: "PANNG-NGT(20, 40, 60, 0.80)" },
+                                                                    { x: 1.03259389635 , y: 2090.55211687, label: "PANNG-NGT(20, 40, 60, 0.90)" },
+                                                                    { x: 1.0 , y: 333.030790221, label: "PANNG-NGT(20, 40, 60, 1.30)" },
                                                             ]
                         },
                                                 ]},
@@ -510,12 +511,13 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.16878578109, 7647.70431703)
-                                    (1.06483264857, 3576.06020092)
-                                    (1.00969530528, 1302.95224875)
-                                    (1.00236074528, 357.663178553)
+                                                (1.29220469702, 2760.30536215)
+                                    (1.27857711337, 2630.78117955)
+                                    (1.09926897893, 2298.96077403)
+                                    (1.03259389635, 2090.55211687)
+                                    (1.0, 333.030790221)
                             };
-            \addlegendentry{ flann };
+            \addlegendentry{ NGT-panng };
             \end{axis}
     \end{tikzpicture}
     \caption{ Relative Error-Queries per second (1/s) tradeoff - up and to the left is better }
@@ -533,13 +535,14 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "flann",
+                            label: "NGT-panng",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.3719806763285024 , y: 10.0, label: "FLANN(target_precision=0.500000)" },
-                                                                    { x: 0.9280193236714975 , y: 10.0, label: "FLANN(target_precision=0.950000)" },
+                                                                    { x: 0.06280193236714976 , y: 10.0, label: "PANNG-NGT(20, 40, 60, 0.60)" },
+                                                                    { x: 0.5884057971014492 , y: 10.0, label: "PANNG-NGT(20, 40, 60, 0.90)" },
+                                                                    { x: 1.0 , y: 10.0, label: "PANNG-NGT(20, 40, 60, 1.30)" },
                                                             ]
                         },
                                                 ]},
@@ -628,10 +631,11 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.3719806763285024, 10.0)
-                                    (0.9280193236714975, 10.0)
+                                                (0.06280193236714976, 10.0)
+                                    (0.5884057971014492, 10.0)
+                                    (1.0, 10.0)
                             };
-            \addlegendentry{ flann };
+            \addlegendentry{ NGT-panng };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Candidates generated tradeoff - down and to the right is better }
@@ -649,15 +653,16 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "flann",
+                            label: "NGT-panng",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.1391304347826087 , y: 0.967610631012, label: "FLANN(target_precision=0.200000)" },
-                                                                    { x: 0.3719806763285024 , y: 2.05477525186, label: "FLANN(target_precision=0.500000)" },
-                                                                    { x: 0.7801932367149759 , y: 10.8584178842, label: "FLANN(target_precision=0.900000)" },
-                                                                    { x: 0.9280193236714975 , y: 21.2043074456, label: "FLANN(target_precision=0.950000)" },
+                                                                    { x: 0.042028985507246375 , y: 10.513329575, label: "PANNG-NGT(20, 40, 60, 0.40)" },
+                                                                    { x: 0.06280193236714976 , y: 11.0811192609, label: "PANNG-NGT(20, 40, 60, 0.60)" },
+                                                                    { x: 0.3893719806763285 , y: 12.5708973926, label: "PANNG-NGT(20, 40, 60, 0.80)" },
+                                                                    { x: 0.5884057971014492 , y: 13.9427282223, label: "PANNG-NGT(20, 40, 60, 0.90)" },
+                                                                    { x: 1.0 , y: 87.5834933479, label: "PANNG-NGT(20, 40, 60, 1.30)" },
                                                             ]
                         },
                                                 ]},
@@ -746,12 +751,13 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.1391304347826087, 0.967610631012)
-                                    (0.3719806763285024, 2.05477525186)
-                                    (0.7801932367149759, 10.8584178842)
-                                    (0.9280193236714975, 21.2043074456)
+                                                (0.042028985507246375, 10.513329575)
+                                    (0.06280193236714976, 11.0811192609)
+                                    (0.3893719806763285, 12.5708973926)
+                                    (0.5884057971014492, 13.9427282223)
+                                    (1.0, 87.5834933479)
                             };
-            \addlegendentry{ flann };
+            \addlegendentry{ NGT-panng };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB)/Queries per second (s) tradeoff - down and to the right is better }
@@ -769,15 +775,16 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "flann",
+                            label: "NGT-panng",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.15845410628019324 , y: 7647.70431703, label: "FLANN(target_precision=0.200000)" },
-                                                                    { x: 0.43091787439613527 , y: 3576.06020092, label: "FLANN(target_precision=0.500000)" },
-                                                                    { x: 0.8690821256038648 , y: 1302.95224875, label: "FLANN(target_precision=0.900000)" },
-                                                                    { x: 0.9792270531400966 , y: 357.663178553, label: "FLANN(target_precision=0.950000)" },
+                                                                    { x: 0.05217391304347826 , y: 2760.30536215, label: "PANNG-NGT(20, 40, 60, 0.40)" },
+                                                                    { x: 0.07294685990338164 , y: 2630.78117955, label: "PANNG-NGT(20, 40, 60, 0.60)" },
+                                                                    { x: 0.4318840579710145 , y: 2298.96077403, label: "PANNG-NGT(20, 40, 60, 0.80)" },
+                                                                    { x: 0.6545893719806763 , y: 2090.55211687, label: "PANNG-NGT(20, 40, 60, 0.90)" },
+                                                                    { x: 1.0 , y: 333.030790221, label: "PANNG-NGT(20, 40, 60, 1.30)" },
                                                             ]
                         },
                                                 ]},
@@ -866,12 +873,13 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.15845410628019324, 7647.70431703)
-                                    (0.43091787439613527, 3576.06020092)
-                                    (0.8690821256038648, 1302.95224875)
-                                    (0.9792270531400966, 357.663178553)
+                                                (0.05217391304347826, 2760.30536215)
+                                    (0.07294685990338164, 2630.78117955)
+                                    (0.4318840579710145, 2298.96077403)
+                                    (0.6545893719806763, 2090.55211687)
+                                    (1.0, 333.030790221)
                             };
-            \addlegendentry{ flann };
+            \addlegendentry{ NGT-panng };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.01 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -889,14 +897,16 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "flann",
+                            label: "NGT-panng",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.43333333333333335 , y: 7647.70431703, label: "FLANN(target_precision=0.200000)" },
-                                                                    { x: 0.9033816425120773 , y: 3576.06020092, label: "FLANN(target_precision=0.500000)" },
-                                                                    { x: 1.0 , y: 1302.95224875, label: "FLANN(target_precision=0.900000)" },
+                                                                    { x: 0.1536231884057971 , y: 2760.30536215, label: "PANNG-NGT(20, 40, 60, 0.40)" },
+                                                                    { x: 0.17439613526570047 , y: 2630.78117955, label: "PANNG-NGT(20, 40, 60, 0.60)" },
+                                                                    { x: 0.6681159420289855 , y: 2298.96077403, label: "PANNG-NGT(20, 40, 60, 0.80)" },
+                                                                    { x: 0.9584541062801932 , y: 2090.55211687, label: "PANNG-NGT(20, 40, 60, 0.90)" },
+                                                                    { x: 1.0 , y: 333.030790221, label: "PANNG-NGT(20, 40, 60, 1.30)" },
                                                             ]
                         },
                                                 ]},
@@ -985,11 +995,13 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.43333333333333335, 7647.70431703)
-                                    (0.9033816425120773, 3576.06020092)
-                                    (1.0, 1302.95224875)
+                                                (0.1536231884057971, 2760.30536215)
+                                    (0.17439613526570047, 2630.78117955)
+                                    (0.6681159420289855, 2298.96077403)
+                                    (0.9584541062801932, 2090.55211687)
+                                    (1.0, 333.030790221)
                             };
-            \addlegendentry{ flann };
+            \addlegendentry{ NGT-panng };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.1 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1009,16 +1021,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "flann",
+                            label: "NGT-panng",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.1391304347826087 , y: 7647.70431703, label: "FLANN(target_precision=0.200000)" },
-                                                                    { x: 0.3719806763285024 , y: 3576.06020092, label: "FLANN(target_precision=0.500000)" },
-                                                                    { x: 0.7801932367149759 , y: 1302.95224875, label: "FLANN(target_precision=0.900000)" },
-                                                                    { x: 0.7367149758454107 , y: 512.963464198, label: "FLANN(target_precision=0.800000)" },
-                                                                    { x: 0.9280193236714975 , y: 357.663178553, label: "FLANN(target_precision=0.950000)" },
+                                                                    { x: 0.042028985507246375 , y: 2760.30536215, label: "PANNG-NGT(20, 40, 60, 0.40)" },
+                                                                    { x: 0.06280193236714976 , y: 2630.78117955, label: "PANNG-NGT(20, 40, 60, 0.60)" },
+                                                                    { x: 0.3893719806763285 , y: 2298.96077403, label: "PANNG-NGT(20, 40, 60, 0.80)" },
+                                                                    { x: 0.5884057971014492 , y: 2090.55211687, label: "PANNG-NGT(20, 40, 60, 0.90)" },
+                                                                    { x: 1.0 , y: 333.030790221, label: "PANNG-NGT(20, 40, 60, 1.30)" },
                                                             ]
                         },
                                                 ]},
@@ -1107,13 +1119,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.1391304347826087, 7647.70431703)
-                                    (0.3719806763285024, 3576.06020092)
-                                    (0.7801932367149759, 1302.95224875)
-                                    (0.7367149758454107, 512.963464198)
-                                    (0.9280193236714975, 357.663178553)
+                                                (0.042028985507246375, 2760.30536215)
+                                    (0.06280193236714976, 2630.78117955)
+                                    (0.3893719806763285, 2298.96077403)
+                                    (0.5884057971014492, 2090.55211687)
+                                    (1.0, 333.030790221)
                             };
-            \addlegendentry{ flann };
+            \addlegendentry{ NGT-panng };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1131,16 +1143,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "flann",
+                            label: "NGT-panng",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.1391304347826087 , y: 15.9188029766, label: "FLANN(target_precision=0.200000)" },
-                                                                    { x: 0.3719806763285024 , y: 19.9688174725, label: "FLANN(target_precision=0.500000)" },
-                                                                    { x: 0.7367149758454107 , y: 48.2013044357, label: "FLANN(target_precision=0.800000)" },
-                                                                    { x: 0.9280193236714975 , y: 65.8383963108, label: "FLANN(target_precision=0.950000)" },
-                                                                    { x: 0.7801932367149759 , y: 74.4988055229, label: "FLANN(target_precision=0.900000)" },
+                                                                    { x: 0.042028985507246375 , y: 1.72683286667, label: "PANNG-NGT(20, 40, 60, 0.40)" },
+                                                                    { x: 1.0 , y: 1.72811746597, label: "PANNG-NGT(20, 40, 60, 1.30)" },
+                                                                    { x: 0.3893719806763285 , y: 1.73623132706, label: "PANNG-NGT(20, 40, 60, 0.80)" },
+                                                                    { x: 0.5884057971014492 , y: 1.75594544411, label: "PANNG-NGT(20, 40, 60, 0.90)" },
+                                                                    { x: 0.06280193236714976 , y: 1.76118779182, label: "PANNG-NGT(20, 40, 60, 0.60)" },
                                                             ]
                         },
                                                 ]},
@@ -1229,13 +1241,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.1391304347826087, 15.9188029766)
-                                    (0.3719806763285024, 19.9688174725)
-                                    (0.7367149758454107, 48.2013044357)
-                                    (0.9280193236714975, 65.8383963108)
-                                    (0.7801932367149759, 74.4988055229)
+                                                (0.042028985507246375, 1.72683286667)
+                                    (1.0, 1.72811746597)
+                                    (0.3893719806763285, 1.73623132706)
+                                    (0.5884057971014492, 1.75594544411)
+                                    (0.06280193236714976, 1.76118779182)
                             };
-            \addlegendentry{ flann };
+            \addlegendentry{ NGT-panng };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Build time (s) tradeoff - down and to the right is better }
@@ -1253,16 +1265,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "flann",
+                            label: "NGT-panng",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.3719806763285024 , y: 7348.0, label: "FLANN(target_precision=0.500000)" },
-                                                                    { x: 0.1391304347826087 , y: 7400.0, label: "FLANN(target_precision=0.200000)" },
-                                                                    { x: 0.9280193236714975 , y: 7584.0, label: "FLANN(target_precision=0.950000)" },
-                                                                    { x: 0.7367149758454107 , y: 7644.0, label: "FLANN(target_precision=0.800000)" },
-                                                                    { x: 0.7801932367149759 , y: 14148.0, label: "FLANN(target_precision=0.900000)" },
+                                                                    { x: 0.3893719806763285 , y: 28900.0, label: "PANNG-NGT(20, 40, 60, 0.80)" },
+                                                                    { x: 0.042028985507246375 , y: 29020.0, label: "PANNG-NGT(20, 40, 60, 0.40)" },
+                                                                    { x: 0.5884057971014492 , y: 29148.0, label: "PANNG-NGT(20, 40, 60, 0.90)" },
+                                                                    { x: 0.06280193236714976 , y: 29152.0, label: "PANNG-NGT(20, 40, 60, 0.60)" },
+                                                                    { x: 1.0 , y: 29168.0, label: "PANNG-NGT(20, 40, 60, 1.30)" },
                                                             ]
                         },
                                                 ]},
@@ -1351,13 +1363,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.3719806763285024, 7348.0)
-                                    (0.1391304347826087, 7400.0)
-                                    (0.9280193236714975, 7584.0)
-                                    (0.7367149758454107, 7644.0)
-                                    (0.7801932367149759, 14148.0)
+                                                (0.3893719806763285, 28900.0)
+                                    (0.042028985507246375, 29020.0)
+                                    (0.5884057971014492, 29148.0)
+                                    (0.06280193236714976, 29152.0)
+                                    (1.0, 29168.0)
                             };
-            \addlegendentry{ flann };
+            \addlegendentry{ NGT-panng };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB) tradeoff - down and to the right is better }
@@ -1375,16 +1387,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "flann",
+                            label: "NGT-panng",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.16878578109 , y: 7647.70431703, label: "FLANN(target_precision=0.200000)" },
-                                                                    { x: 1.06483264857 , y: 3576.06020092, label: "FLANN(target_precision=0.500000)" },
-                                                                    { x: 1.00969530528 , y: 1302.95224875, label: "FLANN(target_precision=0.900000)" },
-                                                                    { x: 1.01509607215 , y: 512.963464198, label: "FLANN(target_precision=0.800000)" },
-                                                                    { x: 1.00236074528 , y: 357.663178553, label: "FLANN(target_precision=0.950000)" },
+                                                                    { x: 1.29220469702 , y: 2760.30536215, label: "PANNG-NGT(20, 40, 60, 0.40)" },
+                                                                    { x: 1.27857711337 , y: 2630.78117955, label: "PANNG-NGT(20, 40, 60, 0.60)" },
+                                                                    { x: 1.09926897893 , y: 2298.96077403, label: "PANNG-NGT(20, 40, 60, 0.80)" },
+                                                                    { x: 1.03259389635 , y: 2090.55211687, label: "PANNG-NGT(20, 40, 60, 0.90)" },
+                                                                    { x: 1.0 , y: 333.030790221, label: "PANNG-NGT(20, 40, 60, 1.30)" },
                                                             ]
                         },
                                                 ]},
@@ -1473,13 +1485,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.16878578109, 7647.70431703)
-                                    (1.06483264857, 3576.06020092)
-                                    (1.00969530528, 1302.95224875)
-                                    (1.01509607215, 512.963464198)
-                                    (1.00236074528, 357.663178553)
+                                                (1.29220469702, 2760.30536215)
+                                    (1.27857711337, 2630.78117955)
+                                    (1.09926897893, 2298.96077403)
+                                    (1.03259389635, 2090.55211687)
+                                    (1.0, 333.030790221)
                             };
-            \addlegendentry{ flann };
+            \addlegendentry{ NGT-panng };
             \end{axis}
     \end{tikzpicture}
     \caption{ Relative Error-Queries per second (1/s) tradeoff - up and to the left is better }
@@ -1497,16 +1509,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "flann",
+                            label: "NGT-panng",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.3719806763285024 , y: 10.0, label: "FLANN(target_precision=0.500000)" },
-                                                                    { x: 0.9280193236714975 , y: 10.0, label: "FLANN(target_precision=0.950000)" },
-                                                                    { x: 0.7801932367149759 , y: 10.0, label: "FLANN(target_precision=0.900000)" },
-                                                                    { x: 0.1391304347826087 , y: 10.0, label: "FLANN(target_precision=0.200000)" },
-                                                                    { x: 0.7367149758454107 , y: 10.0, label: "FLANN(target_precision=0.800000)" },
+                                                                    { x: 0.06280193236714976 , y: 10.0, label: "PANNG-NGT(20, 40, 60, 0.60)" },
+                                                                    { x: 0.5884057971014492 , y: 10.0, label: "PANNG-NGT(20, 40, 60, 0.90)" },
+                                                                    { x: 0.042028985507246375 , y: 10.0, label: "PANNG-NGT(20, 40, 60, 0.40)" },
+                                                                    { x: 0.3893719806763285 , y: 10.0, label: "PANNG-NGT(20, 40, 60, 0.80)" },
+                                                                    { x: 1.0 , y: 10.0, label: "PANNG-NGT(20, 40, 60, 1.30)" },
                                                             ]
                         },
                                                 ]},
@@ -1595,13 +1607,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.3719806763285024, 10.0)
-                                    (0.9280193236714975, 10.0)
-                                    (0.7801932367149759, 10.0)
-                                    (0.1391304347826087, 10.0)
-                                    (0.7367149758454107, 10.0)
+                                                (0.06280193236714976, 10.0)
+                                    (0.5884057971014492, 10.0)
+                                    (0.042028985507246375, 10.0)
+                                    (0.3893719806763285, 10.0)
+                                    (1.0, 10.0)
                             };
-            \addlegendentry{ flann };
+            \addlegendentry{ NGT-panng };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Candidates generated tradeoff - down and to the right is better }
@@ -1619,16 +1631,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "flann",
+                            label: "NGT-panng",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.1391304347826087 , y: 0.967610631012, label: "FLANN(target_precision=0.200000)" },
-                                                                    { x: 0.3719806763285024 , y: 2.05477525186, label: "FLANN(target_precision=0.500000)" },
-                                                                    { x: 0.7801932367149759 , y: 10.8584178842, label: "FLANN(target_precision=0.900000)" },
-                                                                    { x: 0.7367149758454107 , y: 14.9016460889, label: "FLANN(target_precision=0.800000)" },
-                                                                    { x: 0.9280193236714975 , y: 21.2043074456, label: "FLANN(target_precision=0.950000)" },
+                                                                    { x: 0.042028985507246375 , y: 10.513329575, label: "PANNG-NGT(20, 40, 60, 0.40)" },
+                                                                    { x: 0.06280193236714976 , y: 11.0811192609, label: "PANNG-NGT(20, 40, 60, 0.60)" },
+                                                                    { x: 0.3893719806763285 , y: 12.5708973926, label: "PANNG-NGT(20, 40, 60, 0.80)" },
+                                                                    { x: 0.5884057971014492 , y: 13.9427282223, label: "PANNG-NGT(20, 40, 60, 0.90)" },
+                                                                    { x: 1.0 , y: 87.5834933479, label: "PANNG-NGT(20, 40, 60, 1.30)" },
                                                             ]
                         },
                                                 ]},
@@ -1717,13 +1729,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.1391304347826087, 0.967610631012)
-                                    (0.3719806763285024, 2.05477525186)
-                                    (0.7801932367149759, 10.8584178842)
-                                    (0.7367149758454107, 14.9016460889)
-                                    (0.9280193236714975, 21.2043074456)
+                                                (0.042028985507246375, 10.513329575)
+                                    (0.06280193236714976, 11.0811192609)
+                                    (0.3893719806763285, 12.5708973926)
+                                    (0.5884057971014492, 13.9427282223)
+                                    (1.0, 87.5834933479)
                             };
-            \addlegendentry{ flann };
+            \addlegendentry{ NGT-panng };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB)/Queries per second (s) tradeoff - down and to the right is better }
@@ -1741,16 +1753,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "flann",
+                            label: "NGT-panng",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.15845410628019324 , y: 7647.70431703, label: "FLANN(target_precision=0.200000)" },
-                                                                    { x: 0.43091787439613527 , y: 3576.06020092, label: "FLANN(target_precision=0.500000)" },
-                                                                    { x: 0.8690821256038648 , y: 1302.95224875, label: "FLANN(target_precision=0.900000)" },
-                                                                    { x: 0.8473429951690822 , y: 512.963464198, label: "FLANN(target_precision=0.800000)" },
-                                                                    { x: 0.9792270531400966 , y: 357.663178553, label: "FLANN(target_precision=0.950000)" },
+                                                                    { x: 0.05217391304347826 , y: 2760.30536215, label: "PANNG-NGT(20, 40, 60, 0.40)" },
+                                                                    { x: 0.07294685990338164 , y: 2630.78117955, label: "PANNG-NGT(20, 40, 60, 0.60)" },
+                                                                    { x: 0.4318840579710145 , y: 2298.96077403, label: "PANNG-NGT(20, 40, 60, 0.80)" },
+                                                                    { x: 0.6545893719806763 , y: 2090.55211687, label: "PANNG-NGT(20, 40, 60, 0.90)" },
+                                                                    { x: 1.0 , y: 333.030790221, label: "PANNG-NGT(20, 40, 60, 1.30)" },
                                                             ]
                         },
                                                 ]},
@@ -1839,13 +1851,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.15845410628019324, 7647.70431703)
-                                    (0.43091787439613527, 3576.06020092)
-                                    (0.8690821256038648, 1302.95224875)
-                                    (0.8473429951690822, 512.963464198)
-                                    (0.9792270531400966, 357.663178553)
+                                                (0.05217391304347826, 2760.30536215)
+                                    (0.07294685990338164, 2630.78117955)
+                                    (0.4318840579710145, 2298.96077403)
+                                    (0.6545893719806763, 2090.55211687)
+                                    (1.0, 333.030790221)
                             };
-            \addlegendentry{ flann };
+            \addlegendentry{ NGT-panng };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.01 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1863,16 +1875,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "flann",
+                            label: "NGT-panng",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.43333333333333335 , y: 7647.70431703, label: "FLANN(target_precision=0.200000)" },
-                                                                    { x: 0.9033816425120773 , y: 3576.06020092, label: "FLANN(target_precision=0.500000)" },
-                                                                    { x: 1.0 , y: 1302.95224875, label: "FLANN(target_precision=0.900000)" },
-                                                                    { x: 1.0 , y: 512.963464198, label: "FLANN(target_precision=0.800000)" },
-                                                                    { x: 1.0 , y: 357.663178553, label: "FLANN(target_precision=0.950000)" },
+                                                                    { x: 0.1536231884057971 , y: 2760.30536215, label: "PANNG-NGT(20, 40, 60, 0.40)" },
+                                                                    { x: 0.17439613526570047 , y: 2630.78117955, label: "PANNG-NGT(20, 40, 60, 0.60)" },
+                                                                    { x: 0.6681159420289855 , y: 2298.96077403, label: "PANNG-NGT(20, 40, 60, 0.80)" },
+                                                                    { x: 0.9584541062801932 , y: 2090.55211687, label: "PANNG-NGT(20, 40, 60, 0.90)" },
+                                                                    { x: 1.0 , y: 333.030790221, label: "PANNG-NGT(20, 40, 60, 1.30)" },
                                                             ]
                         },
                                                 ]},
@@ -1961,13 +1973,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.43333333333333335, 7647.70431703)
-                                    (0.9033816425120773, 3576.06020092)
-                                    (1.0, 1302.95224875)
-                                    (1.0, 512.963464198)
-                                    (1.0, 357.663178553)
+                                                (0.1536231884057971, 2760.30536215)
+                                    (0.17439613526570047, 2630.78117955)
+                                    (0.6681159420289855, 2298.96077403)
+                                    (0.9584541062801932, 2090.55211687)
+                                    (1.0, 333.030790221)
                             };
-            \addlegendentry{ flann };
+            \addlegendentry{ NGT-panng };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.1 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
