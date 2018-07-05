@@ -57,22 +57,21 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "pynndescent",
+                            label: "ball",
+                            fill: false,
+                            pointStyle: "triangle",
+                            borderColor: "rgba(102, 255, 255, 1)",
+                            data: [
+                                                                    { x: 1.0 , y: 105.869652504, label: "BallTree(leaf_size=400)" },
+                                                            ]
+                        },
+                                                {
+                            label: "kd",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.8657004830917875 , y: 1383.0547665, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.8961352657004831 , y: 1253.18402106, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.921256038647343 , y: 1157.91352267, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9743961352657005 , y: 1090.33394659, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9845410628019323 , y: 959.35378108, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9908212560386473 , y: 847.875312013, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9922705314009662 , y: 702.750574887, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9971014492753624 , y: 697.846011394, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9980676328502416 , y: 599.657238052, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9985507246376811 , y: 515.165892829, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.0 , y: 433.046900812, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=4.00)" },
+                                                                    { x: 1.0 , y: 91.8823379883, label: "KDTree(leaf_size=100)" },
                                                             ]
                         },
                                                 ]},
@@ -161,19 +160,13 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.8657004830917875, 1383.0547665)
-                                    (0.8961352657004831, 1253.18402106)
-                                    (0.921256038647343, 1157.91352267)
-                                    (0.9743961352657005, 1090.33394659)
-                                    (0.9845410628019323, 959.35378108)
-                                    (0.9908212560386473, 847.875312013)
-                                    (0.9922705314009662, 702.750574887)
-                                    (0.9971014492753624, 697.846011394)
-                                    (0.9980676328502416, 599.657238052)
-                                    (0.9985507246376811, 515.165892829)
-                                    (1.0, 433.046900812)
+                                                (1.0, 105.869652504)
                             };
-            \addlegendentry{ pynndescent };
+            \addlegendentry{ ball };
+                                \addplot coordinates {
+                                                (1.0, 91.8823379883)
+                            };
+            \addlegendentry{ kd };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -191,16 +184,21 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "pynndescent",
+                            label: "ball",
+                            fill: false,
+                            pointStyle: "triangle",
+                            borderColor: "rgba(102, 255, 255, 1)",
+                            data: [
+                                                                    { x: 1.0 , y: 0.176725149155, label: "BallTree(leaf_size=400)" },
+                                                            ]
+                        },
+                                                {
+                            label: "kd",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.921256038647343 , y: 3.66684269905, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9632850241545894 , y: 3.66684269905, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9922705314009662 , y: 3.66684269905, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 0.9990338164251208 , y: 5.84920430183, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 8.54423999786, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=4.00)" },
+                                                                    { x: 1.0 , y: 0.225028514862, label: "KDTree(leaf_size=100)" },
                                                             ]
                         },
                                                 ]},
@@ -289,13 +287,13 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.921256038647343, 3.66684269905)
-                                    (0.9632850241545894, 3.66684269905)
-                                    (0.9922705314009662, 3.66684269905)
-                                    (0.9990338164251208, 5.84920430183)
-                                    (1.0, 8.54423999786)
+                                                (1.0, 0.176725149155)
                             };
-            \addlegendentry{ pynndescent };
+            \addlegendentry{ ball };
+                                \addplot coordinates {
+                                                (1.0, 0.225028514862)
+                            };
+            \addlegendentry{ kd };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Build time (s) tradeoff - down and to the right is better }
@@ -313,14 +311,21 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "pynndescent",
+                            label: "ball",
+                            fill: false,
+                            pointStyle: "triangle",
+                            borderColor: "rgba(102, 255, 255, 1)",
+                            data: [
+                                                                    { x: 1.0 , y: 59404.0, label: "BallTree(leaf_size=400)" },
+                                                            ]
+                        },
+                                                {
+                            label: "kd",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9845410628019323 , y: 94308.0, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9990338164251208 , y: 94308.0, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 100300.0, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=4.00)" },
+                                                                    { x: 1.0 , y: 59464.0, label: "KDTree(leaf_size=100)" },
                                                             ]
                         },
                                                 ]},
@@ -409,11 +414,13 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.9845410628019323, 94308.0)
-                                    (0.9990338164251208, 94308.0)
-                                    (1.0, 100300.0)
+                                                (1.0, 59404.0)
                             };
-            \addlegendentry{ pynndescent };
+            \addlegendentry{ ball };
+                                \addplot coordinates {
+                                                (1.0, 59464.0)
+                            };
+            \addlegendentry{ kd };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB) tradeoff - down and to the right is better }
@@ -431,23 +438,21 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "pynndescent",
+                            label: "ball",
+                            fill: false,
+                            pointStyle: "triangle",
+                            borderColor: "rgba(102, 255, 255, 1)",
+                            data: [
+                                                                    { x: 1.0 , y: 105.869652504, label: "BallTree(leaf_size=400)" },
+                                                            ]
+                        },
+                                                {
+                            label: "kd",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.00505397167 , y: 1383.0547665, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 1.00386642017 , y: 1253.18402106, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.00279186914 , y: 1157.91352267, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.00074271711 , y: 1090.33394659, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 1.00032699237 , y: 959.35378108, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.00017471122 , y: 847.875312013, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.00015692111 , y: 702.750574887, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.00011841665 , y: 697.846011394, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.000103427 , y: 599.657238052, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.00002312225 , y: 580.836813007, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.00002046784 , y: 515.165892829, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.0 , y: 433.046900812, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=4.00)" },
+                                                                    { x: 1.0 , y: 91.8823379883, label: "KDTree(leaf_size=100)" },
                                                             ]
                         },
                                                 ]},
@@ -536,20 +541,13 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.00505397167, 1383.0547665)
-                                    (1.00386642017, 1253.18402106)
-                                    (1.00279186914, 1157.91352267)
-                                    (1.00074271711, 1090.33394659)
-                                    (1.00032699237, 959.35378108)
-                                    (1.00017471122, 847.875312013)
-                                    (1.00015692111, 702.750574887)
-                                    (1.00011841665, 697.846011394)
-                                    (1.000103427, 599.657238052)
-                                    (1.00002312225, 580.836813007)
-                                    (1.00002046784, 515.165892829)
-                                    (1.0, 433.046900812)
+                                                (1.0, 105.869652504)
                             };
-            \addlegendentry{ pynndescent };
+            \addlegendentry{ ball };
+                                \addplot coordinates {
+                                                (1.0, 91.8823379883)
+                            };
+            \addlegendentry{ kd };
             \end{axis}
     \end{tikzpicture}
     \caption{ Relative Error-Queries per second (1/s) tradeoff - up and to the left is better }
@@ -567,14 +565,21 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "pynndescent",
+                            label: "ball",
+                            fill: false,
+                            pointStyle: "triangle",
+                            borderColor: "rgba(102, 255, 255, 1)",
+                            data: [
+                                                                    { x: 1.0 , y: 10.0, label: "BallTree(leaf_size=400)" },
+                                                            ]
+                        },
+                                                {
+                            label: "kd",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.921256038647343 , y: 10.0, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9990338164251208 , y: 10.0, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.0 , y: 10.0, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=4.00)" },
+                                                                    { x: 1.0 , y: 10.0, label: "KDTree(leaf_size=20)" },
                                                             ]
                         },
                                                 ]},
@@ -663,11 +668,13 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.921256038647343, 10.0)
-                                    (0.9990338164251208, 10.0)
-                                    (1.0, 10.0)
+                                                (1.0, 10.0)
                             };
-            \addlegendentry{ pynndescent };
+            \addlegendentry{ ball };
+                                \addplot coordinates {
+                                                (1.0, 10.0)
+                            };
+            \addlegendentry{ kd };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Candidates generated tradeoff - down and to the right is better }
@@ -685,19 +692,21 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "pynndescent",
+                            label: "ball",
+                            fill: false,
+                            pointStyle: "triangle",
+                            borderColor: "rgba(102, 255, 255, 1)",
+                            data: [
+                                                                    { x: 1.0 , y: 561.105081531, label: "BallTree(leaf_size=400)" },
+                                                            ]
+                        },
+                                                {
+                            label: "kd",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.8657004830917875 , y: 79.690264384, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9743961352657005 , y: 86.494601305, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9845410628019323 , y: 98.303672597, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9908212560386473 , y: 111.228618954, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9971014492753624 , y: 143.727983484, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9980676328502416 , y: 162.365741785, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9985507246376811 , y: 217.66968963, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.0 , y: 231.614635302, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=4.00)" },
+                                                                    { x: 1.0 , y: 647.175521454, label: "KDTree(leaf_size=100)" },
                                                             ]
                         },
                                                 ]},
@@ -786,16 +795,13 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.8657004830917875, 79.690264384)
-                                    (0.9743961352657005, 86.494601305)
-                                    (0.9845410628019323, 98.303672597)
-                                    (0.9908212560386473, 111.228618954)
-                                    (0.9971014492753624, 143.727983484)
-                                    (0.9980676328502416, 162.365741785)
-                                    (0.9985507246376811, 217.66968963)
-                                    (1.0, 231.614635302)
+                                                (1.0, 561.105081531)
                             };
-            \addlegendentry{ pynndescent };
+            \addlegendentry{ ball };
+                                \addplot coordinates {
+                                                (1.0, 647.175521454)
+                            };
+            \addlegendentry{ kd };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB)/Queries per second (s) tradeoff - down and to the right is better }
@@ -813,18 +819,21 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "pynndescent",
+                            label: "ball",
+                            fill: false,
+                            pointStyle: "triangle",
+                            borderColor: "rgba(102, 255, 255, 1)",
+                            data: [
+                                                                    { x: 1.0 , y: 105.869652504, label: "BallTree(leaf_size=400)" },
+                                                            ]
+                        },
+                                                {
+                            label: "kd",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.942512077294686 , y: 1383.0547665, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9608695652173913 , y: 1253.18402106, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9748792270531401 , y: 1157.91352267, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9966183574879227 , y: 1090.33394659, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9990338164251208 , y: 959.35378108, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9995169082125603 , y: 847.875312013, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.0 , y: 697.846011394, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.50)" },
+                                                                    { x: 1.0 , y: 91.8823379883, label: "KDTree(leaf_size=100)" },
                                                             ]
                         },
                                                 ]},
@@ -913,15 +922,13 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.942512077294686, 1383.0547665)
-                                    (0.9608695652173913, 1253.18402106)
-                                    (0.9748792270531401, 1157.91352267)
-                                    (0.9966183574879227, 1090.33394659)
-                                    (0.9990338164251208, 959.35378108)
-                                    (0.9995169082125603, 847.875312013)
-                                    (1.0, 697.846011394)
+                                                (1.0, 105.869652504)
                             };
-            \addlegendentry{ pynndescent };
+            \addlegendentry{ ball };
+                                \addplot coordinates {
+                                                (1.0, 91.8823379883)
+                            };
+            \addlegendentry{ kd };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.01 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -939,12 +946,21 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "pynndescent",
+                            label: "ball",
+                            fill: false,
+                            pointStyle: "triangle",
+                            borderColor: "rgba(102, 255, 255, 1)",
+                            data: [
+                                                                    { x: 1.0 , y: 105.869652504, label: "BallTree(leaf_size=400)" },
+                                                            ]
+                        },
+                                                {
+                            label: "kd",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.0 , y: 1383.0547665, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.00)" },
+                                                                    { x: 1.0 , y: 91.8823379883, label: "KDTree(leaf_size=100)" },
                                                             ]
                         },
                                                 ]},
@@ -1033,9 +1049,13 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 1383.0547665)
+                                                (1.0, 105.869652504)
                             };
-            \addlegendentry{ pynndescent };
+            \addlegendentry{ ball };
+                                \addplot coordinates {
+                                                (1.0, 91.8823379883)
+                            };
+            \addlegendentry{ kd };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.1 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1055,36 +1075,24 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "pynndescent",
+                            label: "ball",
+                            fill: false,
+                            pointStyle: "triangle",
+                            borderColor: "rgba(102, 255, 255, 1)",
+                            data: [
+                                                                    { x: 1.0 , y: 105.869652504, label: "BallTree(leaf_size=400)" },
+                                                                    { x: 1.0 , y: 93.2636148222, label: "BallTree(leaf_size=10)" },
+                                                            ]
+                        },
+                                                {
+                            label: "kd",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.8657004830917875 , y: 1383.0547665, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.8961352657004831 , y: 1253.18402106, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.921256038647343 , y: 1157.91352267, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9743961352657005 , y: 1090.33394659, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9845410628019323 , y: 959.35378108, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9729468599033816 , y: 926.932855038, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9632850241545894 , y: 907.913071667, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9908212560386473 , y: 847.875312013, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9903381642512077 , y: 820.860557287, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.985024154589372 , y: 801.262616214, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9922705314009662 , y: 702.750574887, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9971014492753624 , y: 697.846011394, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9922705314009662 , y: 650.16233298, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 0.9980676328502416 , y: 599.657238052, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9980676328502416 , y: 580.836813007, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9966183574879227 , y: 559.786437789, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9985507246376811 , y: 515.165892829, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9975845410628019 , y: 466.253264688, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.0 , y: 433.046900812, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9990338164251208 , y: 409.829887406, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9990338164251208 , y: 395.199335069, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 0.9990338164251208 , y: 368.016378496, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 310.898008073, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.0 , y: 300.959715977, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 231.743543327, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=8.00)" },
+                                                                    { x: 1.0 , y: 91.8823379883, label: "KDTree(leaf_size=100)" },
+                                                                    { x: 1.0 , y: 64.2471625409, label: "KDTree(leaf_size=20)" },
+                                                                    { x: 1.0 , y: 45.188212958, label: "KDTree(leaf_size=10)" },
                                                             ]
                         },
                                                 ]},
@@ -1173,33 +1181,16 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.8657004830917875, 1383.0547665)
-                                    (0.8961352657004831, 1253.18402106)
-                                    (0.921256038647343, 1157.91352267)
-                                    (0.9743961352657005, 1090.33394659)
-                                    (0.9845410628019323, 959.35378108)
-                                    (0.9729468599033816, 926.932855038)
-                                    (0.9632850241545894, 907.913071667)
-                                    (0.9908212560386473, 847.875312013)
-                                    (0.9903381642512077, 820.860557287)
-                                    (0.985024154589372, 801.262616214)
-                                    (0.9922705314009662, 702.750574887)
-                                    (0.9971014492753624, 697.846011394)
-                                    (0.9922705314009662, 650.16233298)
-                                    (0.9980676328502416, 599.657238052)
-                                    (0.9980676328502416, 580.836813007)
-                                    (0.9966183574879227, 559.786437789)
-                                    (0.9985507246376811, 515.165892829)
-                                    (0.9975845410628019, 466.253264688)
-                                    (1.0, 433.046900812)
-                                    (0.9990338164251208, 409.829887406)
-                                    (0.9990338164251208, 395.199335069)
-                                    (0.9990338164251208, 368.016378496)
-                                    (1.0, 310.898008073)
-                                    (1.0, 300.959715977)
-                                    (1.0, 231.743543327)
+                                                (1.0, 105.869652504)
+                                    (1.0, 93.2636148222)
                             };
-            \addlegendentry{ pynndescent };
+            \addlegendentry{ ball };
+                                \addplot [only marks] coordinates {
+                                                (1.0, 91.8823379883)
+                                    (1.0, 64.2471625409)
+                                    (1.0, 45.188212958)
+                            };
+            \addlegendentry{ kd };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1217,36 +1208,24 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "pynndescent",
+                            label: "ball",
+                            fill: false,
+                            pointStyle: "triangle",
+                            borderColor: "rgba(102, 255, 255, 1)",
+                            data: [
+                                                                    { x: 1.0 , y: 0.176725149155, label: "BallTree(leaf_size=400)" },
+                                                                    { x: 1.0 , y: 0.344353437424, label: "BallTree(leaf_size=10)" },
+                                                            ]
+                        },
+                                                {
+                            label: "kd",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.921256038647343 , y: 3.66684269905, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9632850241545894 , y: 3.66684269905, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.8961352657004831 , y: 3.66684269905, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.8657004830917875 , y: 3.66684269905, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9922705314009662 , y: 3.66684269905, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 0.9729468599033816 , y: 5.84920430183, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.985024154589372 , y: 5.84920430183, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9990338164251208 , y: 5.84920430183, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 0.9922705314009662 , y: 5.84920430183, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9985507246376811 , y: 5.84920430183, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9845410628019323 , y: 5.96664333344, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9990338164251208 , y: 5.96664333344, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 0.9908212560386473 , y: 5.96664333344, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9980676328502416 , y: 5.96664333344, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9743961352657005 , y: 5.96664333344, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9980676328502416 , y: 8.54423999786, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.0 , y: 8.54423999786, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9903381642512077 , y: 8.54423999786, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 1.0 , y: 8.54423999786, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 0.9971014492753624 , y: 8.54423999786, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9990338164251208 , y: 12.8136336803, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9966183574879227 , y: 12.8136336803, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9975845410628019 , y: 12.8136336803, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.0 , y: 12.8136336803, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 12.8136336803, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=4.00)" },
+                                                                    { x: 1.0 , y: 0.225028514862, label: "KDTree(leaf_size=100)" },
+                                                                    { x: 1.0 , y: 0.27764749527, label: "KDTree(leaf_size=20)" },
+                                                                    { x: 1.0 , y: 0.32458114624, label: "KDTree(leaf_size=10)" },
                                                             ]
                         },
                                                 ]},
@@ -1335,33 +1314,16 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.921256038647343, 3.66684269905)
-                                    (0.9632850241545894, 3.66684269905)
-                                    (0.8961352657004831, 3.66684269905)
-                                    (0.8657004830917875, 3.66684269905)
-                                    (0.9922705314009662, 3.66684269905)
-                                    (0.9729468599033816, 5.84920430183)
-                                    (0.985024154589372, 5.84920430183)
-                                    (0.9990338164251208, 5.84920430183)
-                                    (0.9922705314009662, 5.84920430183)
-                                    (0.9985507246376811, 5.84920430183)
-                                    (0.9845410628019323, 5.96664333344)
-                                    (0.9990338164251208, 5.96664333344)
-                                    (0.9908212560386473, 5.96664333344)
-                                    (0.9980676328502416, 5.96664333344)
-                                    (0.9743961352657005, 5.96664333344)
-                                    (0.9980676328502416, 8.54423999786)
-                                    (1.0, 8.54423999786)
-                                    (0.9903381642512077, 8.54423999786)
-                                    (1.0, 8.54423999786)
-                                    (0.9971014492753624, 8.54423999786)
-                                    (0.9990338164251208, 12.8136336803)
-                                    (0.9966183574879227, 12.8136336803)
-                                    (0.9975845410628019, 12.8136336803)
-                                    (1.0, 12.8136336803)
-                                    (1.0, 12.8136336803)
+                                                (1.0, 0.176725149155)
+                                    (1.0, 0.344353437424)
                             };
-            \addlegendentry{ pynndescent };
+            \addlegendentry{ ball };
+                                \addplot [only marks] coordinates {
+                                                (1.0, 0.225028514862)
+                                    (1.0, 0.27764749527)
+                                    (1.0, 0.32458114624)
+                            };
+            \addlegendentry{ kd };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Build time (s) tradeoff - down and to the right is better }
@@ -1379,36 +1341,24 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "pynndescent",
+                            label: "ball",
+                            fill: false,
+                            pointStyle: "triangle",
+                            borderColor: "rgba(102, 255, 255, 1)",
+                            data: [
+                                                                    { x: 1.0 , y: 59404.0, label: "BallTree(leaf_size=400)" },
+                                                                    { x: 1.0 , y: 67836.0, label: "BallTree(leaf_size=10)" },
+                                                            ]
+                        },
+                                                {
+                            label: "kd",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9845410628019323 , y: 94308.0, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9990338164251208 , y: 94308.0, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 0.9908212560386473 , y: 94308.0, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9980676328502416 , y: 94308.0, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9743961352657005 , y: 94308.0, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9980676328502416 , y: 100300.0, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.0 , y: 100300.0, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9903381642512077 , y: 100300.0, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 1.0 , y: 100300.0, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 0.9971014492753624 , y: 100300.0, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9990338164251208 , y: 108052.0, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9966183574879227 , y: 108052.0, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9975845410628019 , y: 108052.0, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.0 , y: 108052.0, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 108052.0, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.921256038647343 , y: 110216.0, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9632850241545894 , y: 110216.0, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.8961352657004831 , y: 110216.0, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.8657004830917875 , y: 110216.0, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9922705314009662 , y: 110216.0, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 0.9729468599033816 , y: 112136.0, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.985024154589372 , y: 112136.0, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9990338164251208 , y: 112136.0, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 0.9922705314009662 , y: 112136.0, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9985507246376811 , y: 112136.0, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=4.00)" },
+                                                                    { x: 1.0 , y: 59464.0, label: "KDTree(leaf_size=100)" },
+                                                                    { x: 1.0 , y: 67768.0, label: "KDTree(leaf_size=20)" },
+                                                                    { x: 1.0 , y: 76020.0, label: "KDTree(leaf_size=10)" },
                                                             ]
                         },
                                                 ]},
@@ -1497,33 +1447,16 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.9845410628019323, 94308.0)
-                                    (0.9990338164251208, 94308.0)
-                                    (0.9908212560386473, 94308.0)
-                                    (0.9980676328502416, 94308.0)
-                                    (0.9743961352657005, 94308.0)
-                                    (0.9980676328502416, 100300.0)
-                                    (1.0, 100300.0)
-                                    (0.9903381642512077, 100300.0)
-                                    (1.0, 100300.0)
-                                    (0.9971014492753624, 100300.0)
-                                    (0.9990338164251208, 108052.0)
-                                    (0.9966183574879227, 108052.0)
-                                    (0.9975845410628019, 108052.0)
-                                    (1.0, 108052.0)
-                                    (1.0, 108052.0)
-                                    (0.921256038647343, 110216.0)
-                                    (0.9632850241545894, 110216.0)
-                                    (0.8961352657004831, 110216.0)
-                                    (0.8657004830917875, 110216.0)
-                                    (0.9922705314009662, 110216.0)
-                                    (0.9729468599033816, 112136.0)
-                                    (0.985024154589372, 112136.0)
-                                    (0.9990338164251208, 112136.0)
-                                    (0.9922705314009662, 112136.0)
-                                    (0.9985507246376811, 112136.0)
+                                                (1.0, 59404.0)
+                                    (1.0, 67836.0)
                             };
-            \addlegendentry{ pynndescent };
+            \addlegendentry{ ball };
+                                \addplot [only marks] coordinates {
+                                                (1.0, 59464.0)
+                                    (1.0, 67768.0)
+                                    (1.0, 76020.0)
+                            };
+            \addlegendentry{ kd };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB) tradeoff - down and to the right is better }
@@ -1541,36 +1474,24 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "pynndescent",
+                            label: "ball",
+                            fill: false,
+                            pointStyle: "triangle",
+                            borderColor: "rgba(102, 255, 255, 1)",
+                            data: [
+                                                                    { x: 1.0 , y: 105.869652504, label: "BallTree(leaf_size=400)" },
+                                                                    { x: 1.0 , y: 93.2636148222, label: "BallTree(leaf_size=10)" },
+                                                            ]
+                        },
+                                                {
+                            label: "kd",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.00505397167 , y: 1383.0547665, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 1.00386642017 , y: 1253.18402106, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.00279186914 , y: 1157.91352267, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.00074271711 , y: 1090.33394659, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 1.00032699237 , y: 959.35378108, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.00080054533 , y: 926.932855038, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 1.00123998278 , y: 907.913071667, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.00017471122 , y: 847.875312013, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.00034163086 , y: 820.860557287, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 1.00030216803 , y: 801.262616214, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.00015692111 , y: 702.750574887, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.00011841665 , y: 697.846011394, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.00017190847 , y: 650.16233298, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.000103427 , y: 599.657238052, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.00002312225 , y: 580.836813007, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.00004485741 , y: 559.786437789, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 1.00002046784 , y: 515.165892829, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.00003503973 , y: 466.253264688, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.0 , y: 433.046900812, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.00000354284 , y: 409.829887406, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.00000655701 , y: 395.199335069, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.00000655701 , y: 368.016378496, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 310.898008073, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.0 , y: 300.959715977, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 231.743543327, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=8.00)" },
+                                                                    { x: 1.0 , y: 91.8823379883, label: "KDTree(leaf_size=100)" },
+                                                                    { x: 1.0 , y: 64.2471625409, label: "KDTree(leaf_size=20)" },
+                                                                    { x: 1.0 , y: 45.188212958, label: "KDTree(leaf_size=10)" },
                                                             ]
                         },
                                                 ]},
@@ -1659,33 +1580,16 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.00505397167, 1383.0547665)
-                                    (1.00386642017, 1253.18402106)
-                                    (1.00279186914, 1157.91352267)
-                                    (1.00074271711, 1090.33394659)
-                                    (1.00032699237, 959.35378108)
-                                    (1.00080054533, 926.932855038)
-                                    (1.00123998278, 907.913071667)
-                                    (1.00017471122, 847.875312013)
-                                    (1.00034163086, 820.860557287)
-                                    (1.00030216803, 801.262616214)
-                                    (1.00015692111, 702.750574887)
-                                    (1.00011841665, 697.846011394)
-                                    (1.00017190847, 650.16233298)
-                                    (1.000103427, 599.657238052)
-                                    (1.00002312225, 580.836813007)
-                                    (1.00004485741, 559.786437789)
-                                    (1.00002046784, 515.165892829)
-                                    (1.00003503973, 466.253264688)
-                                    (1.0, 433.046900812)
-                                    (1.00000354284, 409.829887406)
-                                    (1.00000655701, 395.199335069)
-                                    (1.00000655701, 368.016378496)
-                                    (1.0, 310.898008073)
-                                    (1.0, 300.959715977)
-                                    (1.0, 231.743543327)
+                                                (1.0, 105.869652504)
+                                    (1.0, 93.2636148222)
                             };
-            \addlegendentry{ pynndescent };
+            \addlegendentry{ ball };
+                                \addplot [only marks] coordinates {
+                                                (1.0, 91.8823379883)
+                                    (1.0, 64.2471625409)
+                                    (1.0, 45.188212958)
+                            };
+            \addlegendentry{ kd };
             \end{axis}
     \end{tikzpicture}
     \caption{ Relative Error-Queries per second (1/s) tradeoff - up and to the left is better }
@@ -1703,36 +1607,24 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "pynndescent",
+                            label: "ball",
+                            fill: false,
+                            pointStyle: "triangle",
+                            borderColor: "rgba(102, 255, 255, 1)",
+                            data: [
+                                                                    { x: 1.0 , y: 10.0, label: "BallTree(leaf_size=400)" },
+                                                                    { x: 1.0 , y: 10.0, label: "BallTree(leaf_size=10)" },
+                                                            ]
+                        },
+                                                {
+                            label: "kd",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.921256038647343 , y: 10.0, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9990338164251208 , y: 10.0, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9729468599033816 , y: 10.0, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9966183574879227 , y: 10.0, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9632850241545894 , y: 10.0, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9980676328502416 , y: 10.0, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.0 , y: 10.0, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9845410628019323 , y: 10.0, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9903381642512077 , y: 10.0, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.985024154589372 , y: 10.0, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9975845410628019 , y: 10.0, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.0 , y: 10.0, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 0.9990338164251208 , y: 10.0, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 0.9922705314009662 , y: 10.0, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9990338164251208 , y: 10.0, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 0.8961352657004831 , y: 10.0, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9908212560386473 , y: 10.0, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9980676328502416 , y: 10.0, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9971014492753624 , y: 10.0, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.8657004830917875 , y: 10.0, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 1.0 , y: 10.0, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 0.9743961352657005 , y: 10.0, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9922705314009662 , y: 10.0, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 10.0, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9985507246376811 , y: 10.0, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=4.00)" },
+                                                                    { x: 1.0 , y: 10.0, label: "KDTree(leaf_size=20)" },
+                                                                    { x: 1.0 , y: 10.0, label: "KDTree(leaf_size=100)" },
+                                                                    { x: 1.0 , y: 10.0, label: "KDTree(leaf_size=10)" },
                                                             ]
                         },
                                                 ]},
@@ -1821,33 +1713,16 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.921256038647343, 10.0)
-                                    (0.9990338164251208, 10.0)
-                                    (0.9729468599033816, 10.0)
-                                    (0.9966183574879227, 10.0)
-                                    (0.9632850241545894, 10.0)
-                                    (0.9980676328502416, 10.0)
+                                                (1.0, 10.0)
                                     (1.0, 10.0)
-                                    (0.9845410628019323, 10.0)
-                                    (0.9903381642512077, 10.0)
-                                    (0.985024154589372, 10.0)
-                                    (0.9975845410628019, 10.0)
-                                    (1.0, 10.0)
-                                    (0.9990338164251208, 10.0)
-                                    (0.9922705314009662, 10.0)
-                                    (0.9990338164251208, 10.0)
-                                    (0.8961352657004831, 10.0)
-                                    (0.9908212560386473, 10.0)
-                                    (0.9980676328502416, 10.0)
-                                    (0.9971014492753624, 10.0)
-                                    (0.8657004830917875, 10.0)
-                                    (1.0, 10.0)
-                                    (0.9743961352657005, 10.0)
-                                    (0.9922705314009662, 10.0)
-                                    (1.0, 10.0)
-                                    (0.9985507246376811, 10.0)
                             };
-            \addlegendentry{ pynndescent };
+            \addlegendentry{ ball };
+                                \addplot [only marks] coordinates {
+                                                (1.0, 10.0)
+                                    (1.0, 10.0)
+                                    (1.0, 10.0)
+                            };
+            \addlegendentry{ kd };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Candidates generated tradeoff - down and to the right is better }
@@ -1865,36 +1740,24 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "pynndescent",
+                            label: "ball",
+                            fill: false,
+                            pointStyle: "triangle",
+                            borderColor: "rgba(102, 255, 255, 1)",
+                            data: [
+                                                                    { x: 1.0 , y: 561.105081531, label: "BallTree(leaf_size=400)" },
+                                                                    { x: 1.0 , y: 727.357610246, label: "BallTree(leaf_size=10)" },
+                                                            ]
+                        },
+                                                {
+                            label: "kd",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.8657004830917875 , y: 79.690264384, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9743961352657005 , y: 86.494601305, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.8961352657004831 , y: 87.9487753974, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.921256038647343 , y: 95.1850011614, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9845410628019323 , y: 98.303672597, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9908212560386473 , y: 111.228618954, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9729468599033816 , y: 120.975321341, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9632850241545894 , y: 121.394881778, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9903381642512077 , y: 122.188840857, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.985024154589372 , y: 139.949122461, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9971014492753624 , y: 143.727983484, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9922705314009662 , y: 159.567283197, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9980676328502416 , y: 162.365741785, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9980676328502416 , y: 167.26221854, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9922705314009662 , y: 169.520740297, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 0.9966183574879227 , y: 193.023611695, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9985507246376811 , y: 217.66968963, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.0 , y: 231.614635302, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9975845410628019 , y: 231.745294207, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9990338164251208 , y: 238.634004745, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 0.9990338164251208 , y: 263.650854465, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9990338164251208 , y: 304.703829917, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 333.267193831, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 347.548061403, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.0 , y: 466.256787346, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=8.00)" },
+                                                                    { x: 1.0 , y: 647.175521454, label: "KDTree(leaf_size=100)" },
+                                                                    { x: 1.0 , y: 1054.80144679, label: "KDTree(leaf_size=20)" },
+                                                                    { x: 1.0 , y: 1682.29710855, label: "KDTree(leaf_size=10)" },
                                                             ]
                         },
                                                 ]},
@@ -1983,33 +1846,16 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.8657004830917875, 79.690264384)
-                                    (0.9743961352657005, 86.494601305)
-                                    (0.8961352657004831, 87.9487753974)
-                                    (0.921256038647343, 95.1850011614)
-                                    (0.9845410628019323, 98.303672597)
-                                    (0.9908212560386473, 111.228618954)
-                                    (0.9729468599033816, 120.975321341)
-                                    (0.9632850241545894, 121.394881778)
-                                    (0.9903381642512077, 122.188840857)
-                                    (0.985024154589372, 139.949122461)
-                                    (0.9971014492753624, 143.727983484)
-                                    (0.9922705314009662, 159.567283197)
-                                    (0.9980676328502416, 162.365741785)
-                                    (0.9980676328502416, 167.26221854)
-                                    (0.9922705314009662, 169.520740297)
-                                    (0.9966183574879227, 193.023611695)
-                                    (0.9985507246376811, 217.66968963)
-                                    (1.0, 231.614635302)
-                                    (0.9975845410628019, 231.745294207)
-                                    (0.9990338164251208, 238.634004745)
-                                    (0.9990338164251208, 263.650854465)
-                                    (0.9990338164251208, 304.703829917)
-                                    (1.0, 333.267193831)
-                                    (1.0, 347.548061403)
-                                    (1.0, 466.256787346)
+                                                (1.0, 561.105081531)
+                                    (1.0, 727.357610246)
                             };
-            \addlegendentry{ pynndescent };
+            \addlegendentry{ ball };
+                                \addplot [only marks] coordinates {
+                                                (1.0, 647.175521454)
+                                    (1.0, 1054.80144679)
+                                    (1.0, 1682.29710855)
+                            };
+            \addlegendentry{ kd };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB)/Queries per second (s) tradeoff - down and to the right is better }
@@ -2027,36 +1873,24 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "pynndescent",
+                            label: "ball",
+                            fill: false,
+                            pointStyle: "triangle",
+                            borderColor: "rgba(102, 255, 255, 1)",
+                            data: [
+                                                                    { x: 1.0 , y: 105.869652504, label: "BallTree(leaf_size=400)" },
+                                                                    { x: 1.0 , y: 93.2636148222, label: "BallTree(leaf_size=10)" },
+                                                            ]
+                        },
+                                                {
+                            label: "kd",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.942512077294686 , y: 1383.0547665, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9608695652173913 , y: 1253.18402106, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9748792270531401 , y: 1157.91352267, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9966183574879227 , y: 1090.33394659, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9990338164251208 , y: 959.35378108, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9932367149758454 , y: 926.932855038, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9932367149758454 , y: 907.913071667, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 0.9995169082125603 , y: 847.875312013, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 0.9975845410628019 , y: 820.860557287, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 0.9985507246376811 , y: 801.262616214, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 0.9995169082125603 , y: 702.750574887, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.0 , y: 697.846011394, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.0 , y: 650.16233298, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 599.657238052, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.0 , y: 580.836813007, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.0 , y: 559.786437789, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 1.0 , y: 515.165892829, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.0 , y: 466.253264688, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.0 , y: 433.046900812, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.0 , y: 409.829887406, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.0 , y: 395.199335069, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 368.016378496, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 310.898008073, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.0 , y: 300.959715977, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 231.743543327, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=8.00)" },
+                                                                    { x: 1.0 , y: 91.8823379883, label: "KDTree(leaf_size=100)" },
+                                                                    { x: 1.0 , y: 64.2471625409, label: "KDTree(leaf_size=20)" },
+                                                                    { x: 1.0 , y: 45.188212958, label: "KDTree(leaf_size=10)" },
                                                             ]
                         },
                                                 ]},
@@ -2145,33 +1979,16 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.942512077294686, 1383.0547665)
-                                    (0.9608695652173913, 1253.18402106)
-                                    (0.9748792270531401, 1157.91352267)
-                                    (0.9966183574879227, 1090.33394659)
-                                    (0.9990338164251208, 959.35378108)
-                                    (0.9932367149758454, 926.932855038)
-                                    (0.9932367149758454, 907.913071667)
-                                    (0.9995169082125603, 847.875312013)
-                                    (0.9975845410628019, 820.860557287)
-                                    (0.9985507246376811, 801.262616214)
-                                    (0.9995169082125603, 702.750574887)
-                                    (1.0, 697.846011394)
-                                    (1.0, 650.16233298)
-                                    (1.0, 599.657238052)
-                                    (1.0, 580.836813007)
-                                    (1.0, 559.786437789)
-                                    (1.0, 515.165892829)
-                                    (1.0, 466.253264688)
-                                    (1.0, 433.046900812)
-                                    (1.0, 409.829887406)
-                                    (1.0, 395.199335069)
-                                    (1.0, 368.016378496)
-                                    (1.0, 310.898008073)
-                                    (1.0, 300.959715977)
-                                    (1.0, 231.743543327)
+                                                (1.0, 105.869652504)
+                                    (1.0, 93.2636148222)
                             };
-            \addlegendentry{ pynndescent };
+            \addlegendentry{ ball };
+                                \addplot [only marks] coordinates {
+                                                (1.0, 91.8823379883)
+                                    (1.0, 64.2471625409)
+                                    (1.0, 45.188212958)
+                            };
+            \addlegendentry{ kd };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.01 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -2189,36 +2006,24 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "pynndescent",
+                            label: "ball",
+                            fill: false,
+                            pointStyle: "triangle",
+                            borderColor: "rgba(102, 255, 255, 1)",
+                            data: [
+                                                                    { x: 1.0 , y: 105.869652504, label: "BallTree(leaf_size=400)" },
+                                                                    { x: 1.0 , y: 93.2636148222, label: "BallTree(leaf_size=10)" },
+                                                            ]
+                        },
+                                                {
+                            label: "kd",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.0 , y: 1383.0547665, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 1.0 , y: 1253.18402106, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.0 , y: 1157.91352267, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.0 , y: 1090.33394659, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 1.0 , y: 959.35378108, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.0 , y: 926.932855038, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 1.0 , y: 907.913071667, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.0 , y: 847.875312013, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.0 , y: 820.860557287, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 1.0 , y: 801.262616214, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.0 , y: 702.750574887, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.0 , y: 697.846011394, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.0 , y: 650.16233298, label: "PyNNDescent(n_neighbors=5, n_trees=8, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 599.657238052, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.0 , y: 580.836813007, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.0 , y: 559.786437789, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=1.00)" },
-                                                                    { x: 1.0 , y: 515.165892829, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.0 , y: 466.253264688, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=1.50)" },
-                                                                    { x: 1.0 , y: 433.046900812, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.0 , y: 409.829887406, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=2.00)" },
-                                                                    { x: 1.0 , y: 395.199335069, label: "PyNNDescent(n_neighbors=20, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 368.016378496, label: "PyNNDescent(n_neighbors=20, n_trees=8, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 310.898008073, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=4.00)" },
-                                                                    { x: 1.0 , y: 300.959715977, label: "PyNNDescent(n_neighbors=40, n_trees=4, leaf_size=20, queue_size=8.00)" },
-                                                                    { x: 1.0 , y: 231.743543327, label: "PyNNDescent(n_neighbors=80, n_trees=4, leaf_size=20, queue_size=8.00)" },
+                                                                    { x: 1.0 , y: 91.8823379883, label: "KDTree(leaf_size=100)" },
+                                                                    { x: 1.0 , y: 64.2471625409, label: "KDTree(leaf_size=20)" },
+                                                                    { x: 1.0 , y: 45.188212958, label: "KDTree(leaf_size=10)" },
                                                             ]
                         },
                                                 ]},
@@ -2307,33 +2112,16 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 1383.0547665)
-                                    (1.0, 1253.18402106)
-                                    (1.0, 1157.91352267)
-                                    (1.0, 1090.33394659)
-                                    (1.0, 959.35378108)
-                                    (1.0, 926.932855038)
-                                    (1.0, 907.913071667)
-                                    (1.0, 847.875312013)
-                                    (1.0, 820.860557287)
-                                    (1.0, 801.262616214)
-                                    (1.0, 702.750574887)
-                                    (1.0, 697.846011394)
-                                    (1.0, 650.16233298)
-                                    (1.0, 599.657238052)
-                                    (1.0, 580.836813007)
-                                    (1.0, 559.786437789)
-                                    (1.0, 515.165892829)
-                                    (1.0, 466.253264688)
-                                    (1.0, 433.046900812)
-                                    (1.0, 409.829887406)
-                                    (1.0, 395.199335069)
-                                    (1.0, 368.016378496)
-                                    (1.0, 310.898008073)
-                                    (1.0, 300.959715977)
-                                    (1.0, 231.743543327)
+                                                (1.0, 105.869652504)
+                                    (1.0, 93.2636148222)
                             };
-            \addlegendentry{ pynndescent };
+            \addlegendentry{ ball };
+                                \addplot [only marks] coordinates {
+                                                (1.0, 91.8823379883)
+                                    (1.0, 64.2471625409)
+                                    (1.0, 45.188212958)
+                            };
+            \addlegendentry{ kd };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.1 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
