@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>sign-language-digits (k = 10)</title>
+        <title>dummy-algo-mt</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -47,7 +47,7 @@
             </nav>
 
                     <div class="container">
-                                <h2>Plots for sign-language-digits (k = 10)</h2>
+                                <h2>Plots for dummy-algo-mt</h2>
                                                 <h3>Recall/Queries per second (1/s)</h3>
             <div id="RecallQueries per second (1/s)">
             <canvas id="chartRecallQueries per second (1/s)" width="800" height="600"></canvas>
@@ -57,39 +57,12 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 68.551391934, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 81.6101963476, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
                                                                     { x: 0.005314009661835749 , y: 182744.880657, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 71.3867322052, label: "KDTree(leaf_size=400)" },
                                                             ]
                         },
                                                 ]},
@@ -178,21 +151,9 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 68.551391934)
-                            };
-            \addlegendentry{ ball };
-                                \addplot coordinates {
-                                                (0.9995169082125603, 81.6101963476)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot coordinates {
                                                 (0.005314009661835749, 182744.880657)
                             };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot coordinates {
-                                                (1.0, 71.3867322052)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -210,39 +171,12 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 0.474489688873, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 0.0158975124359, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
                                                                     { x: 0.005314009661835749 , y: 0.00662207603455, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 0.241654396057, label: "KDTree(leaf_size=400)" },
                                                             ]
                         },
                                                 ]},
@@ -331,21 +265,9 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 0.474489688873)
-                            };
-            \addlegendentry{ ball };
-                                \addplot coordinates {
-                                                (0.9995169082125603, 0.0158975124359)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot coordinates {
                                                 (0.005314009661835749, 0.00662207603455)
                             };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot coordinates {
-                                                (1.0, 0.241654396057)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Build time (s) tradeoff - down and to the right is better }
@@ -363,38 +285,11 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 63564.0, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 29732.0, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 59468.0, label: "KDTree(leaf_size=400)" },
                                                             ]
                         },
                                                 ]},
@@ -483,20 +378,8 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 63564.0)
-                            };
-            \addlegendentry{ ball };
-                                \addplot coordinates {
-                                                (0.9995169082125603, 29732.0)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot coordinates {
                                         };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot coordinates {
-                                                (1.0, 59468.0)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB) tradeoff - down and to the right is better }
@@ -514,39 +397,12 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 68.551391934, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.00000000465 , y: 81.6101963476, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
                                                                     { x: 1.44705682845 , y: 182744.880657, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 71.3867322052, label: "KDTree(leaf_size=400)" },
                                                             ]
                         },
                                                 ]},
@@ -635,21 +491,9 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 68.551391934)
-                            };
-            \addlegendentry{ ball };
-                                \addplot coordinates {
-                                                (1.00000000465, 81.6101963476)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot coordinates {
                                                 (1.44705682845, 182744.880657)
                             };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot coordinates {
-                                                (1.0, 71.3867322052)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Relative Error-Queries per second (1/s) tradeoff - up and to the left is better }
@@ -667,39 +511,12 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 10.0, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 10.0, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
                                                                     { x: 0.005314009661835749 , y: 10.0, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 10.0, label: "KDTree(leaf_size=400)" },
                                                             ]
                         },
                                                 ]},
@@ -788,21 +605,9 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 10.0)
-                            };
-            \addlegendentry{ ball };
-                                \addplot coordinates {
-                                                (0.9995169082125603, 10.0)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot coordinates {
                                                 (0.005314009661835749, 10.0)
                             };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot coordinates {
-                                                (1.0, 10.0)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Candidates generated tradeoff - down and to the right is better }
@@ -820,38 +625,11 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 927.245942157, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 364.317221752, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 833.039952426, label: "KDTree(leaf_size=400)" },
                                                             ]
                         },
                                                 ]},
@@ -940,20 +718,8 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 927.245942157)
-                            };
-            \addlegendentry{ ball };
-                                \addplot coordinates {
-                                                (0.9995169082125603, 364.317221752)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot coordinates {
                                         };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot coordinates {
-                                                (1.0, 833.039952426)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB)/Queries per second (s) tradeoff - down and to the right is better }
@@ -971,39 +737,12 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 68.551391934, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.0 , y: 81.6101963476, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
                                                                     { x: 0.006280193236714976 , y: 182744.880657, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 71.3867322052, label: "KDTree(leaf_size=400)" },
                                                             ]
                         },
                                                 ]},
@@ -1092,21 +831,9 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 68.551391934)
-                            };
-            \addlegendentry{ ball };
-                                \addplot coordinates {
-                                                (1.0, 81.6101963476)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot coordinates {
                                                 (0.006280193236714976, 182744.880657)
                             };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot coordinates {
-                                                (1.0, 71.3867322052)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.01 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1124,39 +851,12 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 68.551391934, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.0 , y: 81.6101963476, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
                                                                     { x: 0.03768115942028986 , y: 182744.880657, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 71.3867322052, label: "KDTree(leaf_size=400)" },
                                                             ]
                         },
                                                 ]},
@@ -1245,21 +945,9 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 68.551391934)
-                            };
-            \addlegendentry{ ball };
-                                \addplot coordinates {
-                                                (1.0, 81.6101963476)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot coordinates {
                                                 (0.03768115942028986, 182744.880657)
                             };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot coordinates {
-                                                (1.0, 71.3867322052)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.1 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1269,7 +957,7 @@
                 </div>
             
                         <hr />
-                                <h2>Scatterplots for sign-language-digits (k = 10)</h2>
+                                <h2>Scatterplots for dummy-algo-mt</h2>
                                                 <h3>Recall/Queries per second (1/s)</h3>
             <div id="RecallQueries per second (1/s)Scatterplot ">
             <canvas id="chartRecallQueries per second (1/s)Scatterplot " width="800" height="600"></canvas>
@@ -1279,40 +967,12 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 68.551391934, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 81.6101963476, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
                                                                     { x: 0.005314009661835749 , y: 182744.880657, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 71.3867322052, label: "KDTree(leaf_size=400)" },
-                                                                    { x: 1.0 , y: 38.4288650918, label: "KDTree(leaf_size=10)" },
                                                             ]
                         },
                                                 ]},
@@ -1401,22 +1061,9 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 68.551391934)
-                            };
-            \addlegendentry{ ball };
-                                \addplot [only marks] coordinates {
-                                                (0.9995169082125603, 81.6101963476)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot [only marks] coordinates {
                                                 (0.005314009661835749, 182744.880657)
                             };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 71.3867322052)
-                                    (1.0, 38.4288650918)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1434,40 +1081,12 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 0.474489688873, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 0.0158975124359, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
                                                                     { x: 0.005314009661835749 , y: 0.00662207603455, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 0.241654396057, label: "KDTree(leaf_size=400)" },
-                                                                    { x: 1.0 , y: 0.467152833939, label: "KDTree(leaf_size=10)" },
                                                             ]
                         },
                                                 ]},
@@ -1556,22 +1175,9 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 0.474489688873)
-                            };
-            \addlegendentry{ ball };
-                                \addplot [only marks] coordinates {
-                                                (0.9995169082125603, 0.0158975124359)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot [only marks] coordinates {
                                                 (0.005314009661835749, 0.00662207603455)
                             };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 0.241654396057)
-                                    (1.0, 0.467152833939)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Build time (s) tradeoff - down and to the right is better }
@@ -1589,39 +1195,11 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 63564.0, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 29732.0, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 59468.0, label: "KDTree(leaf_size=400)" },
-                                                                    { x: 1.0 , y: 75888.0, label: "KDTree(leaf_size=10)" },
                                                             ]
                         },
                                                 ]},
@@ -1710,21 +1288,8 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 63564.0)
-                            };
-            \addlegendentry{ ball };
-                                \addplot [only marks] coordinates {
-                                                (0.9995169082125603, 29732.0)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot [only marks] coordinates {
                                         };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 59468.0)
-                                    (1.0, 75888.0)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB) tradeoff - down and to the right is better }
@@ -1742,40 +1307,12 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 68.551391934, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.00000000465 , y: 81.6101963476, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
                                                                     { x: 1.44705682845 , y: 182744.880657, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 71.3867322052, label: "KDTree(leaf_size=400)" },
-                                                                    { x: 1.0 , y: 38.4288650918, label: "KDTree(leaf_size=10)" },
                                                             ]
                         },
                                                 ]},
@@ -1864,22 +1401,9 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 68.551391934)
-                            };
-            \addlegendentry{ ball };
-                                \addplot [only marks] coordinates {
-                                                (1.00000000465, 81.6101963476)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot [only marks] coordinates {
                                                 (1.44705682845, 182744.880657)
                             };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 71.3867322052)
-                                    (1.0, 38.4288650918)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Relative Error-Queries per second (1/s) tradeoff - up and to the left is better }
@@ -1897,40 +1421,12 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 10.0, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 10.0, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
                                                                     { x: 0.005314009661835749 , y: 10.0, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 10.0, label: "KDTree(leaf_size=400)" },
-                                                                    { x: 1.0 , y: 10.0, label: "KDTree(leaf_size=10)" },
                                                             ]
                         },
                                                 ]},
@@ -2019,22 +1515,9 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 10.0)
-                            };
-            \addlegendentry{ ball };
-                                \addplot [only marks] coordinates {
-                                                (0.9995169082125603, 10.0)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot [only marks] coordinates {
                                                 (0.005314009661835749, 10.0)
                             };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 10.0)
-                                    (1.0, 10.0)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Candidates generated tradeoff - down and to the right is better }
@@ -2052,39 +1535,11 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 927.245942157, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 364.317221752, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 833.039952426, label: "KDTree(leaf_size=400)" },
-                                                                    { x: 1.0 , y: 1974.76557839, label: "KDTree(leaf_size=10)" },
                                                             ]
                         },
                                                 ]},
@@ -2173,21 +1628,8 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 927.245942157)
-                            };
-            \addlegendentry{ ball };
-                                \addplot [only marks] coordinates {
-                                                (0.9995169082125603, 364.317221752)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot [only marks] coordinates {
                                         };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 833.039952426)
-                                    (1.0, 1974.76557839)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB)/Queries per second (s) tradeoff - down and to the right is better }
@@ -2205,40 +1647,12 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 68.551391934, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.0 , y: 81.6101963476, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
                                                                     { x: 0.006280193236714976 , y: 182744.880657, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 71.3867322052, label: "KDTree(leaf_size=400)" },
-                                                                    { x: 1.0 , y: 38.4288650918, label: "KDTree(leaf_size=10)" },
                                                             ]
                         },
                                                 ]},
@@ -2327,22 +1741,9 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 68.551391934)
-                            };
-            \addlegendentry{ ball };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 81.6101963476)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot [only marks] coordinates {
                                                 (0.006280193236714976, 182744.880657)
                             };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 71.3867322052)
-                                    (1.0, 38.4288650918)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.01 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -2360,40 +1761,12 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 68.551391934, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "sign-language-digits (k = 10)",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.0 , y: 81.6101963476, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
                                                                     { x: 0.03768115942028986 , y: 182744.880657, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 71.3867322052, label: "KDTree(leaf_size=400)" },
-                                                                    { x: 1.0 , y: 38.4288650918, label: "KDTree(leaf_size=10)" },
                                                             ]
                         },
                                                 ]},
@@ -2482,22 +1855,9 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 68.551391934)
-                            };
-            \addlegendentry{ ball };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 81.6101963476)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot [only marks] coordinates {
                                                 (0.03768115942028986, 182744.880657)
                             };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 71.3867322052)
-                                    (1.0, 38.4288650918)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ sign-language-digits (k = 10) };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.1 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
