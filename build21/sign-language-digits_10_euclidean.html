@@ -57,20 +57,15 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "mrpt",
+                            label: "flann",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.24057971014492754 , y: 17545.4879961, label: "MRPT(n_trees=25, depth=4, votes_required=20)" },
-                                                                    { x: 0.4386473429951691 , y: 10742.3836084, label: "MRPT(n_trees=100, depth=4, votes_required=40)" },
-                                                                    { x: 0.4792270531400966 , y: 10041.6475215, label: "MRPT(n_trees=100, depth=4, votes_required=20)" },
-                                                                    { x: 0.6202898550724638 , y: 4203.34016606, label: "MRPT(n_trees=25, depth=4, votes_required=4)" },
-                                                                    { x: 0.7144927536231884 , y: 3818.13472651, label: "MRPT(n_trees=100, depth=8, votes_required=2)" },
-                                                                    { x: 0.9589371980676329 , y: 2299.01556207, label: "MRPT(n_trees=100, depth=4, votes_required=10)" },
-                                                                    { x: 0.9806763285024155 , y: 537.787905329, label: "MRPT(n_trees=25, depth=4, votes_required=1)" },
-                                                                    { x: 0.9995169082125603 , y: 497.73977471, label: "MRPT(n_trees=100, depth=4, votes_required=4)" },
-                                                                    { x: 1.0 , y: 421.291000156, label: "MRPT(n_trees=100, depth=4, votes_required=2)" },
+                                                                    { x: 0.1391304347826087 , y: 7647.70431703, label: "FLANN(target_precision=0.200000)" },
+                                                                    { x: 0.3719806763285024 , y: 3576.06020092, label: "FLANN(target_precision=0.500000)" },
+                                                                    { x: 0.7801932367149759 , y: 1302.95224875, label: "FLANN(target_precision=0.900000)" },
+                                                                    { x: 0.9280193236714975 , y: 357.663178553, label: "FLANN(target_precision=0.950000)" },
                                                             ]
                         },
                                                 ]},
@@ -159,17 +154,12 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.24057971014492754, 17545.4879961)
-                                    (0.4386473429951691, 10742.3836084)
-                                    (0.4792270531400966, 10041.6475215)
-                                    (0.6202898550724638, 4203.34016606)
-                                    (0.7144927536231884, 3818.13472651)
-                                    (0.9589371980676329, 2299.01556207)
-                                    (0.9806763285024155, 537.787905329)
-                                    (0.9995169082125603, 497.73977471)
-                                    (1.0, 421.291000156)
+                                                (0.1391304347826087, 7647.70431703)
+                                    (0.3719806763285024, 3576.06020092)
+                                    (0.7801932367149759, 1302.95224875)
+                                    (0.9280193236714975, 357.663178553)
                             };
-            \addlegendentry{ mrpt };
+            \addlegendentry{ flann };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -187,16 +177,15 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "mrpt",
+                            label: "flann",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.13671497584541062 , y: 0.0118021965027, label: "MRPT(n_trees=5, depth=2, votes_required=4)" },
-                                                                    { x: 0.9347826086956522 , y: 0.0118021965027, label: "MRPT(n_trees=5, depth=2, votes_required=1)" },
-                                                                    { x: 0.9806763285024155 , y: 0.0772013664246, label: "MRPT(n_trees=25, depth=4, votes_required=1)" },
-                                                                    { x: 0.9995169082125603 , y: 0.324726343155, label: "MRPT(n_trees=100, depth=4, votes_required=4)" },
-                                                                    { x: 1.0 , y: 0.324726343155, label: "MRPT(n_trees=100, depth=4, votes_required=2)" },
+                                                                    { x: 0.1391304347826087 , y: 15.9188029766, label: "FLANN(target_precision=0.200000)" },
+                                                                    { x: 0.3719806763285024 , y: 19.9688174725, label: "FLANN(target_precision=0.500000)" },
+                                                                    { x: 0.7367149758454107 , y: 48.2013044357, label: "FLANN(target_precision=0.800000)" },
+                                                                    { x: 0.9280193236714975 , y: 65.8383963108, label: "FLANN(target_precision=0.950000)" },
                                                             ]
                         },
                                                 ]},
@@ -285,13 +274,12 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.13671497584541062, 0.0118021965027)
-                                    (0.9347826086956522, 0.0118021965027)
-                                    (0.9806763285024155, 0.0772013664246)
-                                    (0.9995169082125603, 0.324726343155)
-                                    (1.0, 0.324726343155)
+                                                (0.1391304347826087, 15.9188029766)
+                                    (0.3719806763285024, 19.9688174725)
+                                    (0.7367149758454107, 48.2013044357)
+                                    (0.9280193236714975, 65.8383963108)
                             };
-            \addlegendentry{ mrpt };
+            \addlegendentry{ flann };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Build time (s) tradeoff - down and to the right is better }
@@ -309,11 +297,13 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "mrpt",
+                            label: "flann",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
+                                                                    { x: 0.3719806763285024 , y: 7348.0, label: "FLANN(target_precision=0.500000)" },
+                                                                    { x: 0.9280193236714975 , y: 7584.0, label: "FLANN(target_precision=0.950000)" },
                                                             ]
                         },
                                                 ]},
@@ -402,8 +392,10 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                        };
-            \addlegendentry{ mrpt };
+                                                (0.3719806763285024, 7348.0)
+                                    (0.9280193236714975, 7584.0)
+                            };
+            \addlegendentry{ flann };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB) tradeoff - down and to the right is better }
@@ -421,20 +413,15 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "mrpt",
+                            label: "flann",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.12520294158 , y: 17545.4879961, label: "MRPT(n_trees=25, depth=4, votes_required=20)" },
-                                                                    { x: 1.0624552936 , y: 10742.3836084, label: "MRPT(n_trees=100, depth=4, votes_required=40)" },
-                                                                    { x: 1.05539060818 , y: 10041.6475215, label: "MRPT(n_trees=100, depth=4, votes_required=20)" },
-                                                                    { x: 1.02247338882 , y: 4203.34016606, label: "MRPT(n_trees=25, depth=4, votes_required=4)" },
-                                                                    { x: 1.01327424442 , y: 3818.13472651, label: "MRPT(n_trees=100, depth=8, votes_required=2)" },
-                                                                    { x: 1.0007386906 , y: 2299.01556207, label: "MRPT(n_trees=100, depth=4, votes_required=10)" },
-                                                                    { x: 1.00052257126 , y: 537.787905329, label: "MRPT(n_trees=25, depth=4, votes_required=1)" },
-                                                                    { x: 1.00000114568 , y: 497.73977471, label: "MRPT(n_trees=100, depth=4, votes_required=4)" },
-                                                                    { x: 1.0 , y: 421.291000156, label: "MRPT(n_trees=100, depth=4, votes_required=2)" },
+                                                                    { x: 1.16878578109 , y: 7647.70431703, label: "FLANN(target_precision=0.200000)" },
+                                                                    { x: 1.06483264857 , y: 3576.06020092, label: "FLANN(target_precision=0.500000)" },
+                                                                    { x: 1.00969530528 , y: 1302.95224875, label: "FLANN(target_precision=0.900000)" },
+                                                                    { x: 1.00236074528 , y: 357.663178553, label: "FLANN(target_precision=0.950000)" },
                                                             ]
                         },
                                                 ]},
@@ -523,17 +510,12 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.12520294158, 17545.4879961)
-                                    (1.0624552936, 10742.3836084)
-                                    (1.05539060818, 10041.6475215)
-                                    (1.02247338882, 4203.34016606)
-                                    (1.01327424442, 3818.13472651)
-                                    (1.0007386906, 2299.01556207)
-                                    (1.00052257126, 537.787905329)
-                                    (1.00000114568, 497.73977471)
-                                    (1.0, 421.291000156)
+                                                (1.16878578109, 7647.70431703)
+                                    (1.06483264857, 3576.06020092)
+                                    (1.00969530528, 1302.95224875)
+                                    (1.00236074528, 357.663178553)
                             };
-            \addlegendentry{ mrpt };
+            \addlegendentry{ flann };
             \end{axis}
     \end{tikzpicture}
     \caption{ Relative Error-Queries per second (1/s) tradeoff - up and to the left is better }
@@ -551,16 +533,13 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "mrpt",
+                            label: "flann",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.1386473429951691 , y: 10.0, label: "MRPT(n_trees=5, depth=8, votes_required=20)" },
-                                                                    { x: 0.9164251207729469 , y: 10.0, label: "MRPT(n_trees=25, depth=4, votes_required=2)" },
-                                                                    { x: 0.9806763285024155 , y: 10.0, label: "MRPT(n_trees=25, depth=4, votes_required=1)" },
-                                                                    { x: 0.9995169082125603 , y: 10.0, label: "MRPT(n_trees=100, depth=4, votes_required=4)" },
-                                                                    { x: 1.0 , y: 10.0, label: "MRPT(n_trees=100, depth=4, votes_required=2)" },
+                                                                    { x: 0.3719806763285024 , y: 10.0, label: "FLANN(target_precision=0.500000)" },
+                                                                    { x: 0.9280193236714975 , y: 10.0, label: "FLANN(target_precision=0.950000)" },
                                                             ]
                         },
                                                 ]},
@@ -649,13 +628,10 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.1386473429951691, 10.0)
-                                    (0.9164251207729469, 10.0)
-                                    (0.9806763285024155, 10.0)
-                                    (0.9995169082125603, 10.0)
-                                    (1.0, 10.0)
+                                                (0.3719806763285024, 10.0)
+                                    (0.9280193236714975, 10.0)
                             };
-            \addlegendentry{ mrpt };
+            \addlegendentry{ flann };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Candidates generated tradeoff - down and to the right is better }
@@ -673,11 +649,15 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "mrpt",
+                            label: "flann",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
+                                                                    { x: 0.1391304347826087 , y: 0.967610631012, label: "FLANN(target_precision=0.200000)" },
+                                                                    { x: 0.3719806763285024 , y: 2.05477525186, label: "FLANN(target_precision=0.500000)" },
+                                                                    { x: 0.7801932367149759 , y: 10.8584178842, label: "FLANN(target_precision=0.900000)" },
+                                                                    { x: 0.9280193236714975 , y: 21.2043074456, label: "FLANN(target_precision=0.950000)" },
                                                             ]
                         },
                                                 ]},
@@ -766,8 +746,12 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                        };
-            \addlegendentry{ mrpt };
+                                                (0.1391304347826087, 0.967610631012)
+                                    (0.3719806763285024, 2.05477525186)
+                                    (0.7801932367149759, 10.8584178842)
+                                    (0.9280193236714975, 21.2043074456)
+                            };
+            \addlegendentry{ flann };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB)/Queries per second (s) tradeoff - down and to the right is better }
@@ -785,19 +769,15 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "mrpt",
+                            label: "flann",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.27342995169082124 , y: 17545.4879961, label: "MRPT(n_trees=25, depth=4, votes_required=20)" },
-                                                                    { x: 0.485024154589372 , y: 10742.3836084, label: "MRPT(n_trees=100, depth=4, votes_required=40)" },
-                                                                    { x: 0.5260869565217391 , y: 10041.6475215, label: "MRPT(n_trees=100, depth=4, votes_required=20)" },
-                                                                    { x: 0.7140096618357488 , y: 4203.34016606, label: "MRPT(n_trees=25, depth=4, votes_required=4)" },
-                                                                    { x: 0.8140096618357487 , y: 3818.13472651, label: "MRPT(n_trees=100, depth=8, votes_required=2)" },
-                                                                    { x: 0.9942028985507246 , y: 2299.01556207, label: "MRPT(n_trees=100, depth=4, votes_required=10)" },
-                                                                    { x: 0.9980676328502416 , y: 537.787905329, label: "MRPT(n_trees=25, depth=4, votes_required=1)" },
-                                                                    { x: 1.0 , y: 497.73977471, label: "MRPT(n_trees=100, depth=4, votes_required=4)" },
+                                                                    { x: 0.15845410628019324 , y: 7647.70431703, label: "FLANN(target_precision=0.200000)" },
+                                                                    { x: 0.43091787439613527 , y: 3576.06020092, label: "FLANN(target_precision=0.500000)" },
+                                                                    { x: 0.8690821256038648 , y: 1302.95224875, label: "FLANN(target_precision=0.900000)" },
+                                                                    { x: 0.9792270531400966 , y: 357.663178553, label: "FLANN(target_precision=0.950000)" },
                                                             ]
                         },
                                                 ]},
@@ -886,16 +866,12 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.27342995169082124, 17545.4879961)
-                                    (0.485024154589372, 10742.3836084)
-                                    (0.5260869565217391, 10041.6475215)
-                                    (0.7140096618357488, 4203.34016606)
-                                    (0.8140096618357487, 3818.13472651)
-                                    (0.9942028985507246, 2299.01556207)
-                                    (0.9980676328502416, 537.787905329)
-                                    (1.0, 497.73977471)
+                                                (0.15845410628019324, 7647.70431703)
+                                    (0.43091787439613527, 3576.06020092)
+                                    (0.8690821256038648, 1302.95224875)
+                                    (0.9792270531400966, 357.663178553)
                             };
-            \addlegendentry{ mrpt };
+            \addlegendentry{ flann };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.01 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -913,16 +889,14 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "mrpt",
+                            label: "flann",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.5932367149758454 , y: 17545.4879961, label: "MRPT(n_trees=25, depth=4, votes_required=20)" },
-                                                                    { x: 0.8487922705314009 , y: 10742.3836084, label: "MRPT(n_trees=100, depth=4, votes_required=40)" },
-                                                                    { x: 0.870048309178744 , y: 10041.6475215, label: "MRPT(n_trees=100, depth=4, votes_required=20)" },
-                                                                    { x: 0.996135265700483 , y: 4203.34016606, label: "MRPT(n_trees=25, depth=4, votes_required=4)" },
-                                                                    { x: 1.0 , y: 3818.13472651, label: "MRPT(n_trees=100, depth=8, votes_required=2)" },
+                                                                    { x: 0.43333333333333335 , y: 7647.70431703, label: "FLANN(target_precision=0.200000)" },
+                                                                    { x: 0.9033816425120773 , y: 3576.06020092, label: "FLANN(target_precision=0.500000)" },
+                                                                    { x: 1.0 , y: 1302.95224875, label: "FLANN(target_precision=0.900000)" },
                                                             ]
                         },
                                                 ]},
@@ -1011,13 +985,11 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (0.5932367149758454, 17545.4879961)
-                                    (0.8487922705314009, 10742.3836084)
-                                    (0.870048309178744, 10041.6475215)
-                                    (0.996135265700483, 4203.34016606)
-                                    (1.0, 3818.13472651)
+                                                (0.43333333333333335, 7647.70431703)
+                                    (0.9033816425120773, 3576.06020092)
+                                    (1.0, 1302.95224875)
                             };
-            \addlegendentry{ mrpt };
+            \addlegendentry{ flann };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.1 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1037,46 +1009,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "mrpt",
+                            label: "flann",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.24057971014492754 , y: 17545.4879961, label: "MRPT(n_trees=25, depth=4, votes_required=20)" },
-                                                                    { x: 0.24057971014492754 , y: 17373.1051126, label: "MRPT(n_trees=25, depth=4, votes_required=40)" },
-                                                                    { x: 0.24057971014492754 , y: 17282.4995123, label: "MRPT(n_trees=25, depth=4, votes_required=100)" },
-                                                                    { x: 0.24057971014492754 , y: 16585.243806, label: "MRPT(n_trees=25, depth=4, votes_required=10)" },
-                                                                    { x: 0.1386473429951691 , y: 14372.6150179, label: "MRPT(n_trees=5, depth=8, votes_required=1)" },
-                                                                    { x: 0.1294685990338164 , y: 13176.2239995, label: "MRPT(n_trees=5, depth=2, votes_required=40)" },
-                                                                    { x: 0.1386473429951691 , y: 13093.7583399, label: "MRPT(n_trees=5, depth=8, votes_required=40)" },
-                                                                    { x: 0.1294685990338164 , y: 13059.4887037, label: "MRPT(n_trees=5, depth=2, votes_required=100)" },
-                                                                    { x: 0.1386473429951691 , y: 13025.0071709, label: "MRPT(n_trees=5, depth=8, votes_required=10)" },
-                                                                    { x: 0.1294685990338164 , y: 13020.9050526, label: "MRPT(n_trees=5, depth=2, votes_required=20)" },
-                                                                    { x: 0.1386473429951691 , y: 12964.7134154, label: "MRPT(n_trees=5, depth=8, votes_required=4)" },
-                                                                    { x: 0.1386473429951691 , y: 12865.0099723, label: "MRPT(n_trees=5, depth=8, votes_required=100)" },
-                                                                    { x: 0.1386473429951691 , y: 12854.53389, label: "MRPT(n_trees=5, depth=8, votes_required=2)" },
-                                                                    { x: 0.13671497584541062 , y: 12796.93612, label: "MRPT(n_trees=5, depth=2, votes_required=4)" },
-                                                                    { x: 0.1294685990338164 , y: 12722.8634985, label: "MRPT(n_trees=5, depth=2, votes_required=10)" },
-                                                                    { x: 0.1386473429951691 , y: 12613.256937, label: "MRPT(n_trees=5, depth=8, votes_required=20)" },
-                                                                    { x: 0.4386473429951691 , y: 10742.3836084, label: "MRPT(n_trees=100, depth=4, votes_required=40)" },
-                                                                    { x: 0.43816425120772945 , y: 10689.8746352, label: "MRPT(n_trees=100, depth=4, votes_required=100)" },
-                                                                    { x: 0.4792270531400966 , y: 10041.6475215, label: "MRPT(n_trees=100, depth=4, votes_required=20)" },
-                                                                    { x: 0.4251207729468599 , y: 7780.59404237, label: "MRPT(n_trees=100, depth=8, votes_required=4)" },
-                                                                    { x: 0.4067632850241546 , y: 7680.78812435, label: "MRPT(n_trees=100, depth=8, votes_required=40)" },
-                                                                    { x: 0.4067632850241546 , y: 7662.82382638, label: "MRPT(n_trees=100, depth=8, votes_required=100)" },
-                                                                    { x: 0.4067632850241546 , y: 7628.15132932, label: "MRPT(n_trees=100, depth=8, votes_required=20)" },
-                                                                    { x: 0.4067632850241546 , y: 7550.86341459, label: "MRPT(n_trees=100, depth=8, votes_required=10)" },
-                                                                    { x: 0.6202898550724638 , y: 4203.34016606, label: "MRPT(n_trees=25, depth=4, votes_required=4)" },
-                                                                    { x: 0.7144927536231884 , y: 3818.13472651, label: "MRPT(n_trees=100, depth=8, votes_required=2)" },
-                                                                    { x: 0.9589371980676329 , y: 2299.01556207, label: "MRPT(n_trees=100, depth=4, votes_required=10)" },
-                                                                    { x: 0.9178743961352657 , y: 1406.58159337, label: "MRPT(n_trees=100, depth=8, votes_required=1)" },
-                                                                    { x: 0.721256038647343 , y: 1180.38734588, label: "MRPT(n_trees=5, depth=2, votes_required=2)" },
-                                                                    { x: 0.9164251207729469 , y: 1002.85408952, label: "MRPT(n_trees=25, depth=4, votes_required=2)" },
-                                                                    { x: 0.9347826086956522 , y: 550.498510608, label: "MRPT(n_trees=5, depth=2, votes_required=1)" },
-                                                                    { x: 0.9806763285024155 , y: 537.787905329, label: "MRPT(n_trees=25, depth=4, votes_required=1)" },
-                                                                    { x: 0.9995169082125603 , y: 497.73977471, label: "MRPT(n_trees=100, depth=4, votes_required=4)" },
-                                                                    { x: 1.0 , y: 421.291000156, label: "MRPT(n_trees=100, depth=4, votes_required=2)" },
-                                                                    { x: 1.0 , y: 400.101994517, label: "MRPT(n_trees=100, depth=4, votes_required=1)" },
+                                                                    { x: 0.1391304347826087 , y: 7647.70431703, label: "FLANN(target_precision=0.200000)" },
+                                                                    { x: 0.3719806763285024 , y: 3576.06020092, label: "FLANN(target_precision=0.500000)" },
+                                                                    { x: 0.7801932367149759 , y: 1302.95224875, label: "FLANN(target_precision=0.900000)" },
+                                                                    { x: 0.7367149758454107 , y: 512.963464198, label: "FLANN(target_precision=0.800000)" },
+                                                                    { x: 0.9280193236714975 , y: 357.663178553, label: "FLANN(target_precision=0.950000)" },
                                                             ]
                         },
                                                 ]},
@@ -1165,43 +1107,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.24057971014492754, 17545.4879961)
-                                    (0.24057971014492754, 17373.1051126)
-                                    (0.24057971014492754, 17282.4995123)
-                                    (0.24057971014492754, 16585.243806)
-                                    (0.1386473429951691, 14372.6150179)
-                                    (0.1294685990338164, 13176.2239995)
-                                    (0.1386473429951691, 13093.7583399)
-                                    (0.1294685990338164, 13059.4887037)
-                                    (0.1386473429951691, 13025.0071709)
-                                    (0.1294685990338164, 13020.9050526)
-                                    (0.1386473429951691, 12964.7134154)
-                                    (0.1386473429951691, 12865.0099723)
-                                    (0.1386473429951691, 12854.53389)
-                                    (0.13671497584541062, 12796.93612)
-                                    (0.1294685990338164, 12722.8634985)
-                                    (0.1386473429951691, 12613.256937)
-                                    (0.4386473429951691, 10742.3836084)
-                                    (0.43816425120772945, 10689.8746352)
-                                    (0.4792270531400966, 10041.6475215)
-                                    (0.4251207729468599, 7780.59404237)
-                                    (0.4067632850241546, 7680.78812435)
-                                    (0.4067632850241546, 7662.82382638)
-                                    (0.4067632850241546, 7628.15132932)
-                                    (0.4067632850241546, 7550.86341459)
-                                    (0.6202898550724638, 4203.34016606)
-                                    (0.7144927536231884, 3818.13472651)
-                                    (0.9589371980676329, 2299.01556207)
-                                    (0.9178743961352657, 1406.58159337)
-                                    (0.721256038647343, 1180.38734588)
-                                    (0.9164251207729469, 1002.85408952)
-                                    (0.9347826086956522, 550.498510608)
-                                    (0.9806763285024155, 537.787905329)
-                                    (0.9995169082125603, 497.73977471)
-                                    (1.0, 421.291000156)
-                                    (1.0, 400.101994517)
+                                                (0.1391304347826087, 7647.70431703)
+                                    (0.3719806763285024, 3576.06020092)
+                                    (0.7801932367149759, 1302.95224875)
+                                    (0.7367149758454107, 512.963464198)
+                                    (0.9280193236714975, 357.663178553)
                             };
-            \addlegendentry{ mrpt };
+            \addlegendentry{ flann };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1219,46 +1131,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "mrpt",
+                            label: "flann",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.13671497584541062 , y: 0.0118021965027, label: "MRPT(n_trees=5, depth=2, votes_required=4)" },
-                                                                    { x: 0.1294685990338164 , y: 0.0118021965027, label: "MRPT(n_trees=5, depth=2, votes_required=40)" },
-                                                                    { x: 0.1294685990338164 , y: 0.0118021965027, label: "MRPT(n_trees=5, depth=2, votes_required=20)" },
-                                                                    { x: 0.1294685990338164 , y: 0.0118021965027, label: "MRPT(n_trees=5, depth=2, votes_required=100)" },
-                                                                    { x: 0.1294685990338164 , y: 0.0118021965027, label: "MRPT(n_trees=5, depth=2, votes_required=10)" },
-                                                                    { x: 0.9347826086956522 , y: 0.0118021965027, label: "MRPT(n_trees=5, depth=2, votes_required=1)" },
-                                                                    { x: 0.721256038647343 , y: 0.0118021965027, label: "MRPT(n_trees=5, depth=2, votes_required=2)" },
-                                                                    { x: 0.1386473429951691 , y: 0.0270781517029, label: "MRPT(n_trees=5, depth=8, votes_required=20)" },
-                                                                    { x: 0.1386473429951691 , y: 0.0270781517029, label: "MRPT(n_trees=5, depth=8, votes_required=40)" },
-                                                                    { x: 0.1386473429951691 , y: 0.0270781517029, label: "MRPT(n_trees=5, depth=8, votes_required=2)" },
-                                                                    { x: 0.1386473429951691 , y: 0.0270781517029, label: "MRPT(n_trees=5, depth=8, votes_required=1)" },
-                                                                    { x: 0.1386473429951691 , y: 0.0270781517029, label: "MRPT(n_trees=5, depth=8, votes_required=10)" },
-                                                                    { x: 0.1386473429951691 , y: 0.0270781517029, label: "MRPT(n_trees=5, depth=8, votes_required=100)" },
-                                                                    { x: 0.1386473429951691 , y: 0.0270781517029, label: "MRPT(n_trees=5, depth=8, votes_required=4)" },
-                                                                    { x: 0.9164251207729469 , y: 0.0772013664246, label: "MRPT(n_trees=25, depth=4, votes_required=2)" },
-                                                                    { x: 0.24057971014492754 , y: 0.0772013664246, label: "MRPT(n_trees=25, depth=4, votes_required=20)" },
-                                                                    { x: 0.24057971014492754 , y: 0.0772013664246, label: "MRPT(n_trees=25, depth=4, votes_required=100)" },
-                                                                    { x: 0.9806763285024155 , y: 0.0772013664246, label: "MRPT(n_trees=25, depth=4, votes_required=1)" },
-                                                                    { x: 0.24057971014492754 , y: 0.0772013664246, label: "MRPT(n_trees=25, depth=4, votes_required=10)" },
-                                                                    { x: 0.24057971014492754 , y: 0.0772013664246, label: "MRPT(n_trees=25, depth=4, votes_required=40)" },
-                                                                    { x: 0.6202898550724638 , y: 0.0772013664246, label: "MRPT(n_trees=25, depth=4, votes_required=4)" },
-                                                                    { x: 0.4792270531400966 , y: 0.324726343155, label: "MRPT(n_trees=100, depth=4, votes_required=20)" },
-                                                                    { x: 0.9995169082125603 , y: 0.324726343155, label: "MRPT(n_trees=100, depth=4, votes_required=4)" },
-                                                                    { x: 0.43816425120772945 , y: 0.324726343155, label: "MRPT(n_trees=100, depth=4, votes_required=100)" },
-                                                                    { x: 0.4386473429951691 , y: 0.324726343155, label: "MRPT(n_trees=100, depth=4, votes_required=40)" },
-                                                                    { x: 1.0 , y: 0.324726343155, label: "MRPT(n_trees=100, depth=4, votes_required=2)" },
-                                                                    { x: 1.0 , y: 0.324726343155, label: "MRPT(n_trees=100, depth=4, votes_required=1)" },
-                                                                    { x: 0.9589371980676329 , y: 0.324726343155, label: "MRPT(n_trees=100, depth=4, votes_required=10)" },
-                                                                    { x: 0.4067632850241546 , y: 0.447566986084, label: "MRPT(n_trees=100, depth=8, votes_required=20)" },
-                                                                    { x: 0.7144927536231884 , y: 0.447566986084, label: "MRPT(n_trees=100, depth=8, votes_required=2)" },
-                                                                    { x: 0.4067632850241546 , y: 0.447566986084, label: "MRPT(n_trees=100, depth=8, votes_required=40)" },
-                                                                    { x: 0.4067632850241546 , y: 0.447566986084, label: "MRPT(n_trees=100, depth=8, votes_required=10)" },
-                                                                    { x: 0.4067632850241546 , y: 0.447566986084, label: "MRPT(n_trees=100, depth=8, votes_required=100)" },
-                                                                    { x: 0.4251207729468599 , y: 0.447566986084, label: "MRPT(n_trees=100, depth=8, votes_required=4)" },
-                                                                    { x: 0.9178743961352657 , y: 0.447566986084, label: "MRPT(n_trees=100, depth=8, votes_required=1)" },
+                                                                    { x: 0.1391304347826087 , y: 15.9188029766, label: "FLANN(target_precision=0.200000)" },
+                                                                    { x: 0.3719806763285024 , y: 19.9688174725, label: "FLANN(target_precision=0.500000)" },
+                                                                    { x: 0.7367149758454107 , y: 48.2013044357, label: "FLANN(target_precision=0.800000)" },
+                                                                    { x: 0.9280193236714975 , y: 65.8383963108, label: "FLANN(target_precision=0.950000)" },
+                                                                    { x: 0.7801932367149759 , y: 74.4988055229, label: "FLANN(target_precision=0.900000)" },
                                                             ]
                         },
                                                 ]},
@@ -1347,43 +1229,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.13671497584541062, 0.0118021965027)
-                                    (0.1294685990338164, 0.0118021965027)
-                                    (0.1294685990338164, 0.0118021965027)
-                                    (0.1294685990338164, 0.0118021965027)
-                                    (0.1294685990338164, 0.0118021965027)
-                                    (0.9347826086956522, 0.0118021965027)
-                                    (0.721256038647343, 0.0118021965027)
-                                    (0.1386473429951691, 0.0270781517029)
-                                    (0.1386473429951691, 0.0270781517029)
-                                    (0.1386473429951691, 0.0270781517029)
-                                    (0.1386473429951691, 0.0270781517029)
-                                    (0.1386473429951691, 0.0270781517029)
-                                    (0.1386473429951691, 0.0270781517029)
-                                    (0.1386473429951691, 0.0270781517029)
-                                    (0.9164251207729469, 0.0772013664246)
-                                    (0.24057971014492754, 0.0772013664246)
-                                    (0.24057971014492754, 0.0772013664246)
-                                    (0.9806763285024155, 0.0772013664246)
-                                    (0.24057971014492754, 0.0772013664246)
-                                    (0.24057971014492754, 0.0772013664246)
-                                    (0.6202898550724638, 0.0772013664246)
-                                    (0.4792270531400966, 0.324726343155)
-                                    (0.9995169082125603, 0.324726343155)
-                                    (0.43816425120772945, 0.324726343155)
-                                    (0.4386473429951691, 0.324726343155)
-                                    (1.0, 0.324726343155)
-                                    (1.0, 0.324726343155)
-                                    (0.9589371980676329, 0.324726343155)
-                                    (0.4067632850241546, 0.447566986084)
-                                    (0.7144927536231884, 0.447566986084)
-                                    (0.4067632850241546, 0.447566986084)
-                                    (0.4067632850241546, 0.447566986084)
-                                    (0.4067632850241546, 0.447566986084)
-                                    (0.4251207729468599, 0.447566986084)
-                                    (0.9178743961352657, 0.447566986084)
+                                                (0.1391304347826087, 15.9188029766)
+                                    (0.3719806763285024, 19.9688174725)
+                                    (0.7367149758454107, 48.2013044357)
+                                    (0.9280193236714975, 65.8383963108)
+                                    (0.7801932367149759, 74.4988055229)
                             };
-            \addlegendentry{ mrpt };
+            \addlegendentry{ flann };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Build time (s) tradeoff - down and to the right is better }
@@ -1401,11 +1253,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "mrpt",
+                            label: "flann",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
+                                                                    { x: 0.3719806763285024 , y: 7348.0, label: "FLANN(target_precision=0.500000)" },
+                                                                    { x: 0.1391304347826087 , y: 7400.0, label: "FLANN(target_precision=0.200000)" },
+                                                                    { x: 0.9280193236714975 , y: 7584.0, label: "FLANN(target_precision=0.950000)" },
+                                                                    { x: 0.7367149758454107 , y: 7644.0, label: "FLANN(target_precision=0.800000)" },
+                                                                    { x: 0.7801932367149759 , y: 14148.0, label: "FLANN(target_precision=0.900000)" },
                                                             ]
                         },
                                                 ]},
@@ -1494,8 +1351,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                        };
-            \addlegendentry{ mrpt };
+                                                (0.3719806763285024, 7348.0)
+                                    (0.1391304347826087, 7400.0)
+                                    (0.9280193236714975, 7584.0)
+                                    (0.7367149758454107, 7644.0)
+                                    (0.7801932367149759, 14148.0)
+                            };
+            \addlegendentry{ flann };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB) tradeoff - down and to the right is better }
@@ -1513,46 +1375,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "mrpt",
+                            label: "flann",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.12520294158 , y: 17545.4879961, label: "MRPT(n_trees=25, depth=4, votes_required=20)" },
-                                                                    { x: 1.12520294158 , y: 17373.1051126, label: "MRPT(n_trees=25, depth=4, votes_required=40)" },
-                                                                    { x: 1.12520294158 , y: 17282.4995123, label: "MRPT(n_trees=25, depth=4, votes_required=100)" },
-                                                                    { x: 1.12520294158 , y: 16585.243806, label: "MRPT(n_trees=25, depth=4, votes_required=10)" },
-                                                                    { x: 1.14660283778 , y: 14372.6150179, label: "MRPT(n_trees=5, depth=8, votes_required=1)" },
-                                                                    { x: 1.16982092069 , y: 13176.2239995, label: "MRPT(n_trees=5, depth=2, votes_required=40)" },
-                                                                    { x: 1.14660283778 , y: 13093.7583399, label: "MRPT(n_trees=5, depth=8, votes_required=40)" },
-                                                                    { x: 1.16982092069 , y: 13059.4887037, label: "MRPT(n_trees=5, depth=2, votes_required=100)" },
-                                                                    { x: 1.14660283778 , y: 13025.0071709, label: "MRPT(n_trees=5, depth=8, votes_required=10)" },
-                                                                    { x: 1.16982092069 , y: 13020.9050526, label: "MRPT(n_trees=5, depth=2, votes_required=20)" },
-                                                                    { x: 1.14660283778 , y: 12964.7134154, label: "MRPT(n_trees=5, depth=8, votes_required=4)" },
-                                                                    { x: 1.14660283778 , y: 12865.0099723, label: "MRPT(n_trees=5, depth=8, votes_required=100)" },
-                                                                    { x: 1.14660283778 , y: 12854.53389, label: "MRPT(n_trees=5, depth=8, votes_required=2)" },
-                                                                    { x: 1.16273893981 , y: 12796.93612, label: "MRPT(n_trees=5, depth=2, votes_required=4)" },
-                                                                    { x: 1.16982092069 , y: 12722.8634985, label: "MRPT(n_trees=5, depth=2, votes_required=10)" },
-                                                                    { x: 1.14660283778 , y: 12613.256937, label: "MRPT(n_trees=5, depth=8, votes_required=20)" },
-                                                                    { x: 1.0624552936 , y: 10742.3836084, label: "MRPT(n_trees=100, depth=4, votes_required=40)" },
-                                                                    { x: 1.06260782893 , y: 10689.8746352, label: "MRPT(n_trees=100, depth=4, votes_required=100)" },
-                                                                    { x: 1.05539060818 , y: 10041.6475215, label: "MRPT(n_trees=100, depth=4, votes_required=20)" },
-                                                                    { x: 1.06177895091 , y: 7780.59404237, label: "MRPT(n_trees=100, depth=8, votes_required=4)" },
-                                                                    { x: 1.06510787862 , y: 7680.78812435, label: "MRPT(n_trees=100, depth=8, votes_required=40)" },
-                                                                    { x: 1.06510787862 , y: 7662.82382638, label: "MRPT(n_trees=100, depth=8, votes_required=100)" },
-                                                                    { x: 1.06510787862 , y: 7628.15132932, label: "MRPT(n_trees=100, depth=8, votes_required=20)" },
-                                                                    { x: 1.06510787862 , y: 7550.86341459, label: "MRPT(n_trees=100, depth=8, votes_required=10)" },
-                                                                    { x: 1.02247338882 , y: 4203.34016606, label: "MRPT(n_trees=25, depth=4, votes_required=4)" },
-                                                                    { x: 1.01327424442 , y: 3818.13472651, label: "MRPT(n_trees=100, depth=8, votes_required=2)" },
-                                                                    { x: 1.0007386906 , y: 2299.01556207, label: "MRPT(n_trees=100, depth=4, votes_required=10)" },
-                                                                    { x: 1.00252907097 , y: 1406.58159337, label: "MRPT(n_trees=100, depth=8, votes_required=1)" },
-                                                                    { x: 1.01704923661 , y: 1180.38734588, label: "MRPT(n_trees=5, depth=2, votes_required=2)" },
-                                                                    { x: 1.00276000984 , y: 1002.85408952, label: "MRPT(n_trees=25, depth=4, votes_required=2)" },
-                                                                    { x: 1.00295711275 , y: 550.498510608, label: "MRPT(n_trees=5, depth=2, votes_required=1)" },
-                                                                    { x: 1.00052257126 , y: 537.787905329, label: "MRPT(n_trees=25, depth=4, votes_required=1)" },
-                                                                    { x: 1.00000114568 , y: 497.73977471, label: "MRPT(n_trees=100, depth=4, votes_required=4)" },
-                                                                    { x: 1.0 , y: 421.291000156, label: "MRPT(n_trees=100, depth=4, votes_required=2)" },
-                                                                    { x: 1.0 , y: 400.101994517, label: "MRPT(n_trees=100, depth=4, votes_required=1)" },
+                                                                    { x: 1.16878578109 , y: 7647.70431703, label: "FLANN(target_precision=0.200000)" },
+                                                                    { x: 1.06483264857 , y: 3576.06020092, label: "FLANN(target_precision=0.500000)" },
+                                                                    { x: 1.00969530528 , y: 1302.95224875, label: "FLANN(target_precision=0.900000)" },
+                                                                    { x: 1.01509607215 , y: 512.963464198, label: "FLANN(target_precision=0.800000)" },
+                                                                    { x: 1.00236074528 , y: 357.663178553, label: "FLANN(target_precision=0.950000)" },
                                                             ]
                         },
                                                 ]},
@@ -1641,43 +1473,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.12520294158, 17545.4879961)
-                                    (1.12520294158, 17373.1051126)
-                                    (1.12520294158, 17282.4995123)
-                                    (1.12520294158, 16585.243806)
-                                    (1.14660283778, 14372.6150179)
-                                    (1.16982092069, 13176.2239995)
-                                    (1.14660283778, 13093.7583399)
-                                    (1.16982092069, 13059.4887037)
-                                    (1.14660283778, 13025.0071709)
-                                    (1.16982092069, 13020.9050526)
-                                    (1.14660283778, 12964.7134154)
-                                    (1.14660283778, 12865.0099723)
-                                    (1.14660283778, 12854.53389)
-                                    (1.16273893981, 12796.93612)
-                                    (1.16982092069, 12722.8634985)
-                                    (1.14660283778, 12613.256937)
-                                    (1.0624552936, 10742.3836084)
-                                    (1.06260782893, 10689.8746352)
-                                    (1.05539060818, 10041.6475215)
-                                    (1.06177895091, 7780.59404237)
-                                    (1.06510787862, 7680.78812435)
-                                    (1.06510787862, 7662.82382638)
-                                    (1.06510787862, 7628.15132932)
-                                    (1.06510787862, 7550.86341459)
-                                    (1.02247338882, 4203.34016606)
-                                    (1.01327424442, 3818.13472651)
-                                    (1.0007386906, 2299.01556207)
-                                    (1.00252907097, 1406.58159337)
-                                    (1.01704923661, 1180.38734588)
-                                    (1.00276000984, 1002.85408952)
-                                    (1.00295711275, 550.498510608)
-                                    (1.00052257126, 537.787905329)
-                                    (1.00000114568, 497.73977471)
-                                    (1.0, 421.291000156)
-                                    (1.0, 400.101994517)
+                                                (1.16878578109, 7647.70431703)
+                                    (1.06483264857, 3576.06020092)
+                                    (1.00969530528, 1302.95224875)
+                                    (1.01509607215, 512.963464198)
+                                    (1.00236074528, 357.663178553)
                             };
-            \addlegendentry{ mrpt };
+            \addlegendentry{ flann };
             \end{axis}
     \end{tikzpicture}
     \caption{ Relative Error-Queries per second (1/s) tradeoff - up and to the left is better }
@@ -1695,46 +1497,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "mrpt",
+                            label: "flann",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.1386473429951691 , y: 10.0, label: "MRPT(n_trees=5, depth=8, votes_required=20)" },
-                                                                    { x: 0.9164251207729469 , y: 10.0, label: "MRPT(n_trees=25, depth=4, votes_required=2)" },
-                                                                    { x: 0.13671497584541062 , y: 10.0, label: "MRPT(n_trees=5, depth=2, votes_required=4)" },
-                                                                    { x: 0.24057971014492754 , y: 10.0, label: "MRPT(n_trees=25, depth=4, votes_required=20)" },
-                                                                    { x: 0.4067632850241546 , y: 10.0, label: "MRPT(n_trees=100, depth=8, votes_required=20)" },
-                                                                    { x: 0.24057971014492754 , y: 10.0, label: "MRPT(n_trees=25, depth=4, votes_required=100)" },
-                                                                    { x: 0.7144927536231884 , y: 10.0, label: "MRPT(n_trees=100, depth=8, votes_required=2)" },
-                                                                    { x: 0.9806763285024155 , y: 10.0, label: "MRPT(n_trees=25, depth=4, votes_required=1)" },
-                                                                    { x: 0.4067632850241546 , y: 10.0, label: "MRPT(n_trees=100, depth=8, votes_required=40)" },
-                                                                    { x: 0.24057971014492754 , y: 10.0, label: "MRPT(n_trees=25, depth=4, votes_required=10)" },
-                                                                    { x: 0.4792270531400966 , y: 10.0, label: "MRPT(n_trees=100, depth=4, votes_required=20)" },
-                                                                    { x: 0.1386473429951691 , y: 10.0, label: "MRPT(n_trees=5, depth=8, votes_required=40)" },
-                                                                    { x: 0.4067632850241546 , y: 10.0, label: "MRPT(n_trees=100, depth=8, votes_required=10)" },
-                                                                    { x: 0.9995169082125603 , y: 10.0, label: "MRPT(n_trees=100, depth=4, votes_required=4)" },
-                                                                    { x: 0.4067632850241546 , y: 10.0, label: "MRPT(n_trees=100, depth=8, votes_required=100)" },
-                                                                    { x: 0.1386473429951691 , y: 10.0, label: "MRPT(n_trees=5, depth=8, votes_required=2)" },
-                                                                    { x: 0.1386473429951691 , y: 10.0, label: "MRPT(n_trees=5, depth=8, votes_required=1)" },
-                                                                    { x: 0.4251207729468599 , y: 10.0, label: "MRPT(n_trees=100, depth=8, votes_required=4)" },
-                                                                    { x: 0.24057971014492754 , y: 10.0, label: "MRPT(n_trees=25, depth=4, votes_required=40)" },
-                                                                    { x: 0.1294685990338164 , y: 10.0, label: "MRPT(n_trees=5, depth=2, votes_required=40)" },
-                                                                    { x: 0.1386473429951691 , y: 10.0, label: "MRPT(n_trees=5, depth=8, votes_required=10)" },
-                                                                    { x: 0.1386473429951691 , y: 10.0, label: "MRPT(n_trees=5, depth=8, votes_required=100)" },
-                                                                    { x: 0.1294685990338164 , y: 10.0, label: "MRPT(n_trees=5, depth=2, votes_required=20)" },
-                                                                    { x: 0.43816425120772945 , y: 10.0, label: "MRPT(n_trees=100, depth=4, votes_required=100)" },
-                                                                    { x: 0.1294685990338164 , y: 10.0, label: "MRPT(n_trees=5, depth=2, votes_required=100)" },
-                                                                    { x: 0.4386473429951691 , y: 10.0, label: "MRPT(n_trees=100, depth=4, votes_required=40)" },
-                                                                    { x: 0.6202898550724638 , y: 10.0, label: "MRPT(n_trees=25, depth=4, votes_required=4)" },
-                                                                    { x: 1.0 , y: 10.0, label: "MRPT(n_trees=100, depth=4, votes_required=2)" },
-                                                                    { x: 1.0 , y: 10.0, label: "MRPT(n_trees=100, depth=4, votes_required=1)" },
-                                                                    { x: 0.1386473429951691 , y: 10.0, label: "MRPT(n_trees=5, depth=8, votes_required=4)" },
-                                                                    { x: 0.1294685990338164 , y: 10.0, label: "MRPT(n_trees=5, depth=2, votes_required=10)" },
-                                                                    { x: 0.9589371980676329 , y: 10.0, label: "MRPT(n_trees=100, depth=4, votes_required=10)" },
-                                                                    { x: 0.9178743961352657 , y: 10.0, label: "MRPT(n_trees=100, depth=8, votes_required=1)" },
-                                                                    { x: 0.9347826086956522 , y: 10.0, label: "MRPT(n_trees=5, depth=2, votes_required=1)" },
-                                                                    { x: 0.721256038647343 , y: 10.0, label: "MRPT(n_trees=5, depth=2, votes_required=2)" },
+                                                                    { x: 0.3719806763285024 , y: 10.0, label: "FLANN(target_precision=0.500000)" },
+                                                                    { x: 0.9280193236714975 , y: 10.0, label: "FLANN(target_precision=0.950000)" },
+                                                                    { x: 0.7801932367149759 , y: 10.0, label: "FLANN(target_precision=0.900000)" },
+                                                                    { x: 0.1391304347826087 , y: 10.0, label: "FLANN(target_precision=0.200000)" },
+                                                                    { x: 0.7367149758454107 , y: 10.0, label: "FLANN(target_precision=0.800000)" },
                                                             ]
                         },
                                                 ]},
@@ -1823,43 +1595,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.1386473429951691, 10.0)
-                                    (0.9164251207729469, 10.0)
-                                    (0.13671497584541062, 10.0)
-                                    (0.24057971014492754, 10.0)
-                                    (0.4067632850241546, 10.0)
-                                    (0.24057971014492754, 10.0)
-                                    (0.7144927536231884, 10.0)
-                                    (0.9806763285024155, 10.0)
-                                    (0.4067632850241546, 10.0)
-                                    (0.24057971014492754, 10.0)
-                                    (0.4792270531400966, 10.0)
-                                    (0.1386473429951691, 10.0)
-                                    (0.4067632850241546, 10.0)
-                                    (0.9995169082125603, 10.0)
-                                    (0.4067632850241546, 10.0)
-                                    (0.1386473429951691, 10.0)
-                                    (0.1386473429951691, 10.0)
-                                    (0.4251207729468599, 10.0)
-                                    (0.24057971014492754, 10.0)
-                                    (0.1294685990338164, 10.0)
-                                    (0.1386473429951691, 10.0)
-                                    (0.1386473429951691, 10.0)
-                                    (0.1294685990338164, 10.0)
-                                    (0.43816425120772945, 10.0)
-                                    (0.1294685990338164, 10.0)
-                                    (0.4386473429951691, 10.0)
-                                    (0.6202898550724638, 10.0)
-                                    (1.0, 10.0)
-                                    (1.0, 10.0)
-                                    (0.1386473429951691, 10.0)
-                                    (0.1294685990338164, 10.0)
-                                    (0.9589371980676329, 10.0)
-                                    (0.9178743961352657, 10.0)
-                                    (0.9347826086956522, 10.0)
-                                    (0.721256038647343, 10.0)
+                                                (0.3719806763285024, 10.0)
+                                    (0.9280193236714975, 10.0)
+                                    (0.7801932367149759, 10.0)
+                                    (0.1391304347826087, 10.0)
+                                    (0.7367149758454107, 10.0)
                             };
-            \addlegendentry{ mrpt };
+            \addlegendentry{ flann };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Candidates generated tradeoff - down and to the right is better }
@@ -1877,11 +1619,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "mrpt",
+                            label: "flann",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
+                                                                    { x: 0.1391304347826087 , y: 0.967610631012, label: "FLANN(target_precision=0.200000)" },
+                                                                    { x: 0.3719806763285024 , y: 2.05477525186, label: "FLANN(target_precision=0.500000)" },
+                                                                    { x: 0.7801932367149759 , y: 10.8584178842, label: "FLANN(target_precision=0.900000)" },
+                                                                    { x: 0.7367149758454107 , y: 14.9016460889, label: "FLANN(target_precision=0.800000)" },
+                                                                    { x: 0.9280193236714975 , y: 21.2043074456, label: "FLANN(target_precision=0.950000)" },
                                                             ]
                         },
                                                 ]},
@@ -1970,8 +1717,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                        };
-            \addlegendentry{ mrpt };
+                                                (0.1391304347826087, 0.967610631012)
+                                    (0.3719806763285024, 2.05477525186)
+                                    (0.7801932367149759, 10.8584178842)
+                                    (0.7367149758454107, 14.9016460889)
+                                    (0.9280193236714975, 21.2043074456)
+                            };
+            \addlegendentry{ flann };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB)/Queries per second (s) tradeoff - down and to the right is better }
@@ -1989,46 +1741,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "mrpt",
+                            label: "flann",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.27342995169082124 , y: 17545.4879961, label: "MRPT(n_trees=25, depth=4, votes_required=20)" },
-                                                                    { x: 0.27342995169082124 , y: 17373.1051126, label: "MRPT(n_trees=25, depth=4, votes_required=40)" },
-                                                                    { x: 0.27342995169082124 , y: 17282.4995123, label: "MRPT(n_trees=25, depth=4, votes_required=100)" },
-                                                                    { x: 0.27342995169082124 , y: 16585.243806, label: "MRPT(n_trees=25, depth=4, votes_required=10)" },
-                                                                    { x: 0.15893719806763285 , y: 14372.6150179, label: "MRPT(n_trees=5, depth=8, votes_required=1)" },
-                                                                    { x: 0.1497584541062802 , y: 13176.2239995, label: "MRPT(n_trees=5, depth=2, votes_required=40)" },
-                                                                    { x: 0.15893719806763285 , y: 13093.7583399, label: "MRPT(n_trees=5, depth=8, votes_required=40)" },
-                                                                    { x: 0.1497584541062802 , y: 13059.4887037, label: "MRPT(n_trees=5, depth=2, votes_required=100)" },
-                                                                    { x: 0.15893719806763285 , y: 13025.0071709, label: "MRPT(n_trees=5, depth=8, votes_required=10)" },
-                                                                    { x: 0.1497584541062802 , y: 13020.9050526, label: "MRPT(n_trees=5, depth=2, votes_required=20)" },
-                                                                    { x: 0.15893719806763285 , y: 12964.7134154, label: "MRPT(n_trees=5, depth=8, votes_required=4)" },
-                                                                    { x: 0.15893719806763285 , y: 12865.0099723, label: "MRPT(n_trees=5, depth=8, votes_required=100)" },
-                                                                    { x: 0.15893719806763285 , y: 12854.53389, label: "MRPT(n_trees=5, depth=8, votes_required=2)" },
-                                                                    { x: 0.15845410628019324 , y: 12796.93612, label: "MRPT(n_trees=5, depth=2, votes_required=4)" },
-                                                                    { x: 0.1497584541062802 , y: 12722.8634985, label: "MRPT(n_trees=5, depth=2, votes_required=10)" },
-                                                                    { x: 0.15893719806763285 , y: 12613.256937, label: "MRPT(n_trees=5, depth=8, votes_required=20)" },
-                                                                    { x: 0.485024154589372 , y: 10742.3836084, label: "MRPT(n_trees=100, depth=4, votes_required=40)" },
-                                                                    { x: 0.4845410628019324 , y: 10689.8746352, label: "MRPT(n_trees=100, depth=4, votes_required=100)" },
-                                                                    { x: 0.5260869565217391 , y: 10041.6475215, label: "MRPT(n_trees=100, depth=4, votes_required=20)" },
-                                                                    { x: 0.4777777777777778 , y: 7780.59404237, label: "MRPT(n_trees=100, depth=8, votes_required=4)" },
-                                                                    { x: 0.457487922705314 , y: 7680.78812435, label: "MRPT(n_trees=100, depth=8, votes_required=40)" },
-                                                                    { x: 0.457487922705314 , y: 7662.82382638, label: "MRPT(n_trees=100, depth=8, votes_required=100)" },
-                                                                    { x: 0.457487922705314 , y: 7628.15132932, label: "MRPT(n_trees=100, depth=8, votes_required=20)" },
-                                                                    { x: 0.457487922705314 , y: 7550.86341459, label: "MRPT(n_trees=100, depth=8, votes_required=10)" },
-                                                                    { x: 0.7140096618357488 , y: 4203.34016606, label: "MRPT(n_trees=25, depth=4, votes_required=4)" },
-                                                                    { x: 0.8140096618357487 , y: 3818.13472651, label: "MRPT(n_trees=100, depth=8, votes_required=2)" },
-                                                                    { x: 0.9942028985507246 , y: 2299.01556207, label: "MRPT(n_trees=100, depth=4, votes_required=10)" },
-                                                                    { x: 0.9797101449275363 , y: 1406.58159337, label: "MRPT(n_trees=100, depth=8, votes_required=1)" },
-                                                                    { x: 0.8280193236714976 , y: 1180.38734588, label: "MRPT(n_trees=5, depth=2, votes_required=2)" },
-                                                                    { x: 0.9758454106280193 , y: 1002.85408952, label: "MRPT(n_trees=25, depth=4, votes_required=2)" },
-                                                                    { x: 0.9821256038647344 , y: 550.498510608, label: "MRPT(n_trees=5, depth=2, votes_required=1)" },
-                                                                    { x: 0.9980676328502416 , y: 537.787905329, label: "MRPT(n_trees=25, depth=4, votes_required=1)" },
-                                                                    { x: 1.0 , y: 497.73977471, label: "MRPT(n_trees=100, depth=4, votes_required=4)" },
-                                                                    { x: 1.0 , y: 421.291000156, label: "MRPT(n_trees=100, depth=4, votes_required=2)" },
-                                                                    { x: 1.0 , y: 400.101994517, label: "MRPT(n_trees=100, depth=4, votes_required=1)" },
+                                                                    { x: 0.15845410628019324 , y: 7647.70431703, label: "FLANN(target_precision=0.200000)" },
+                                                                    { x: 0.43091787439613527 , y: 3576.06020092, label: "FLANN(target_precision=0.500000)" },
+                                                                    { x: 0.8690821256038648 , y: 1302.95224875, label: "FLANN(target_precision=0.900000)" },
+                                                                    { x: 0.8473429951690822 , y: 512.963464198, label: "FLANN(target_precision=0.800000)" },
+                                                                    { x: 0.9792270531400966 , y: 357.663178553, label: "FLANN(target_precision=0.950000)" },
                                                             ]
                         },
                                                 ]},
@@ -2117,43 +1839,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.27342995169082124, 17545.4879961)
-                                    (0.27342995169082124, 17373.1051126)
-                                    (0.27342995169082124, 17282.4995123)
-                                    (0.27342995169082124, 16585.243806)
-                                    (0.15893719806763285, 14372.6150179)
-                                    (0.1497584541062802, 13176.2239995)
-                                    (0.15893719806763285, 13093.7583399)
-                                    (0.1497584541062802, 13059.4887037)
-                                    (0.15893719806763285, 13025.0071709)
-                                    (0.1497584541062802, 13020.9050526)
-                                    (0.15893719806763285, 12964.7134154)
-                                    (0.15893719806763285, 12865.0099723)
-                                    (0.15893719806763285, 12854.53389)
-                                    (0.15845410628019324, 12796.93612)
-                                    (0.1497584541062802, 12722.8634985)
-                                    (0.15893719806763285, 12613.256937)
-                                    (0.485024154589372, 10742.3836084)
-                                    (0.4845410628019324, 10689.8746352)
-                                    (0.5260869565217391, 10041.6475215)
-                                    (0.4777777777777778, 7780.59404237)
-                                    (0.457487922705314, 7680.78812435)
-                                    (0.457487922705314, 7662.82382638)
-                                    (0.457487922705314, 7628.15132932)
-                                    (0.457487922705314, 7550.86341459)
-                                    (0.7140096618357488, 4203.34016606)
-                                    (0.8140096618357487, 3818.13472651)
-                                    (0.9942028985507246, 2299.01556207)
-                                    (0.9797101449275363, 1406.58159337)
-                                    (0.8280193236714976, 1180.38734588)
-                                    (0.9758454106280193, 1002.85408952)
-                                    (0.9821256038647344, 550.498510608)
-                                    (0.9980676328502416, 537.787905329)
-                                    (1.0, 497.73977471)
-                                    (1.0, 421.291000156)
-                                    (1.0, 400.101994517)
+                                                (0.15845410628019324, 7647.70431703)
+                                    (0.43091787439613527, 3576.06020092)
+                                    (0.8690821256038648, 1302.95224875)
+                                    (0.8473429951690822, 512.963464198)
+                                    (0.9792270531400966, 357.663178553)
                             };
-            \addlegendentry{ mrpt };
+            \addlegendentry{ flann };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.01 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -2171,46 +1863,16 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "mrpt",
+                            label: "flann",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.5932367149758454 , y: 17545.4879961, label: "MRPT(n_trees=25, depth=4, votes_required=20)" },
-                                                                    { x: 0.5932367149758454 , y: 17373.1051126, label: "MRPT(n_trees=25, depth=4, votes_required=40)" },
-                                                                    { x: 0.5932367149758454 , y: 17282.4995123, label: "MRPT(n_trees=25, depth=4, votes_required=100)" },
-                                                                    { x: 0.5932367149758454 , y: 16585.243806, label: "MRPT(n_trees=25, depth=4, votes_required=10)" },
-                                                                    { x: 0.4748792270531401 , y: 14372.6150179, label: "MRPT(n_trees=5, depth=8, votes_required=1)" },
-                                                                    { x: 0.4449275362318841 , y: 13176.2239995, label: "MRPT(n_trees=5, depth=2, votes_required=40)" },
-                                                                    { x: 0.4748792270531401 , y: 13093.7583399, label: "MRPT(n_trees=5, depth=8, votes_required=40)" },
-                                                                    { x: 0.4449275362318841 , y: 13059.4887037, label: "MRPT(n_trees=5, depth=2, votes_required=100)" },
-                                                                    { x: 0.4748792270531401 , y: 13025.0071709, label: "MRPT(n_trees=5, depth=8, votes_required=10)" },
-                                                                    { x: 0.4449275362318841 , y: 13020.9050526, label: "MRPT(n_trees=5, depth=2, votes_required=20)" },
-                                                                    { x: 0.4748792270531401 , y: 12964.7134154, label: "MRPT(n_trees=5, depth=8, votes_required=4)" },
-                                                                    { x: 0.4748792270531401 , y: 12865.0099723, label: "MRPT(n_trees=5, depth=8, votes_required=100)" },
-                                                                    { x: 0.4748792270531401 , y: 12854.53389, label: "MRPT(n_trees=5, depth=8, votes_required=2)" },
-                                                                    { x: 0.45893719806763283 , y: 12796.93612, label: "MRPT(n_trees=5, depth=2, votes_required=4)" },
-                                                                    { x: 0.4449275362318841 , y: 12722.8634985, label: "MRPT(n_trees=5, depth=2, votes_required=10)" },
-                                                                    { x: 0.4748792270531401 , y: 12613.256937, label: "MRPT(n_trees=5, depth=8, votes_required=20)" },
-                                                                    { x: 0.8487922705314009 , y: 10742.3836084, label: "MRPT(n_trees=100, depth=4, votes_required=40)" },
-                                                                    { x: 0.8483091787439614 , y: 10689.8746352, label: "MRPT(n_trees=100, depth=4, votes_required=100)" },
-                                                                    { x: 0.870048309178744 , y: 10041.6475215, label: "MRPT(n_trees=100, depth=4, votes_required=20)" },
-                                                                    { x: 0.8657004830917875 , y: 7780.59404237, label: "MRPT(n_trees=100, depth=8, votes_required=4)" },
-                                                                    { x: 0.8565217391304348 , y: 7680.78812435, label: "MRPT(n_trees=100, depth=8, votes_required=40)" },
-                                                                    { x: 0.8565217391304348 , y: 7662.82382638, label: "MRPT(n_trees=100, depth=8, votes_required=100)" },
-                                                                    { x: 0.8565217391304348 , y: 7628.15132932, label: "MRPT(n_trees=100, depth=8, votes_required=20)" },
-                                                                    { x: 0.8565217391304348 , y: 7550.86341459, label: "MRPT(n_trees=100, depth=8, votes_required=10)" },
-                                                                    { x: 0.996135265700483 , y: 4203.34016606, label: "MRPT(n_trees=25, depth=4, votes_required=4)" },
-                                                                    { x: 1.0 , y: 3818.13472651, label: "MRPT(n_trees=100, depth=8, votes_required=2)" },
-                                                                    { x: 1.0 , y: 2299.01556207, label: "MRPT(n_trees=100, depth=4, votes_required=10)" },
-                                                                    { x: 1.0 , y: 1406.58159337, label: "MRPT(n_trees=100, depth=8, votes_required=1)" },
-                                                                    { x: 1.0 , y: 1180.38734588, label: "MRPT(n_trees=5, depth=2, votes_required=2)" },
-                                                                    { x: 1.0 , y: 1002.85408952, label: "MRPT(n_trees=25, depth=4, votes_required=2)" },
-                                                                    { x: 1.0 , y: 550.498510608, label: "MRPT(n_trees=5, depth=2, votes_required=1)" },
-                                                                    { x: 1.0 , y: 537.787905329, label: "MRPT(n_trees=25, depth=4, votes_required=1)" },
-                                                                    { x: 1.0 , y: 497.73977471, label: "MRPT(n_trees=100, depth=4, votes_required=4)" },
-                                                                    { x: 1.0 , y: 421.291000156, label: "MRPT(n_trees=100, depth=4, votes_required=2)" },
-                                                                    { x: 1.0 , y: 400.101994517, label: "MRPT(n_trees=100, depth=4, votes_required=1)" },
+                                                                    { x: 0.43333333333333335 , y: 7647.70431703, label: "FLANN(target_precision=0.200000)" },
+                                                                    { x: 0.9033816425120773 , y: 3576.06020092, label: "FLANN(target_precision=0.500000)" },
+                                                                    { x: 1.0 , y: 1302.95224875, label: "FLANN(target_precision=0.900000)" },
+                                                                    { x: 1.0 , y: 512.963464198, label: "FLANN(target_precision=0.800000)" },
+                                                                    { x: 1.0 , y: 357.663178553, label: "FLANN(target_precision=0.950000)" },
                                                             ]
                         },
                                                 ]},
@@ -2299,43 +1961,13 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (0.5932367149758454, 17545.4879961)
-                                    (0.5932367149758454, 17373.1051126)
-                                    (0.5932367149758454, 17282.4995123)
-                                    (0.5932367149758454, 16585.243806)
-                                    (0.4748792270531401, 14372.6150179)
-                                    (0.4449275362318841, 13176.2239995)
-                                    (0.4748792270531401, 13093.7583399)
-                                    (0.4449275362318841, 13059.4887037)
-                                    (0.4748792270531401, 13025.0071709)
-                                    (0.4449275362318841, 13020.9050526)
-                                    (0.4748792270531401, 12964.7134154)
-                                    (0.4748792270531401, 12865.0099723)
-                                    (0.4748792270531401, 12854.53389)
-                                    (0.45893719806763283, 12796.93612)
-                                    (0.4449275362318841, 12722.8634985)
-                                    (0.4748792270531401, 12613.256937)
-                                    (0.8487922705314009, 10742.3836084)
-                                    (0.8483091787439614, 10689.8746352)
-                                    (0.870048309178744, 10041.6475215)
-                                    (0.8657004830917875, 7780.59404237)
-                                    (0.8565217391304348, 7680.78812435)
-                                    (0.8565217391304348, 7662.82382638)
-                                    (0.8565217391304348, 7628.15132932)
-                                    (0.8565217391304348, 7550.86341459)
-                                    (0.996135265700483, 4203.34016606)
-                                    (1.0, 3818.13472651)
-                                    (1.0, 2299.01556207)
-                                    (1.0, 1406.58159337)
-                                    (1.0, 1180.38734588)
-                                    (1.0, 1002.85408952)
-                                    (1.0, 550.498510608)
-                                    (1.0, 537.787905329)
-                                    (1.0, 497.73977471)
-                                    (1.0, 421.291000156)
-                                    (1.0, 400.101994517)
+                                                (0.43333333333333335, 7647.70431703)
+                                    (0.9033816425120773, 3576.06020092)
+                                    (1.0, 1302.95224875)
+                                    (1.0, 512.963464198)
+                                    (1.0, 357.663178553)
                             };
-            \addlegendentry{ mrpt };
+            \addlegendentry{ flann };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.1 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
