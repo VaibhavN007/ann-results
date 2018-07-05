@@ -57,39 +57,17 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 68.551391934, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "kgraph",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 81.6101963476, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 0.005314009661835749 , y: 182744.880657, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 71.3867322052, label: "KDTree(leaf_size=400)" },
+                                                                    { x: 0.9714975845410628 , y: 1457.80073845, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.991304347826087 , y: 1426.26372594, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.993719806763285 , y: 883.12633427, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9985507246376811 , y: 748.841383486, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9990338164251208 , y: 670.042984513, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 591.39650402, label: "b'KGraph(euclidean)'" },
                                                             ]
                         },
                                                 ]},
@@ -178,21 +156,14 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 68.551391934)
+                                                (0.9714975845410628, 1457.80073845)
+                                    (0.991304347826087, 1426.26372594)
+                                    (0.993719806763285, 883.12633427)
+                                    (0.9985507246376811, 748.841383486)
+                                    (0.9990338164251208, 670.042984513)
+                                    (0.9995169082125603, 591.39650402)
                             };
-            \addlegendentry{ ball };
-                                \addplot coordinates {
-                                                (0.9995169082125603, 81.6101963476)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot coordinates {
-                                                (0.005314009661835749, 182744.880657)
-                            };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot coordinates {
-                                                (1.0, 71.3867322052)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ kgraph };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -210,39 +181,13 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 0.474489688873, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "kgraph",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 0.0158975124359, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 0.005314009661835749 , y: 0.00662207603455, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 0.241654396057, label: "KDTree(leaf_size=400)" },
+                                                                    { x: 0.9801932367149758 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
                                                             ]
                         },
                                                 ]},
@@ -331,21 +276,10 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 0.474489688873)
+                                                (0.9801932367149758, 3.60996389389)
+                                    (0.9995169082125603, 3.60996389389)
                             };
-            \addlegendentry{ ball };
-                                \addplot coordinates {
-                                                (0.9995169082125603, 0.0158975124359)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot coordinates {
-                                                (0.005314009661835749, 0.00662207603455)
-                            };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot coordinates {
-                                                (1.0, 0.241654396057)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ kgraph };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Build time (s) tradeoff - down and to the right is better }
@@ -363,38 +297,13 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 63564.0, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "kgraph",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 29732.0, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 59468.0, label: "KDTree(leaf_size=400)" },
+                                                                    { x: 0.9801932367149758 , y: 2356, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 2356, label: "b'KGraph(euclidean)'" },
                                                             ]
                         },
                                                 ]},
@@ -483,20 +392,10 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 63564.0)
+                                                (0.9801932367149758, 2356)
+                                    (0.9995169082125603, 2356)
                             };
-            \addlegendentry{ ball };
-                                \addplot coordinates {
-                                                (0.9995169082125603, 29732.0)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot coordinates {
-                                        };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot coordinates {
-                                                (1.0, 59468.0)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ kgraph };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB) tradeoff - down and to the right is better }
@@ -514,39 +413,16 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 68.551391934, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "kgraph",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.00000000465 , y: 81.6101963476, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 1.44705682845 , y: 182744.880657, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 71.3867322052, label: "KDTree(leaf_size=400)" },
+                                                                    { x: 1.00804752143 , y: 1457.80073845, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.00022434043 , y: 1426.26372594, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.00000772431 , y: 748.841383486, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.00000302347 , y: 670.042984513, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.00000000125 , y: 591.39650402, label: "b'KGraph(euclidean)'" },
                                                             ]
                         },
                                                 ]},
@@ -635,21 +511,13 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 68.551391934)
+                                                (1.00804752143, 1457.80073845)
+                                    (1.00022434043, 1426.26372594)
+                                    (1.00000772431, 748.841383486)
+                                    (1.00000302347, 670.042984513)
+                                    (1.00000000125, 591.39650402)
                             };
-            \addlegendentry{ ball };
-                                \addplot coordinates {
-                                                (1.00000000465, 81.6101963476)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot coordinates {
-                                                (1.44705682845, 182744.880657)
-                            };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot coordinates {
-                                                (1.0, 71.3867322052)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ kgraph };
             \end{axis}
     \end{tikzpicture}
     \caption{ Relative Error-Queries per second (1/s) tradeoff - up and to the left is better }
@@ -667,39 +535,13 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 10.0, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "kgraph",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 10.0, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 0.005314009661835749 , y: 10.0, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 10.0, label: "KDTree(leaf_size=400)" },
+                                                                    { x: 0.9801932367149758 , y: 10, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 10, label: "b'KGraph(euclidean)'" },
                                                             ]
                         },
                                                 ]},
@@ -788,21 +630,10 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 10.0)
+                                                (0.9801932367149758, 10)
+                                    (0.9995169082125603, 10)
                             };
-            \addlegendentry{ ball };
-                                \addplot coordinates {
-                                                (0.9995169082125603, 10.0)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot coordinates {
-                                                (0.005314009661835749, 10.0)
-                            };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot coordinates {
-                                                (1.0, 10.0)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ kgraph };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Candidates generated tradeoff - down and to the right is better }
@@ -820,38 +651,17 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 927.245942157, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "kgraph",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 364.317221752, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 833.039952426, label: "KDTree(leaf_size=400)" },
+                                                                    { x: 0.9714975845410628 , y: 1.61613308174, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.991304347826087 , y: 1.65186841476, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.993719806763285 , y: 2.66779497856, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9985507246376811 , y: 3.14619364255, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9990338164251208 , y: 3.51619232565, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 3.98379088139, label: "b'KGraph(euclidean)'" },
                                                             ]
                         },
                                                 ]},
@@ -940,20 +750,14 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 927.245942157)
+                                                (0.9714975845410628, 1.61613308174)
+                                    (0.991304347826087, 1.65186841476)
+                                    (0.993719806763285, 2.66779497856)
+                                    (0.9985507246376811, 3.14619364255)
+                                    (0.9990338164251208, 3.51619232565)
+                                    (0.9995169082125603, 3.98379088139)
                             };
-            \addlegendentry{ ball };
-                                \addplot coordinates {
-                                                (0.9995169082125603, 364.317221752)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot coordinates {
-                                        };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot coordinates {
-                                                (1.0, 833.039952426)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ kgraph };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB)/Queries per second (s) tradeoff - down and to the right is better }
@@ -971,39 +775,14 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 68.551391934, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "kgraph",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.0 , y: 81.6101963476, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 0.006280193236714976 , y: 182744.880657, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 71.3867322052, label: "KDTree(leaf_size=400)" },
+                                                                    { x: 0.9806763285024155 , y: 1457.80073845, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9985507246376811 , y: 1426.26372594, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 748.841383486, label: "b'KGraph(euclidean)'" },
                                                             ]
                         },
                                                 ]},
@@ -1092,21 +871,11 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 68.551391934)
+                                                (0.9806763285024155, 1457.80073845)
+                                    (0.9985507246376811, 1426.26372594)
+                                    (1.0, 748.841383486)
                             };
-            \addlegendentry{ ball };
-                                \addplot coordinates {
-                                                (1.0, 81.6101963476)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot coordinates {
-                                                (0.006280193236714976, 182744.880657)
-                            };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot coordinates {
-                                                (1.0, 71.3867322052)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ kgraph };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.01 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1124,39 +893,13 @@
                                         type: "line",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 68.551391934, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "kgraph",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.0 , y: 81.6101963476, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 0.03768115942028986 , y: 182744.880657, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 71.3867322052, label: "KDTree(leaf_size=400)" },
+                                                                    { x: 0.9855072463768116 , y: 1457.80073845, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 1426.26372594, label: "b'KGraph(euclidean)'" },
                                                             ]
                         },
                                                 ]},
@@ -1245,21 +988,10 @@
             cycle list name = black white
             ]
                                 \addplot coordinates {
-                                                (1.0, 68.551391934)
+                                                (0.9855072463768116, 1457.80073845)
+                                    (1.0, 1426.26372594)
                             };
-            \addlegendentry{ ball };
-                                \addplot coordinates {
-                                                (1.0, 81.6101963476)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot coordinates {
-                                                (0.03768115942028986, 182744.880657)
-                            };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot coordinates {
-                                                (1.0, 71.3867322052)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ kgraph };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.1 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1279,40 +1011,26 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 68.551391934, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "kgraph",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 81.6101963476, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 0.005314009661835749 , y: 182744.880657, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 71.3867322052, label: "KDTree(leaf_size=400)" },
-                                                                    { x: 1.0 , y: 38.4288650918, label: "KDTree(leaf_size=10)" },
+                                                                    { x: 0.9714975845410628 , y: 1457.80073845, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9685990338164251 , y: 1427.1335033, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.991304347826087 , y: 1426.26372594, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9869565217391304 , y: 1425.76016211, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9801932367149758 , y: 1291.25564669, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9826086956521739 , y: 1104.94697859, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.993719806763285 , y: 883.12633427, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9985507246376811 , y: 748.841383486, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9990338164251208 , y: 670.042984513, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 591.39650402, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 558.97121902, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 500.47407737, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 462.503557388, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 419.157239075, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 413.816489537, label: "b'KGraph(euclidean)'" },
                                                             ]
                         },
                                                 ]},
@@ -1401,22 +1119,23 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 68.551391934)
+                                                (0.9714975845410628, 1457.80073845)
+                                    (0.9685990338164251, 1427.1335033)
+                                    (0.991304347826087, 1426.26372594)
+                                    (0.9869565217391304, 1425.76016211)
+                                    (0.9801932367149758, 1291.25564669)
+                                    (0.9826086956521739, 1104.94697859)
+                                    (0.993719806763285, 883.12633427)
+                                    (0.9985507246376811, 748.841383486)
+                                    (0.9990338164251208, 670.042984513)
+                                    (0.9995169082125603, 591.39650402)
+                                    (0.9995169082125603, 558.97121902)
+                                    (0.9995169082125603, 500.47407737)
+                                    (0.9995169082125603, 462.503557388)
+                                    (0.9995169082125603, 419.157239075)
+                                    (0.9995169082125603, 413.816489537)
                             };
-            \addlegendentry{ ball };
-                                \addplot [only marks] coordinates {
-                                                (0.9995169082125603, 81.6101963476)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot [only marks] coordinates {
-                                                (0.005314009661835749, 182744.880657)
-                            };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 71.3867322052)
-                                    (1.0, 38.4288650918)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ kgraph };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -1434,40 +1153,26 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 0.474489688873, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "kgraph",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 0.0158975124359, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 0.005314009661835749 , y: 0.00662207603455, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 0.241654396057, label: "KDTree(leaf_size=400)" },
-                                                                    { x: 1.0 , y: 0.467152833939, label: "KDTree(leaf_size=10)" },
+                                                                    { x: 0.9801932367149758 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.993719806763285 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9685990338164251 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.991304347826087 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9869565217391304 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9714975845410628 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9985507246376811 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9990338164251208 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9826086956521739 , y: 3.60996389389, label: "b'KGraph(euclidean)'" },
                                                             ]
                         },
                                                 ]},
@@ -1556,22 +1261,23 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 0.474489688873)
+                                                (0.9801932367149758, 3.60996389389)
+                                    (0.9995169082125603, 3.60996389389)
+                                    (0.993719806763285, 3.60996389389)
+                                    (0.9995169082125603, 3.60996389389)
+                                    (0.9685990338164251, 3.60996389389)
+                                    (0.991304347826087, 3.60996389389)
+                                    (0.9869565217391304, 3.60996389389)
+                                    (0.9995169082125603, 3.60996389389)
+                                    (0.9714975845410628, 3.60996389389)
+                                    (0.9995169082125603, 3.60996389389)
+                                    (0.9985507246376811, 3.60996389389)
+                                    (0.9995169082125603, 3.60996389389)
+                                    (0.9995169082125603, 3.60996389389)
+                                    (0.9990338164251208, 3.60996389389)
+                                    (0.9826086956521739, 3.60996389389)
                             };
-            \addlegendentry{ ball };
-                                \addplot [only marks] coordinates {
-                                                (0.9995169082125603, 0.0158975124359)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot [only marks] coordinates {
-                                                (0.005314009661835749, 0.00662207603455)
-                            };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 0.241654396057)
-                                    (1.0, 0.467152833939)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ kgraph };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Build time (s) tradeoff - down and to the right is better }
@@ -1589,39 +1295,26 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 63564.0, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "kgraph",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 29732.0, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 59468.0, label: "KDTree(leaf_size=400)" },
-                                                                    { x: 1.0 , y: 75888.0, label: "KDTree(leaf_size=10)" },
+                                                                    { x: 0.9801932367149758 , y: 2356, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 2356, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.993719806763285 , y: 2356, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 2356, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9685990338164251 , y: 2356, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.991304347826087 , y: 2356, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9869565217391304 , y: 2356, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 2356, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9714975845410628 , y: 2356, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 2356, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9985507246376811 , y: 2356, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 2356, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 2356, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9990338164251208 , y: 2356, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9826086956521739 , y: 2356, label: "b'KGraph(euclidean)'" },
                                                             ]
                         },
                                                 ]},
@@ -1710,21 +1403,23 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 63564.0)
+                                                (0.9801932367149758, 2356)
+                                    (0.9995169082125603, 2356)
+                                    (0.993719806763285, 2356)
+                                    (0.9995169082125603, 2356)
+                                    (0.9685990338164251, 2356)
+                                    (0.991304347826087, 2356)
+                                    (0.9869565217391304, 2356)
+                                    (0.9995169082125603, 2356)
+                                    (0.9714975845410628, 2356)
+                                    (0.9995169082125603, 2356)
+                                    (0.9985507246376811, 2356)
+                                    (0.9995169082125603, 2356)
+                                    (0.9995169082125603, 2356)
+                                    (0.9990338164251208, 2356)
+                                    (0.9826086956521739, 2356)
                             };
-            \addlegendentry{ ball };
-                                \addplot [only marks] coordinates {
-                                                (0.9995169082125603, 29732.0)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot [only marks] coordinates {
-                                        };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 59468.0)
-                                    (1.0, 75888.0)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ kgraph };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB) tradeoff - down and to the right is better }
@@ -1742,40 +1437,26 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 68.551391934, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "kgraph",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.00000000465 , y: 81.6101963476, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 1.44705682845 , y: 182744.880657, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 71.3867322052, label: "KDTree(leaf_size=400)" },
-                                                                    { x: 1.0 , y: 38.4288650918, label: "KDTree(leaf_size=10)" },
+                                                                    { x: 1.00804752143 , y: 1457.80073845, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.00815251673 , y: 1427.1335033, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.00022434043 , y: 1426.26372594, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.00026913932 , y: 1425.76016211, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.00562934047 , y: 1291.25564669, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.00554418245 , y: 1104.94697859, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.00056009767 , y: 883.12633427, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.00000772431 , y: 748.841383486, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.00000302347 , y: 670.042984513, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.00000000125 , y: 591.39650402, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.00000000125 , y: 558.97121902, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.00000000125 , y: 500.47407737, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.00000000125 , y: 462.503557388, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.00000000125 , y: 419.157239075, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.00000000125 , y: 413.816489537, label: "b'KGraph(euclidean)'" },
                                                             ]
                         },
                                                 ]},
@@ -1864,22 +1545,23 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 68.551391934)
+                                                (1.00804752143, 1457.80073845)
+                                    (1.00815251673, 1427.1335033)
+                                    (1.00022434043, 1426.26372594)
+                                    (1.00026913932, 1425.76016211)
+                                    (1.00562934047, 1291.25564669)
+                                    (1.00554418245, 1104.94697859)
+                                    (1.00056009767, 883.12633427)
+                                    (1.00000772431, 748.841383486)
+                                    (1.00000302347, 670.042984513)
+                                    (1.00000000125, 591.39650402)
+                                    (1.00000000125, 558.97121902)
+                                    (1.00000000125, 500.47407737)
+                                    (1.00000000125, 462.503557388)
+                                    (1.00000000125, 419.157239075)
+                                    (1.00000000125, 413.816489537)
                             };
-            \addlegendentry{ ball };
-                                \addplot [only marks] coordinates {
-                                                (1.00000000465, 81.6101963476)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot [only marks] coordinates {
-                                                (1.44705682845, 182744.880657)
-                            };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 71.3867322052)
-                                    (1.0, 38.4288650918)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ kgraph };
             \end{axis}
     \end{tikzpicture}
     \caption{ Relative Error-Queries per second (1/s) tradeoff - up and to the left is better }
@@ -1897,40 +1579,26 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 10.0, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "kgraph",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 10.0, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 0.005314009661835749 , y: 10.0, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 10.0, label: "KDTree(leaf_size=400)" },
-                                                                    { x: 1.0 , y: 10.0, label: "KDTree(leaf_size=10)" },
+                                                                    { x: 0.9801932367149758 , y: 10, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 10, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.993719806763285 , y: 10, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 10, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9685990338164251 , y: 10, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.991304347826087 , y: 10, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9869565217391304 , y: 10, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 10, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9714975845410628 , y: 10, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 10, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9985507246376811 , y: 10, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 10, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 10, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9990338164251208 , y: 10, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9826086956521739 , y: 10, label: "b'KGraph(euclidean)'" },
                                                             ]
                         },
                                                 ]},
@@ -2019,22 +1687,23 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 10.0)
+                                                (0.9801932367149758, 10)
+                                    (0.9995169082125603, 10)
+                                    (0.993719806763285, 10)
+                                    (0.9995169082125603, 10)
+                                    (0.9685990338164251, 10)
+                                    (0.991304347826087, 10)
+                                    (0.9869565217391304, 10)
+                                    (0.9995169082125603, 10)
+                                    (0.9714975845410628, 10)
+                                    (0.9995169082125603, 10)
+                                    (0.9985507246376811, 10)
+                                    (0.9995169082125603, 10)
+                                    (0.9995169082125603, 10)
+                                    (0.9990338164251208, 10)
+                                    (0.9826086956521739, 10)
                             };
-            \addlegendentry{ ball };
-                                \addplot [only marks] coordinates {
-                                                (0.9995169082125603, 10.0)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot [only marks] coordinates {
-                                                (0.005314009661835749, 10.0)
-                            };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 10.0)
-                                    (1.0, 10.0)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ kgraph };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Candidates generated tradeoff - down and to the right is better }
@@ -2052,39 +1721,26 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 927.245942157, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "kgraph",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 0.9995169082125603 , y: 364.317221752, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 833.039952426, label: "KDTree(leaf_size=400)" },
-                                                                    { x: 1.0 , y: 1974.76557839, label: "KDTree(leaf_size=10)" },
+                                                                    { x: 0.9714975845410628 , y: 1.61613308174, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9685990338164251 , y: 1.65086167101, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.991304347826087 , y: 1.65186841476, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9869565217391304 , y: 1.6524518377, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9801932367149758 , y: 1.82458059799, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9826086956521739 , y: 2.13222900796, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.993719806763285 , y: 2.66779497856, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9985507246376811 , y: 3.14619364255, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9990338164251208 , y: 3.51619232565, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 3.98379088139, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 4.21488606181, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 4.70753652692, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 5.09401487268, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 5.62080236334, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9995169082125603 , y: 5.69334489942, label: "b'KGraph(euclidean)'" },
                                                             ]
                         },
                                                 ]},
@@ -2173,21 +1829,23 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 927.245942157)
+                                                (0.9714975845410628, 1.61613308174)
+                                    (0.9685990338164251, 1.65086167101)
+                                    (0.991304347826087, 1.65186841476)
+                                    (0.9869565217391304, 1.6524518377)
+                                    (0.9801932367149758, 1.82458059799)
+                                    (0.9826086956521739, 2.13222900796)
+                                    (0.993719806763285, 2.66779497856)
+                                    (0.9985507246376811, 3.14619364255)
+                                    (0.9990338164251208, 3.51619232565)
+                                    (0.9995169082125603, 3.98379088139)
+                                    (0.9995169082125603, 4.21488606181)
+                                    (0.9995169082125603, 4.70753652692)
+                                    (0.9995169082125603, 5.09401487268)
+                                    (0.9995169082125603, 5.62080236334)
+                                    (0.9995169082125603, 5.69334489942)
                             };
-            \addlegendentry{ ball };
-                                \addplot [only marks] coordinates {
-                                                (0.9995169082125603, 364.317221752)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot [only marks] coordinates {
-                                        };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 833.039952426)
-                                    (1.0, 1974.76557839)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ kgraph };
             \end{axis}
     \end{tikzpicture}
     \caption{ Recall-Index size (kB)/Queries per second (s) tradeoff - down and to the right is better }
@@ -2205,40 +1863,26 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 68.551391934, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "kgraph",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.0 , y: 81.6101963476, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 0.006280193236714976 , y: 182744.880657, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 71.3867322052, label: "KDTree(leaf_size=400)" },
-                                                                    { x: 1.0 , y: 38.4288650918, label: "KDTree(leaf_size=10)" },
+                                                                    { x: 0.9806763285024155 , y: 1457.80073845, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9792270531400966 , y: 1427.1335033, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9985507246376811 , y: 1426.26372594, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9980676328502416 , y: 1425.76016211, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9859903381642512 , y: 1291.25564669, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9869565217391304 , y: 1104.94697859, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9966183574879227 , y: 883.12633427, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 748.841383486, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 670.042984513, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 591.39650402, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 558.97121902, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 500.47407737, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 462.503557388, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 419.157239075, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 413.816489537, label: "b'KGraph(euclidean)'" },
                                                             ]
                         },
                                                 ]},
@@ -2327,22 +1971,23 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 68.551391934)
+                                                (0.9806763285024155, 1457.80073845)
+                                    (0.9792270531400966, 1427.1335033)
+                                    (0.9985507246376811, 1426.26372594)
+                                    (0.9980676328502416, 1425.76016211)
+                                    (0.9859903381642512, 1291.25564669)
+                                    (0.9869565217391304, 1104.94697859)
+                                    (0.9966183574879227, 883.12633427)
+                                    (1.0, 748.841383486)
+                                    (1.0, 670.042984513)
+                                    (1.0, 591.39650402)
+                                    (1.0, 558.97121902)
+                                    (1.0, 500.47407737)
+                                    (1.0, 462.503557388)
+                                    (1.0, 419.157239075)
+                                    (1.0, 413.816489537)
                             };
-            \addlegendentry{ ball };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 81.6101963476)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot [only marks] coordinates {
-                                                (0.006280193236714976, 182744.880657)
-                            };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 71.3867322052)
-                                    (1.0, 38.4288650918)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ kgraph };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.01 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
@@ -2360,40 +2005,26 @@
                                         type: "bubble",
                                         data: { datasets: [
                                                 {
-                            label: "ball",
-                            fill: false,
-                            pointStyle: "star",
-                            borderColor: "rgba(178, 255, 102, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 68.551391934, label: "BallTree(leaf_size=20)" },
-                                                            ]
-                        },
-                                                {
-                            label: "bruteforce-blas",
+                            label: "kgraph",
                             fill: false,
                             pointStyle: "rect",
                             borderColor: "rgba(229, 102, 102, 1)",
                             data: [
-                                                                    { x: 1.0 , y: 81.6101963476, label: "BruteForceBLAS()" },
-                                                            ]
-                        },
-                                                {
-                            label: "dummy-algo-mt",
-                            fill: false,
-                            pointStyle: "triangle",
-                            borderColor: "rgba(102, 255, 255, 1)",
-                            data: [
-                                                                    { x: 0.03768115942028986 , y: 182744.880657, label: "DummyAlgoMultiThread" },
-                                                            ]
-                        },
-                                                {
-                            label: "kd",
-                            fill: false,
-                            pointStyle: "circle",
-                            borderColor: "rgba(255, 178, 255, 1)",
-                            data: [
-                                                                    { x: 1.0 , y: 71.3867322052, label: "KDTree(leaf_size=400)" },
-                                                                    { x: 1.0 , y: 38.4288650918, label: "KDTree(leaf_size=10)" },
+                                                                    { x: 0.9855072463768116 , y: 1457.80073845, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9855072463768116 , y: 1427.1335033, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 1426.26372594, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 1425.76016211, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9903381642512077 , y: 1291.25564669, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 0.9903381642512077 , y: 1104.94697859, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 883.12633427, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 748.841383486, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 670.042984513, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 591.39650402, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 558.97121902, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 500.47407737, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 462.503557388, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 419.157239075, label: "b'KGraph(euclidean)'" },
+                                                                    { x: 1.0 , y: 413.816489537, label: "b'KGraph(euclidean)'" },
                                                             ]
                         },
                                                 ]},
@@ -2482,22 +2113,23 @@
             cycle list name = black white
             ]
                                 \addplot [only marks] coordinates {
-                                                (1.0, 68.551391934)
+                                                (0.9855072463768116, 1457.80073845)
+                                    (0.9855072463768116, 1427.1335033)
+                                    (1.0, 1426.26372594)
+                                    (1.0, 1425.76016211)
+                                    (0.9903381642512077, 1291.25564669)
+                                    (0.9903381642512077, 1104.94697859)
+                                    (1.0, 883.12633427)
+                                    (1.0, 748.841383486)
+                                    (1.0, 670.042984513)
+                                    (1.0, 591.39650402)
+                                    (1.0, 558.97121902)
+                                    (1.0, 500.47407737)
+                                    (1.0, 462.503557388)
+                                    (1.0, 419.157239075)
+                                    (1.0, 413.816489537)
                             };
-            \addlegendentry{ ball };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 81.6101963476)
-                            };
-            \addlegendentry{ bruteforce-blas };
-                                \addplot [only marks] coordinates {
-                                                (0.03768115942028986, 182744.880657)
-                            };
-            \addlegendentry{ dummy-algo-mt };
-                                \addplot [only marks] coordinates {
-                                                (1.0, 71.3867322052)
-                                    (1.0, 38.4288650918)
-                            };
-            \addlegendentry{ kd };
+            \addlegendentry{ kgraph };
             \end{axis}
     \end{tikzpicture}
     \caption{ Epsilon 0.1 Recall-Queries per second (1/s) tradeoff - up and to the right is better }
